@@ -1,17 +1,23 @@
 import React from "react";
+import {useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 import { Container } from "@src/store/styled/styleComponents";
 
+import { getBurgerState } from "@src/store/redux";
+import { close } from "@src/store/redux/slice/burger";
+
 import { Burger } from "@cmp/UI/Burger";
+
 
 const Logo = styled.a`
   flex: 1 1 auto;
-  margin: 0 30px 0 0;
+  margin: 0 50px 0 0;
   padding: 10px 20px;
   background-color: #fff;
   border-radius: 5px;
+  z-index: 3;
 `;
 
 const Title = styled.span`
@@ -21,8 +27,12 @@ const Title = styled.span`
 
 const RowContainer = styled(Container)`
   display: flex;
-  align-items: center;
+  align-items: ${props => (props.isAciveBurger ? "flex-start" : "center")};
   flex-wrap: wrap;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    flex-direction: ${props => (props.isAciveBurger ? "column" : "row")};
+  }
 `;
 
 const List = styled.ul`
@@ -31,6 +41,11 @@ const List = styled.ul`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    margin: 10px 0 0 0;
+    display: ${props => (props.isAciveBurger ? "block" : "none")};
+  }
 `;
 
 const Item = styled.li`
@@ -39,10 +54,7 @@ const Item = styled.li`
 
 const Navigation = styled.nav`
   flex: 1 1 auto;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    display: none;
-  }
+  z-index: 3;
 `;
 
 const Link = styled(NavLink)`
@@ -58,22 +70,29 @@ const Link = styled(NavLink)`
 `;
 
 const Header = ({ ...props }) => {
+  const { toggle: isAciveBurger } = useSelector(getBurgerState);
+  const dispatch = useDispatch();
+
+  function closeBurger() {
+    dispatch(close())
+  }
+
   return (
     <>
       <Header.header>
-        <RowContainer>
+        <RowContainer isAciveBurger={isAciveBurger}>
           <Logo href="#">
             <Title>Natali-blog</Title>
           </Logo>
           <Navigation>
-            <List>
+            <List isAciveBurger={isAciveBurger}>
               <Item>
-                <Link {...props} to="/">
+                <Link onClick={closeBurger} {...props} to="/">
                   Главная
                 </Link>
               </Item>
               <Item>
-                <Link {...props} to="started">
+                <Link onClick={closeBurger} {...props} to="started">
                   Дополнительная
                 </Link>
               </Item>
@@ -87,7 +106,10 @@ const Header = ({ ...props }) => {
 };
 
 Header.header = styled.header`
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top: 0px;
   padding: 15px 0;
   background-color: ${props => props.theme.colors.background};
 `;

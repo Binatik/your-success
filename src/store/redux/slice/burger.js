@@ -11,8 +11,12 @@ const burger = createSlice({
     toggle(state) {
       state.toggle = !state.toggle;
     },
+    
+    close(state) {
+      state.toggle = false;
+    }
   },
 });
 
-export const { toggle } = burger.actions;
+export const { toggle, close } = burger.actions;
 export default burger.reducer;

@@ -44,6 +44,7 @@ const IconLine = styled.svg`
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  background-color: ${props => (props.isAciveBurger ? "#fff" : "transparent")};
 `;
 
 const Burger = () => {
@@ -51,13 +52,13 @@ const Burger = () => {
 
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
 
-  const themeColor = useContext(ThemeContext).colors.surface;
+  const themeColor = useContext(ThemeContext).colors.background;
   const burgerShadow = `0 0 0 100vw ${themeColor}, 0 0 0 100vh ${themeColor}`;
 
   return (
     <>
       <Burger.Burger shadow={burgerShadow} isAciveBurger={isAciveBurger} onClick={() => dispatch(toggle())}>
-        <IconLine version="1.1" viewBox="0 0 100 100">
+        <IconLine isAciveBurger={isAciveBurger} version="1.1" viewBox="0 0 100 100">
           <Line1 isAciveBurger={isAciveBurger} d="M 50,35 H 30" />
           <Line2 isAciveBurger={isAciveBurger} d="M 50,35 H 70" />
           <Line3 isAciveBurger={isAciveBurger} d="M 50,50 H 30" />
