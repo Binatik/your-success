@@ -82,7 +82,7 @@ const Header = ({ ...props }) => {
       <Header.header>
         <RowContainer isAciveBurger={isAciveBurger}>
           <Logo href="#">
-            <Title>Natali-blog</Title>
+            <Title>Бизнес-проект</Title>
           </Logo>
           <Navigation>
             <List isAciveBurger={isAciveBurger}>
@@ -112,6 +112,7 @@ Header.header = styled.header`
   top: 0px;
   padding: 15px 0;
   background-color: ${props => props.theme.colors.background};
+  z-index: 11;
 `;
 
 export { Header };

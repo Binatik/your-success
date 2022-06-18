@@ -38,6 +38,14 @@ let configWebPack = {
       },
 
       {
+        test: /\.(mp4)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "video/[name][ext]",
+        },
+      },
+
+      {
         test: /\.(png|svg|gif|jpg|ico)$/,
         type: "asset/resource",
         generator: {

@@ -2,12 +2,12 @@ import React from "react";
 
 import { Container } from "@src/store/styled/styleComponents";
 
+import { Banner } from "@cmp/UI/Banner";
+
 const Main = () => {
   return (
     <>
-      <Container>
-        <h2>Главная страница - index</h2>
-      </Container>
+      <Banner></Banner>
     </>
   );
 };

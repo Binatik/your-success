@@ -10,18 +10,18 @@ export const fontStyle = {
   `,
 
   title: `
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   },
   `,
 
   paragraph: `
-  font-size: 1rem;
+  font-size: 1.3rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   },
   `,
 
