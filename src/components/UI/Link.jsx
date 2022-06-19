@@ -15,6 +15,7 @@ const Link = () => {
 Link.Link = styled.a`
   display: inline-block;
   border-radius: 3px;
+  font-weight: 400;
   padding: 10px;
   color: #fff;
   background-color: ${props => props.theme.colors.background};
