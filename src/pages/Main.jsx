@@ -2,12 +2,14 @@ import React from "react";
 
 import { Container } from "@src/store/styled/styleComponents";
 
-import { Banner } from "@cmp/UI/Banner";
+import animate from "@src/video/particle.mp4";
+
+import { VideoBanner } from "@cmp/UI/VideoBanner";
 
 const Main = () => {
   return (
     <>
-      <Banner></Banner>
+      <VideoBanner video={animate} />
     </>
   );
 };

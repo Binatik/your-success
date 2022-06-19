@@ -1,29 +1,14 @@
-import React from "react";
-import {useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { Container } from "@src/store/styled/styleComponents";
 
 import { getBurgerState } from "@src/store/redux";
-import { close } from "@src/store/redux/slice/burger";
 
 import { Burger } from "@cmp/UI/Burger";
-
-
-const Logo = styled.a`
-  flex: 1 1 auto;
-  margin: 0 50px 0 0;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  z-index: 3;
-`;
-
-const Title = styled.span`
-  color: #000;
-  text-transform: uppercase;
-`;
+import { Logo } from "@cmp/UI/Logo";
+import { NavigationList } from "@cmp/UI/NavigationList";
 
 const RowContainer = styled(Container)`
   display: flex;
@@ -35,77 +20,41 @@ const RowContainer = styled(Container)`
   }
 `;
 
-const List = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 10px 0 0 0;
-    display: ${props => (props.isAciveBurger ? "block" : "none")};
-  }
-`;
-
-const Item = styled.li`
-  margin: 0 20px 0 0;
-`;
-
-const Navigation = styled.nav`
-  flex: 1 1 auto;
-  z-index: 3;
-`;
-
-const Link = styled(NavLink)`
-  display: inline-block;
-  text-decoration: none;
-  color: ${props => props.theme.colors.primary};
-
-  ${props => props.theme.fontStyle.links};
-
-  &.active {
-    color: #fff;
-  }
-`;
-
-const Header = ({ ...props }) => {
+const Header = () => {
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
-  const dispatch = useDispatch();
 
-  function closeBurger() {
-    dispatch(close())
-  }
+  const [links, setLinks] = useState([
+    {
+      id: 0,
+      path: "/",
+      title: "Главная",
+    },
+    {
+      id: 1,
+      path: "started",
+      title: "Дополнительная",
+    },
+    {
+      id: 2,
+      path: "started",
+      title: "Дополнительная2",
+    },
+  ]);
 
   return (
     <>
-      <Header.header>
+      <Header.Header>
         <RowContainer isAciveBurger={isAciveBurger}>
-          <Logo href="#">
-            <Title>Бизнес-проект</Title>
-          </Logo>
-          <Navigation>
-            <List isAciveBurger={isAciveBurger}>
-              <Item>
-                <Link onClick={closeBurger} {...props} to="/">
-                  Главная
-                </Link>
-              </Item>
-              <Item>
-                <Link onClick={closeBurger} {...props} to="started">
-                  Дополнительная
-                </Link>
-              </Item>
-            </List>
-          </Navigation>
+          <Logo title="Бизнес-проект" />
+          <NavigationList links={links} />
           <Burger />
         </RowContainer>
-      </Header.header>
+      </Header.Header>
     </>
   );
 };
 
-Header.header = styled.header`
+Header.Header = styled.header`
   position: fixed;
   width: 100%;
   left: 0px;

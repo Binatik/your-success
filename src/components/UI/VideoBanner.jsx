@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import { Container } from "@src/store/styled/styleComponents";
-
-import animate from "@src/video/particle.mp4";
+import { Link } from "./Link";
 
 const Content = styled.div`
   position: absolute;
   width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   z-index: 10;
@@ -26,7 +26,7 @@ const FlexСontainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 `;
 
 const Title = styled.h1`
@@ -41,6 +41,7 @@ const Center = styled.div`
   border-radius: 4px;
   background-color: #00000096;
   padding: 20px;
+  margin: 65px 0 0 0;
 `;
 
 const Text = styled.p`
@@ -49,11 +50,15 @@ const Text = styled.p`
   ${props => props.theme.fontStyle.paragraph};
 `;
 
-const Banner = () => {
+const LinkContainer = styled.div`
+  margin: 30px 0 0 0;
+`;
+
+const VideoBanner = ({ video }) => {
   return (
-    <Banner.banner>
+    <VideoBanner.Banner>
       <VideoAnimate playsInline autoPlay muted loop>
-        <source src={animate} type="video/webm" />
+        <source src={video} type="video/webm" />
         Your browser does not support the video tag.
       </VideoAnimate>
 
@@ -64,15 +69,18 @@ const Banner = () => {
             <Text>Я - Наталья - интернет - предприниматель. Работаю только через интернет, удалённо.</Text>
             <Text>__</Text>
             <Text>Моя цель - научить вас зарабатывать через интернет от 30 000 рублей и более. </Text>
+            <LinkContainer>
+              <Link />
+            </LinkContainer>
           </Center>
         </FlexСontainer>
       </Content>
-    </Banner.banner>
+    </VideoBanner.Banner>
   );
 };
 
-Banner.banner = styled.section`
-  height: 100vh;
+VideoBanner.Banner = styled.section`
+  height: 100%;
 `;
 
-export { Banner };
+export { VideoBanner };
