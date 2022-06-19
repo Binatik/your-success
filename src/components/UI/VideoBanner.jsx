@@ -15,9 +15,6 @@ const Content = styled.div`
 
 const VideoAnimate = styled.video`
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
 `;
@@ -41,7 +38,6 @@ const Center = styled.div`
   border-radius: 4px;
   background-color: #00000096;
   padding: 20px;
-  margin: 65px 0 0 0;
 `;
 
 const Text = styled.p`
@@ -80,6 +76,7 @@ const VideoBanner = ({ video }) => {
 };
 
 VideoBanner.Banner = styled.section`
+  position: relative;
   height: 100%;
 `;
 
