@@ -19,11 +19,7 @@ export const theme = {
 
   desktopFirst: {
     tablet: `(max-width: ${breakpoints.medium}px)`,
-    desktop: `(max-width: ${breakpoints.large}px)`,
-  },
-
-  mobileFirst: {
-    breakpoints: {},
+    desktop: `(max-width: ${breakpoints.hd}px)`,
   },
 
   fontStyle,

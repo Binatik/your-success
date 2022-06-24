@@ -5,6 +5,7 @@ import animate from "@src/video/particle.mp4";
 
 import { VideoBanner } from "@cmp/UI/VideoBanner";
 import { Link } from "@cmp/UI/Link";
+import { Section } from "@cmp/UI/Section";
 
 const Title = styled.h1`
   margin: 0 0 15px 0;
@@ -36,6 +37,7 @@ const Main = () => {
           <Link />
         </LinkContainer>
       </VideoBanner>
+      <Section bg='#fff' title='Что делать &mdash;' />
     </>
   );
 };

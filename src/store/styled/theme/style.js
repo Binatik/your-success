@@ -13,12 +13,12 @@ export const fontStyle = {
   font-size: 1.8rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   },
   `,
 
   paragraph: `
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 
   @media (max-width: ${breakpoints.medium}px) {
     font-size: 1.1rem;
