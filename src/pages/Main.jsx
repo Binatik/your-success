@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import animate from "@src/video/particle.mp4";
@@ -26,6 +26,26 @@ const LinkContainer = styled.div`
 `;
 
 const Main = () => {
+  const [articles, setArticles] = useState([
+    {
+      id: 0,
+      title: "1",
+      texts: [
+        "Cоздавать отдельные рабочие страницы в удобной для вас соц.сети.",
+        "Заинтересoванным предоставляем пoдрoбную информацию и регистрируем желающих по своей личной ссылке под свой номер.",
+      ],
+    },
+    {
+      id: 1,
+      title: "2",
+      texts: ["Обучаться самим и обучать по нашей готовой методике тех, кто вместе с вами решит строить бизнес."],
+    },
+    {
+      id: 2,
+      title: "3",
+      texts: ["Если потребитель, то приобретать продукцию повседневного спроса для себя и своей семьи в собственном интернет-магазине."],
+    },
+  ]);
   return (
     <>
       <VideoBanner video={animate}>
@@ -37,7 +57,7 @@ const Main = () => {
           <Link />
         </LinkContainer>
       </VideoBanner>
-      <Section bg='#fff' title='Что делать &mdash;' />
+      <Section articles={articles} bg="#fff" title="Что делать &mdash;" />
     </>
   );
 };

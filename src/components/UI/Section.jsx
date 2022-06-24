@@ -60,32 +60,23 @@ const Text = styled.p`
   ${props => props.theme.fontStyle.paragraph};
 `;
 
-const Section = ({ title, bg }) => {
+const Section = ({ title, bg, articles }) => {
   return (
     <>
       <Section.Section bg={bg}>
         <Container>
           <Title>{title}</Title>
           <Items>
-            <ItemGrid>
-              <Item>
-                <SubTitle>1</SubTitle>
-                <Text>Cоздавать отдельные рабочие страницы в удобной для вас соц.сети</Text>
-                <Text>Заинтересoванным предоставляем пoдрoбную информацию и регистрируем желающих по своей личной ссылке под свой номер.</Text>
-              </Item>
-            </ItemGrid>
-            <ItemGrid>
-              <Item>
-                <SubTitle>2</SubTitle>
-                <Text>Обучаться самим и обучать по нашей готовой методике тех, кто вместе с вами решит строить бизнес.</Text>
-              </Item>
-            </ItemGrid>
-            <ItemGrid>
-              <Item>
-                <SubTitle>3</SubTitle>
-                <Text>Если потребитель, то приобретать продукцию повседневного спроса для себя и своей семьи в собственном интернет-магазине</Text>
-              </Item>
-            </ItemGrid>
+            {articles.map(({ id, title, texts }) => (
+              <ItemGrid key={id}>
+                <Item>
+                  <SubTitle>{title}</SubTitle>
+                  {texts.map((text, index) => (
+                    <Text key={index}>{text}</Text>
+                  ))}
+                </Item>
+              </ItemGrid>
+            ))}
           </Items>
         </Container>
       </Section.Section>
