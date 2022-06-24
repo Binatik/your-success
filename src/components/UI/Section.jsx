@@ -6,7 +6,7 @@ import { Container } from "@src/store/styled/styleComponents";
 const Title = styled.h2`
   margin: 0 0 50px 0;
   text-align: center;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.background};
 
   ${props => props.theme.fontStyle.title};
 `;
@@ -38,6 +38,7 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: ${props => props.theme.colors.primary + "00030"} 0px 7px 29px 0px;
+  background-color: ${props => props.theme.colors.secondary};
   height: 100%;
   border-radius: 5px;
 
@@ -85,7 +86,7 @@ const Section = ({ title, bg, articles }) => {
 };
 
 Section.Section = styled.section`
-  padding: 80px 0 0 0;
+  padding: 100px 0;
   background-color: ${props => props.bg};
 `;
 

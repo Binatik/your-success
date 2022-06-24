@@ -30,16 +30,6 @@ const Header = () => {
       path: "/",
       title: "Главная",
     },
-    {
-      id: 1,
-      path: "started",
-      title: "Дополнительная",
-    },
-    {
-      id: 2,
-      path: "started",
-      title: "Дополнительная2",
-    },
   ]);
 
   return (
