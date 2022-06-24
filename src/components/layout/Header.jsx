@@ -9,6 +9,7 @@ import { getBurgerState } from "@src/store/redux";
 import { Burger } from "@cmp/UI/Burger";
 import { Logo } from "@cmp/UI/Logo";
 import { NavigationList } from "@cmp/UI/NavigationList";
+import { Phone } from "@cmp/UI/Phone";
 
 const RowContainer = styled(Container)`
   display: flex;
@@ -47,6 +48,7 @@ const Header = () => {
         <RowContainer isAciveBurger={isAciveBurger}>
           <Logo title="Бизнес-проект" />
           <NavigationList links={links} />
+          <Phone phone="+7 (909) 922-38-01" />
           <Burger />
         </RowContainer>
       </Header.Header>

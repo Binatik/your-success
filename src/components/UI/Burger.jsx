@@ -83,8 +83,9 @@ Burger.Burger = styled.div`
     border-radius: ${props => (props.isAciveBurger ? "50% 50% 50% 50%" : "0")};
 
     position: fixed;
+    top: 0;
     right: 0;
-    transform: translate(-15%, 0);
+    transform: translate(-15%, 35%);
     transition: box-shadow 0.2s, border-radius 0.2s;
     cursor: pointer;
     display: block;

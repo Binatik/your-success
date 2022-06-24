@@ -2,14 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import { Container } from "@src/store/styled/styleComponents";
-import { Link } from "./Link";
 
 const Сopyright = styled.span`
-  color: #fff;
+  color: ${props => props.theme.colors.secondary};
   margin: 0 0 15px 0;
 
   ${props => props.theme.fontStyle.span}
-
 `;
 
 const VideoAnimate = styled.video`
@@ -30,51 +28,27 @@ const FlexСontainer = styled(Container)`
   z-index: 3;
 `;
 
-const Title = styled.h1`
-  margin: 0 0 15px 0;
-  color: #fff;
-  text-align: center;
-
-  ${props => props.theme.fontStyle.title}
-`;
-
 const Center = styled.div`
   margin: 15px 0;
   border-radius: 4px;
-  background-color: #00000096;
+  background-color: ${props => props.theme.colors.primary + "00099"};
   padding: 20px;
 `;
 
-const Text = styled.p`
-  color: #fff;
-
-  ${props => props.theme.fontStyle.paragraph};
-`;
-
-const LinkContainer = styled.div`
-  margin: 30px 0 0 0;
-`;
-
-const VideoBanner = ({ video }) => {
+const VideoBanner = ({ video, children }) => {
   return (
-    <VideoBanner.Banner>
-      <FlexСontainer>
-        <Center>
-          <Title>О бо мне</Title>
-          <Text>Я - Наталья - интернет - предприниматель. Работаю только через интернет, удалённо.</Text>
-          <Text>__</Text>
-          <Text>Моя цель - научить вас зарабатывать через интернет от 30 000 рублей и более. </Text>
-          <LinkContainer>
-            <Link />
-          </LinkContainer>
-        </Center>
-        <Сopyright>Oriflame Cosmetics - Бизнес-проект</Сopyright>
-      </FlexСontainer>
+    <>
+      <VideoBanner.Banner>
+        <FlexСontainer>
+          <Center>{children}</Center>
+          <Сopyright>&copy; Oriflame Cosmetics - Бизнес-проект</Сopyright>
+        </FlexСontainer>
 
-      <VideoAnimate playsInline autoPlay muted loop>
-        <source src={video} type="video/webm" />
-      </VideoAnimate>
-    </VideoBanner.Banner>
+        <VideoAnimate playsInline autoPlay muted loop>
+          <source src={video} type="video/webm" />
+        </VideoAnimate>
+      </VideoBanner.Banner>
+    </>
   );
 };
 

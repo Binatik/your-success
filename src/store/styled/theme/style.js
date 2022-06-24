@@ -21,7 +21,7 @@ export const fontStyle = {
   font-size: 1.3rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   },
   `,
 

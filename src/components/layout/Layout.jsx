@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  margin: 68px 0 0 0;
+  margin: 78px 0 0 0;
   flex: 1 1;
   min-height: 3000px;
 `;

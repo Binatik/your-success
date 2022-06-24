@@ -5,7 +5,7 @@ export const theme = {
   colors: {
     background: "#00CCFF",
     primary: "#000",
-    secondary: "#90a4b4",
+    secondary: "#fff",
     surface: "#aa8270",
 
     backgrounds: [], //Если фон разный.
