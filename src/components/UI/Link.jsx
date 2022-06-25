@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Link = () => {
-  const path = "https://docs.google.com/forms/d/e/1FAIpQLSd2WqntX_EK0EiDuxI8Tf_W-t_HiWmsy_sUPpjTUULIQTON-Q/viewform";
+const Link = ({ path, title }) => {
   return (
     <>
-      <Link.Link href={path}>Заполнить анкету</Link.Link>
+      <Link.Link href={path}>{title}</Link.Link>
     </>
   );
 };

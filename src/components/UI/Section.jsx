@@ -14,11 +14,11 @@ const Title = styled.h2`
 const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 -50px;
 `;
 
 const ItemGrid = styled.div`
-  padding: 0 10px;
+  padding: 0 50px;
   flex: 0 0 ${props => props.theme.grid.col3};
   margin: 0 0 30px 0;
 
@@ -61,7 +61,7 @@ const Text = styled.p`
   ${props => props.theme.fontStyle.paragraph};
 `;
 
-const Section = ({ title, bg, articles }) => {
+const Section = ({ title, bg, articles, children }) => {
   return (
     <>
       <Section.Section bg={bg}>
@@ -79,6 +79,7 @@ const Section = ({ title, bg, articles }) => {
               </ItemGrid>
             ))}
           </Items>
+          {children}
         </Container>
       </Section.Section>
     </>
