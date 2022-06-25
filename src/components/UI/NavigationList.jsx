@@ -7,7 +7,6 @@ import { getBurgerState } from "@src/store/redux";
 import { close } from "@src/store/redux/slice/burger";
 
 const Navigation = styled.nav`
-  flex: 1 1 auto;
   z-index: 3;
 
   @media ${props => props.theme.desktopFirst.tablet} {
