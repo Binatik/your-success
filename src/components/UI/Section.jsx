@@ -14,11 +14,13 @@ const Title = styled.h2`
 const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -20px;
+  margin: 0 -15px;
 `;
 
 const ItemGrid = styled.div`
-  padding: 0 20px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
   flex: 0 0 ${props => props.theme.grid.col3};
   margin: 0 0 30px 0;
 
@@ -33,7 +35,6 @@ const ItemGrid = styled.div`
 
 const Item = styled.div`
   width: 350px;
-  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
