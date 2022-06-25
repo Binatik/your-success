@@ -112,7 +112,7 @@ const Main = () => {
       </VideoBanner>
       <Section articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
       <Section articles={buns} bg="#000" title="Работая с нами &mdash;">
-      <Text style={{ textAlign: "center" }}>Каждый заказывает продукцию сам для себя, через свой личный кабинет и получает свой заказ в офисе компании по месту жительства. Компания сама занимается их заказами, доставкой и дарит подарки.</Text>
+      <Text style={{ textAlign: "center" }}>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</Text>
         <LinkContainer style={{ textAlign: "center" }}>
           <Link path="#" title="Присоединиться к нам" />
         </LinkContainer>
