@@ -14,11 +14,11 @@ const Title = styled.h2`
 const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -50px;
+  margin: 0 -20px;
 `;
 
 const ItemGrid = styled.div`
-  padding: 0 50px;
+  padding: 0 20px;
   flex: 0 0 ${props => props.theme.grid.col3};
   margin: 0 0 30px 0;
 

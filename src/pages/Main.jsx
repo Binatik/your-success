@@ -22,7 +22,7 @@ const Text = styled.p`
 `;
 
 const LinkContainer = styled.div`
-  margin: 30px 0 10px 0;
+  margin: 30px 0 0 0;
 `;
 
 const Main = () => {
@@ -117,10 +117,10 @@ const Main = () => {
       </VideoBanner>
       <Section articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
       <Section articles={buns} bg="#000" title="Работая с нами &mdash;">
-        <LinkContainer>
+      <Text style={{ textAlign: "center" }}>Вот уже 50 лет компания Oriflame исполняет мечты.</Text>
+        <LinkContainer style={{ textAlign: "center" }}>
           <Link path="#" title="Присоединиться к нам" />
         </LinkContainer>
-        <Text>Вот уже 50 лет компания Oriflame исполняет мечты.</Text>
       </Section>
     </>
   );
