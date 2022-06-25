@@ -9,6 +9,11 @@ import { close } from "@src/store/redux/slice/burger";
 const Navigation = styled.nav`
   flex: 1 1 auto;
   z-index: 3;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    margin: 30px 0 0 0;
+    display: ${props => (props.isAciveBurger ? "block" : "none")};
+  }
 `;
 
 const List = styled.ul`
@@ -19,8 +24,8 @@ const List = styled.ul`
   flex-wrap: wrap;
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 10px 0 0 0;
-    display: ${props => (props.isAciveBurger ? "block" : "none")};
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
@@ -28,7 +33,7 @@ const Item = styled.li`
   margin: 0 20px 0 0;
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 20px 0 0 0;
+    margin: 0 0 10px 0;
   }
 `;
 
@@ -39,8 +44,12 @@ const Link = styled(NavLink)`
 
   ${props => props.theme.fontStyle.links};
 
+  &:hover {
+    color: ${props => props.theme.colors.secondary};
+  }
+
   &.active {
-    color: #fff;
+    color: ${props => props.theme.colors.secondary};
   }
 `;
 
@@ -55,8 +64,8 @@ const NavigationList = ({ links }) => {
 
   return (
     <>
-      <Navigation>
-        <List isAciveBurger={isAciveBurger}>
+      <Navigation isAciveBurger={isAciveBurger}>
+        <List>
           {links.map(({ id, path, title }) => (
             <Item key={id}>
               <Link onClick={closeBurger} to={path}>

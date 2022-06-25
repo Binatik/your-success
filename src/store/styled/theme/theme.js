@@ -18,6 +18,7 @@ export const theme = {
   },
 
   desktopFirst: {
+    phone: `(max-width: ${breakpoints.small}px)`,
     tablet: `(max-width: ${breakpoints.medium}px)`,
     desktop: `(max-width: ${breakpoints.hd}px)`,
   },

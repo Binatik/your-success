@@ -13,11 +13,24 @@ import { Phone } from "@cmp/UI/Phone";
 
 const RowContainer = styled(Container)`
   display: flex;
-  align-items: ${props => (props.isAciveBurger ? "flex-start" : "center")};
+  align-items: center;
   flex-wrap: wrap;
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    flex-direction: ${props => (props.isAciveBurger ? "column" : "row")};
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const Inner = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+
+  @media ${props => props.theme.desktopFirst.phone} {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
@@ -30,15 +43,23 @@ const Header = () => {
       path: "/",
       title: "Главная",
     },
+
+    {
+      id: 1,
+      path: "/support",
+      title: "Контакты",
+    },
   ]);
 
   return (
     <>
       <Header.Header>
-        <RowContainer isAciveBurger={isAciveBurger}>
-          <Logo title="Бизнес-проект" />
+        <RowContainer>
+          <Inner>
+            <Logo title="Бизнес-проект" />
+            <Phone phone="+7 (909) 922-38-01" />
+          </Inner>
           <NavigationList links={links} />
-          <Phone phone="+7 (909) 922-38-01" />
           <Burger />
         </RowContainer>
       </Header.Header>
