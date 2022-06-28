@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Container } from "@src/store/styled/styleComponents";
+import { Container } from "@src/store/styled/components";
 
 const ErrorPage = ({ code }) => {
   const [information, setInformation] = useState("");

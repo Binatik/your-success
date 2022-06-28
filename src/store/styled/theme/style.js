@@ -1,7 +1,7 @@
 import { breakpoints } from "./breakpoints";
 
 export const fontStyle = {
-  links: `
+  link: `
     font-size: 1.4rem;
 
     @media (max-width: ${breakpoints.medium}px) {

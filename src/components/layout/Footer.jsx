@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container } from "@src/store/styled/styleComponents";
+import { Container } from "@src/store/styled/components";
 
 const Footer = () => {
   return (

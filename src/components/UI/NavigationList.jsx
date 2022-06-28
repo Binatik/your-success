@@ -8,10 +8,19 @@ import { close } from "@src/store/redux/slice/burger";
 
 const Navigation = styled.nav`
   z-index: 3;
+  position: relative;
+  flex: 1 1 auto;
 
   @media ${props => props.theme.desktopFirst.tablet} {
     margin: 30px 0 0 0;
-    display: ${props => (props.isAciveBurger ? "block" : "none")};
+    visibility: ${props => (props.isAciveBurger ? "visible" : "hidden")};
+    transform: translate(-50%, 0) ${props => (props.isAciveBurger ? "scale(1)" : "scale(0)")};
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s, visibility 0.1s;
   }
 `;
 
@@ -24,7 +33,8 @@ const List = styled.ul`
 
   @media ${props => props.theme.desktopFirst.tablet} {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    overflow: auto;
   }
 `;
 
@@ -41,14 +51,18 @@ const Link = styled(NavLink)`
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
 
-  ${props => props.theme.fontStyle.links};
-
   &:hover {
     color: ${props => props.theme.colors.secondary};
   }
 
   &.active {
     color: ${props => props.theme.colors.secondary};
+  }
+
+  ${props => props.theme.fontStyle.link};
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    font-size: 3rem;
   }
 `;
 

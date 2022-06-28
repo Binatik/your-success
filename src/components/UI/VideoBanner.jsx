@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Container } from "@src/store/styled/styleComponents";
-
-const Сopyright = styled.span`
-  color: ${props => props.theme.colors.secondary};
-  margin: 0 0 15px 0;
-
-  ${props => props.theme.fontStyle.span}
-`;
+import { Container } from "@src/store/styled/components";
 
 const VideoAnimate = styled.video`
   object-fit: cover;
@@ -41,7 +34,6 @@ const VideoBanner = ({ video, children }) => {
       <VideoBanner.Banner>
         <FlexСontainer>
           <Center>{children}</Center>
-          <Сopyright>&copy; Oriflame Cosmetics - Бизнес-проект</Сopyright>
         </FlexСontainer>
 
         <VideoAnimate playsInline autoPlay muted loop>

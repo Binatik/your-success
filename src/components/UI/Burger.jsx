@@ -3,8 +3,7 @@ import styled, { ThemeContext } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 
 import { toggle } from "@src/store/redux/slice/burger";
-import { BurgerLine } from "@src/store/styled/styleComponents";
-
+import { BurgerLine } from "@src/store/styled/components";
 import { getBurgerState } from "@src/store/redux";
 
 const LineClose = styled(BurgerLine)`
@@ -52,7 +51,7 @@ const Burger = () => {
 
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
 
-  const themeColor = useContext(ThemeContext).colors.background;
+  const themeColor = useContext(ThemeContext).colors.surface;
   const burgerShadow = `0 0 0 100vw ${themeColor}, 0 0 0 100vh ${themeColor}`;
 
   return (
@@ -79,15 +78,14 @@ Burger.Burger = styled.div`
   display: none;
 
   @media ${props => props.theme.desktopFirst.tablet} {
+    cursor: pointer;
     box-shadow: ${props => (props.isAciveBurger ? props.shadow : "none")};
     border-radius: ${props => (props.isAciveBurger ? "50% 50% 50% 50%" : "0")};
-
     position: fixed;
     top: 0;
     right: 0;
     transform: translate(-15%, 35%);
-    transition: box-shadow 0.2s, border-radius 0.2s;
-    cursor: pointer;
+    transition: box-shadow 0.8s;
     display: block;
     width: 45px;
     height: 45px;
