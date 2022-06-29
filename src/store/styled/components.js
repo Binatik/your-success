@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
   max-width: 1310px;
@@ -71,6 +72,26 @@ export const Phone = styled.a`
   z-index: 3;
 
   ${props => props.theme.fontStyle.paragraph};
+`;
+
+export const NavigationLink = styled(NavLink)`
+  display: inline-block;
+  text-decoration: none;
+  color: ${props => props.theme.colors.primary};
+
+  &:hover {
+    color: ${props => props.theme.colors.secondary};
+  }
+
+  &.active {
+    color: ${props => props.theme.colors.secondary};
+  }
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    font-size: 3rem;
+  }
+
+  ${props => props.theme.fontStyle.link};
 `;
 
 export const BurgerLine = styled.path`

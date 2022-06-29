@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 
 import { getBurgerState } from "@src/store/redux";
 import { close } from "@src/store/redux/slice/burger";
+import { NavigationLink } from "@src/store/styled/components";
 
 const Navigation = styled.nav`
   z-index: 3;
@@ -46,26 +46,6 @@ const Item = styled.li`
   }
 `;
 
-const Link = styled(NavLink)`
-  display: inline-block;
-  text-decoration: none;
-  color: ${props => props.theme.colors.primary};
-
-  &:hover {
-    color: ${props => props.theme.colors.secondary};
-  }
-
-  &.active {
-    color: ${props => props.theme.colors.secondary};
-  }
-
-  ${props => props.theme.fontStyle.link};
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    font-size: 3rem;
-  }
-`;
-
 const NavigationList = ({ links }) => {
   const dispatch = useDispatch();
 
@@ -81,9 +61,9 @@ const NavigationList = ({ links }) => {
         <List>
           {links.map(({ id, path, title }) => (
             <Item key={id}>
-              <Link onClick={closeBurger} to={path}>
+              <NavigationLink onClick={closeBurger} to={path}>
                 {title}
-              </Link>
+              </NavigationLink>
             </Item>
           ))}
         </List>
