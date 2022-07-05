@@ -8,19 +8,19 @@ import { NavigationLink } from "@src/store/styled/components";
 
 const Navigation = styled.nav`
   z-index: 3;
-  position: relative;
   flex: 1 1 auto;
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 30px 0 0 0;
-    visibility: ${props => (props.isAciveBurger ? "visible" : "hidden")};
-    transform: translate(-50%, 0) ${props => (props.isAciveBurger ? "scale(1)" : "scale(0)")};
     position: fixed;
-    top: 50%;
-    left: 50%;
+    overflow: auto;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 100%;
-    transition: transform 0.9s, visibility 0.1s;
+    height: 100vh;
+    background-color: transparent;
+    padding: 50px 0;
+    transform: ${props => (props.isAciveBurger ? "translateY(60px)" : "translateY(-100%)")};
+    transition: transform 0.5s;
   }
 `;
 
@@ -42,7 +42,10 @@ const Item = styled.li`
   margin: 0 20px 0 0;
 
   @media ${props => props.theme.desktopFirst.tablet} {
+    visibility: ${props => (props.isAciveBurger ? "visible" : "hidden")};
+    transform: ${props => (props.isAciveBurger ? "scale(1)" : "scale(0)")};
     margin: 0 0 10px 0;
+    transition: transform 0.2s;
   }
 `;
 
@@ -60,7 +63,7 @@ const NavigationList = ({ links }) => {
       <Navigation isAciveBurger={isAciveBurger}>
         <List>
           {links.map(({ id, path, title }) => (
-            <Item key={id}>
+            <Item isAciveBurger={isAciveBurger} key={id}>
               <NavigationLink onClick={closeBurger} to={path}>
                 {title}
               </NavigationLink>

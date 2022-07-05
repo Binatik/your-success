@@ -6,6 +6,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
