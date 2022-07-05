@@ -54,7 +54,7 @@ const Main = () => {
           </SecondaryText>
         </Income>
       </Section>
-      <Section articles={[]} bg="#fff" title="Карусель &mdash;">
+      <Section articles={[]} bg="#fff" title="Доходы &mdash;">
         <Slider />
       </Section>
     </>
