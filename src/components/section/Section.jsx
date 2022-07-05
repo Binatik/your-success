@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Container, SurfaceTitle, PrimarySubTitle, PrimaryText } from "@src/store/styled/components";
+import { Container, SurfaceTitle } from "@src/store/styled/components";
 import { ItemGrid } from "./ItemGrid";
 
 const Items = styled.div`
@@ -29,7 +29,7 @@ const Section = ({ title, bg, articles, children }) => {
 };
 
 Section.Section = styled.section`
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: ${props => props.bg};
 `;
 

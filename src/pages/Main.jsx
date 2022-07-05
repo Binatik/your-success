@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import { Link, SecondaryTitle, SecondaryText, Center } from "@src/store/styled/components";
 import { initTasks, initPossibilitys } from "@src/store/state";
@@ -6,6 +7,12 @@ import animate from "@src/video/particle.mp4";
 
 import { VideoBanner } from "@cmp/UI/VideoBanner";
 import { Section } from "@cmp/section/Section";
+import { Slider } from "@cmp/slider/Slider";
+
+const Income = styled.div`
+  outline: thick double ${props => props.theme.colors.surface};
+  padding: 15px;
+`;
 
 const Main = () => {
   const [tasks, setTasks] = useState(initTasks);
@@ -33,6 +40,22 @@ const Main = () => {
             Присоединиться к нам
           </Link>
         </Center>
+      </Section>
+      <Section articles={[]} bg="#000" title="Откуда доход &mdash;">
+        <Income>
+          <SecondaryText style={{ margin: "20px 0" }}>
+            Компания Oriflame платит определенный процент от товарооборота, который создает Ваша команда
+          </SecondaryText>
+          <SecondaryText style={{ margin: "20px 0" }}>
+            Вы и каждый партнер в Вашей команде приобретаете что-то для себя и своей семьи, также как обычно, только через интернет на сайте компании.
+          </SecondaryText>
+          <SecondaryText style={{ margin: "20px 0" }}>
+            Чем больше партнеров и потребителей в Вашей сети, тем больше товарооборот компании, а значит и выше вознаграждение.
+          </SecondaryText>
+        </Income>
+      </Section>
+      <Section articles={[]} bg="#fff" title="Карусель &mdash;">
+        <Slider />
       </Section>
     </>
   );
