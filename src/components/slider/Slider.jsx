@@ -10,13 +10,13 @@ import "swiper/css/navigation";
 
 import "@src/style.css";
 
-import {Lazy, Pagination, Navigation, EffectCoverflow } from "swiper";
+import { Lazy, Pagination, Navigation, EffectCoverflow } from "swiper";
 
 const Slider = () => {
   const colorSurface = useContext(ThemeContext).colors.surface;
   const points = {
     768: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
     },
     576: {
       slidesPerView: 1,
@@ -33,11 +33,12 @@ const Slider = () => {
         lazy={true}
         breakpoints={points}
         effect={"coverflow"}
+        centeredSlides={true}
         coverflowEffect={{
-          rotate: 30,
+          rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 5,
           slideShadows: false,
         }}
         spaceBetween={10}
@@ -52,7 +53,7 @@ const Slider = () => {
       >
         <SwiperSlide>
           <img
-            data-src="https://lh4.googleusercontent.com/Vz-yyGkTT3ZGV34QuwXlnZd2ccl1JdlzTO-2xeK2FZAw0a_OKoT-vyeuw1nllzwr_4ypdfIQbsJJ1hlr02SVvw=w16383"
+            data-src="https://lh4.googleusercontent.com/OFI9fDHbJ7_gguLZW9XUwUOUtqaHpSAMLDDdi3GjPrMkq9qaTj-PWj-ib5ZKO0CsGkRt45owKjUBx0lKIYJt4WE=w16383"
             alt=""
             className="swiper-lazy"
           />
@@ -60,7 +61,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            data-src="https://lh6.googleusercontent.com/h4x5W9yrop_FeG2xdT7bYXMmcpTO_0x9qdjzZguoN9yekc4NqpOK16xP1PvTkUGklsan4qhiSBsQcfWYwibN-Nk=w16383"
+            data-src="https://lh4.googleusercontent.com/PwRfKpzr6YJr1UwIAQzvOu4D5wDorojKXZVg6hPE_G8k21Ti-eOBREF2U_VarhP8ZQQGVU1GCYHWRqTy0MWyOg=w16383"
             alt=""
             className="swiper-lazy"
           />
@@ -69,7 +70,16 @@ const Slider = () => {
         <SwiperSlide>
           <img
             data-src="
-            https://lh6.googleusercontent.com/bNFUhe75aXXc7xEGQjM53kHZNTtg7GYBMeWRT7PrK6xdUUIDjY_5qB5cmiICByq90apHCpGC4bUYUvziei5dQhI=w16383"
+            https://lh4.googleusercontent.com/dip2NjxZc0AoIJsgg_Gl3NDsZwh_Ouy0UXmtXJGVZ4SaDlMGsQ-kJCixP46TG5QdK37CmjrZaKDWo036Rrg-zzA=w16383"
+            alt=""
+            className="swiper-lazy"
+          />
+          <div className="swiper-lazy-preloader"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            data-src="
+            https://lh4.googleusercontent.com/4FI7PrYM_BgMjoV7_SKPMzZLwyKlb7pcBuNOr1N7FvhLug1TEMhKB_dnODJEYakIgfaU2fPRAkR72dbLFW9ZX3k=w16383"
             alt=""
             className="swiper-lazy"
           />
