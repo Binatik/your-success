@@ -54,7 +54,7 @@ const Main = () => {
           </SecondaryText>
         </Income>
       </Section>
-      <Section articles={[]} bg="#fff" title="Доходы &mdash;">
+      <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(255,255,255,1) 10%)" title="Доходы &mdash;">
         <Slider />
       </Section>
     </>

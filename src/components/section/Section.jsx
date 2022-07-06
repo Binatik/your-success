@@ -30,7 +30,7 @@ const Section = ({ title, bg, articles, children }) => {
 
 Section.Section = styled.section`
   padding: 80px 0;
-  background-color: ${props => props.bg};
+  background: ${props => props.bg};
 `;
 
 export { Section };
