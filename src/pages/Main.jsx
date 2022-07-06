@@ -10,7 +10,8 @@ import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
 
 const Income = styled.div`
-  outline: thick double ${props => props.theme.colors.surface};
+  background-color: #00000099;
+  outline: dashed ${props => props.theme.colors.secondary};
   padding: 15px;
 `;
 
@@ -41,7 +42,7 @@ const Main = () => {
           </Link>
         </Center>
       </Section>
-      <Section articles={[]} bg="#000" title="Откуда доход &mdash;">
+      <Section articles={[]} bg="#00CCFF" title="Откуда доход &mdash;">
         <Income>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания Oriflame платит определенный процент от товарооборота, который создает Ваша команда
