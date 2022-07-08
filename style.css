@@ -33,6 +33,7 @@
 html,
 #root,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -64,8 +65,26 @@ body {
 .swiper {
   margin-left: auto;
   margin-right: auto;
+  user-select: none;
 }
 
 .swiper-lazy-preloader {
   color: #00CCFF;
+}
+
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+  color: #000;
+  transition: transform 0.2s;
+}
+
+.swiper-button-disabled::after {
+  transform: scale(0);
+}
+
+.swiper-pagination-bullet {
+  background-color: #00CCFF;
+  border-radius: 10px;
+  width: 30px;
+  height: 15px;
 }
