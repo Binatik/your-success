@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 export const Container = styled.div`
   max-width: 1310px;
@@ -13,7 +14,24 @@ export const Center = styled.div`
   text-align: center;
 `;
 
-export const Link = styled.a`
+export const PrimaryLink = styled.a`
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 10px;
+  color: ${props => props.theme.colors.secondary};
+  background-color: ${props => props.theme.colors.surface};
+  box-shadow: 0px 5px 80px 2px ${props => props.theme.colors.surface};
+  transition: background 0.1s;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+  }
+
+  ${props => props.theme.fontStyle.link};
+`;
+
+export const PrimaryHashLink = styled(HashLink)`
   display: inline-block;
   border-radius: 3px;
   font-weight: 400;

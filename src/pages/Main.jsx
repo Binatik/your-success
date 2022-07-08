@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Link, SecondaryTitle, SecondaryText, Center } from "@src/store/styled/components";
+import { PrimaryLink, PrimaryHashLink, SecondaryTitle, SecondaryText, Center } from "@src/store/styled/components";
 import { initTasks, initPossibilitys } from "@src/store/state";
 import animate from "@src/video/particle.mp4";
 
 import { VideoBanner } from "@cmp/UI/VideoBanner";
 import { Section } from "@cmp/section/Section";
-import { Slider } from "@cmp/slider/Slider";
-
-const Income = styled.div`
-  background-color: #00000099;
-  outline: dashed ${props => props.theme.colors.secondary};
-  padding: 15px;
-`;
 
 const Main = () => {
   const [tasks, setTasks] = useState(initTasks);
@@ -27,36 +20,20 @@ const Main = () => {
         <SecondaryText>Я - Наталья - интернет - предприниматель. Работаю только через интернет, удалённо.</SecondaryText>
         <SecondaryText>__</SecondaryText>
         <SecondaryText>Моя цель - научить вас зарабатывать через интернет от 30 000 рублей и более. </SecondaryText>
-        <Link style={{ margin: "20px 0" }} href={linkQuestionnaire}>
-          Заполнить анкету
-        </Link>
+        <PrimaryHashLink style={{ margin: "20px 0" }} to="#tasks">
+          Читать дальше
+        </PrimaryHashLink>
       </VideoBanner>
-      <Section articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
+      <Section anchor="tasks" articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
       <Section articles={possibilitys} bg="#000" title="Работая с нами &mdash;">
         <SecondaryText style={{ textAlign: "center" }}>
           Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.
         </SecondaryText>
         <Center>
-          <Link style={{ margin: "40px 0" }} href={linkQuestionnaire}>
+          <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
-          </Link>
+          </PrimaryLink>
         </Center>
-      </Section>
-      <Section articles={[]} bg="#00CCFF" title="Откуда доход &mdash;">
-        <Income>
-          <SecondaryText style={{ margin: "20px 0" }}>
-            Компания Oriflame платит определенный процент от товарооборота, который создает Ваша команда
-          </SecondaryText>
-          <SecondaryText style={{ margin: "20px 0" }}>
-            Вы и каждый партнер в Вашей команде приобретаете что-то для себя и своей семьи, также как обычно, только через интернет на сайте компании.
-          </SecondaryText>
-          <SecondaryText style={{ margin: "20px 0" }}>
-            Чем больше партнеров и потребителей в Вашей сети, тем больше товарооборот компании, а значит и выше вознаграждение.
-          </SecondaryText>
-        </Income>
-      </Section>
-      <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(255,255,255,1) 10%)" title="Доходы &mdash;">
-        <Slider />
       </Section>
     </>
   );

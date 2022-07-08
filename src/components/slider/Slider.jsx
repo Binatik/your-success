@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ThemeContext } from "styled-components";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +12,6 @@ import "@src/style.css";
 import { Lazy, Pagination, Navigation, EffectCoverflow } from "swiper";
 
 const Slider = () => {
-  const colorSurface = useContext(ThemeContext).colors.surface;
   const points = {
     768: {
       slidesPerView: "auto",
@@ -26,10 +24,6 @@ const Slider = () => {
   return (
     <>
       <Swiper
-        style={{
-          "--swiper-navigation-color": colorSurface,
-          "--swiper-pagination-color": colorSurface,
-        }}
         lazy={true}
         breakpoints={points}
         effect={"coverflow"}
@@ -53,7 +47,7 @@ const Slider = () => {
       >
         <SwiperSlide>
           <img
-            data-src="https://lh4.googleusercontent.com/OFI9fDHbJ7_gguLZW9XUwUOUtqaHpSAMLDDdi3GjPrMkq9qaTj-PWj-ib5ZKO0CsGkRt45owKjUBx0lKIYJt4WE=w16383"
+            data-src="https://sun9-38.userapi.com/impf/hmFT5EVBUF-O7yUTBz_FQrri-ZZMEHCUP7tFYg/cuDYiZNcm9k.jpg?size=1280x1280&quality=95&sign=4cb7f57d837b09321c63cca46f2294fd&type=album"
             alt=""
             className="swiper-lazy"
           />
@@ -61,16 +55,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            data-src="https://lh4.googleusercontent.com/PwRfKpzr6YJr1UwIAQzvOu4D5wDorojKXZVg6hPE_G8k21Ti-eOBREF2U_VarhP8ZQQGVU1GCYHWRqTy0MWyOg=w16383"
-            alt=""
-            className="swiper-lazy"
-          />
-          <div className="swiper-lazy-preloader"></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            data-src="
-            https://lh4.googleusercontent.com/dip2NjxZc0AoIJsgg_Gl3NDsZwh_Ouy0UXmtXJGVZ4SaDlMGsQ-kJCixP46TG5QdK37CmjrZaKDWo036Rrg-zzA=w16383"
+            data-src="https://sun9-34.userapi.com/impf/vpGDwBafRX8HBigTECppj2Wys9U-UBfVnYYzlg/1CZtxGtxfgs.jpg?size=1280x1280&quality=95&sign=e8830b595213e716d130f3948ce62010&type=album"
             alt=""
             className="swiper-lazy"
           />
@@ -79,7 +64,16 @@ const Slider = () => {
         <SwiperSlide>
           <img
             data-src="
-            https://lh4.googleusercontent.com/4FI7PrYM_BgMjoV7_SKPMzZLwyKlb7pcBuNOr1N7FvhLug1TEMhKB_dnODJEYakIgfaU2fPRAkR72dbLFW9ZX3k=w16383"
+            https://sun9-50.userapi.com/impf/lCLXI91OkzhPnOgO6uLylA7mckhdQ_rx1dsnig/AC0PRfh5GFY.jpg?size=1280x1280&quality=96&sign=405474002a54bd34b9704f4fd058be7c&type=album"
+            alt=""
+            className="swiper-lazy"
+          />
+          <div className="swiper-lazy-preloader"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            data-src="
+            https://sun9-32.userapi.com/impf/Bxn90gRbW-k6ctFJr6PmEvtVj0Zwyj-ifxAGrA/VZbCHDtg494.jpg?size=1280x1280&quality=96&sign=5ef4f09cd700975fab645526dfce536a&type=album"
             alt=""
             className="swiper-lazy"
           />

@@ -7,6 +7,12 @@ export const initNavigation = [
 
   {
     id: 1,
+    path: "/idea",
+    title: "Идея",
+  },
+
+  {
+    id: 2,
     path: "/support",
     title: "Контакты",
   },

@@ -10,10 +10,10 @@ const Items = styled.div`
   margin: 50px -15px 10px -15px;
 `;
 
-const Section = ({ title, bg, articles, children }) => {
+const Section = ({ title, bg, articles, anchor, children }) => {
   return (
     <>
-      <Section.Section bg={bg}>
+      <Section.Section id={anchor} bg={bg}>
         <Container>
           <SurfaceTitle style={{ textAlign: "center" }}>{title}</SurfaceTitle>
           <Items>
