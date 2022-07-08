@@ -57,7 +57,7 @@ const Header = () => {
         <Container>
           <Content>
             <div style={{margin: "0 30px 0 0", zIndex: 3 }}>
-              <Logo title="Бизнес-проект" />
+              <Logo title="Твой" toTitle="успех" />
             </div>
             <NavigationList links={links} />
             <Phone style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
