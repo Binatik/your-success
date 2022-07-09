@@ -43,7 +43,7 @@ const IconLine = styled.svg`
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  background-color: ${props => (props.isAciveBurger ? "#fff" : "transparent")};
+  background-color: ${props => (props.isAciveBurger ? "#000" : "transparent")};
 `;
 
 const Burger = () => {
@@ -84,7 +84,7 @@ Burger.Burger = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    transform: translate(-15%, 35%);
+    transform: translate(-15%, 40%);
     transition: box-shadow 0.6s;
     display: block;
     width: 45px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
-import { Container, Phone } from "@src/store/styled/components";
+import { Container, Support } from "@src/store/styled/components";
 import { getBurgerState } from "@src/store/redux";
 import { useThrottle } from "@src/hooks/useThrottle";
 import { initNavigation } from "@src/store/state";
@@ -60,9 +60,9 @@ const Header = () => {
               <Logo title="Твой" toTitle="успех" />
             </div>
             <NavigationList links={links} />
-            <Phone style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
+            <Support style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
               +7 (909) 922-38-01
-            </Phone>
+            </Support>
             <Burger />
           </Content>
         </Container>

@@ -85,11 +85,17 @@ export const PrimarySubTitle = styled.h3`
   ${props => props.theme.fontStyle.title};
 `;
 
-export const Phone = styled.a`
+export const Support = styled.a`
+  display: inline;
   color: ${props => props.theme.colors.secondary};
   z-index: 3;
+  transition: color 0.1s;
 
   ${props => props.theme.fontStyle.paragraph};
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -116,6 +122,6 @@ export const BurgerLine = styled.path`
   fill: ${props => props.theme.colors.primary};
   transform-origin: 50%;
   transition: transform 400ms;
-  stroke: ${props => props.theme.colors.primary};
-  stroke-width: 2;
+  stroke: #fff;
+  stroke-width: 7;
 `;

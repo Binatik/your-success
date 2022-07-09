@@ -11,7 +11,7 @@ import { Frame } from "@cmp/UI/Frame";
 const Idea = () => {
   const [essence, setEssence] = useState(initEssence);
 
-  const videoPart = "https://www.youtube.com/watch?v=rGV7shl5N-4&t=274s";
+  const videoPart = "https://www.youtube.com/watch?v=rGV7shl5N-4";
   return (
     <>
       <Section articles={[]} bg="#00CCFF" title="">

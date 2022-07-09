@@ -20,7 +20,7 @@ Logo.Logo = styled.a`
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
+  flex: 1 1 100%;
   padding: 10px 20px;
   background-color: ${props => props.theme.colors.secondary};
   border-radius: 5px;

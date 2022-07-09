@@ -5,23 +5,23 @@ export const fontStyle = {
     font-size: 1.4rem;
 
     @media (max-width: ${breakpoints.medium}px) {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     },
   `,
 
   title: `
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   },
   `,
 
   paragraph: `
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
   @media (max-width: ${breakpoints.medium}px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   },
   `,
 
