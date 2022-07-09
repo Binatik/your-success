@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { SecondaryText } from "@src/store/styled/components";
+import { PrimaryLink, SecondaryText, Center } from "@src/store/styled/components";
+import { initEssence } from "@src/store/state";
 
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
 
 const Idea = () => {
+  const [essence, setEssence] = useState(initEssence);
+
+  const videoPart = "https://www.youtube.com/watch?v=rGV7shl5N-4&t=274s";
   return (
     <>
       <Section articles={[]} bg="#00CCFF" title="">
@@ -25,6 +29,14 @@ const Idea = () => {
       </Section>
       <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(255,255,255,1) 10%)" title="Доходы &mdash;">
         <Slider />
+      </Section>
+      <Section articles={essence} bg="#000" title="Суть &mdash;">
+        <Center>
+          <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
+          <PrimaryLink style={{ margin: "40px 0" }} href={videoPart} target="_blank">
+            Видео презентация
+          </PrimaryLink>
+        </Center>
       </Section>
     </>
   );

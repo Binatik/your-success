@@ -1,17 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 
+import { PrimaryLink, SecondaryText, Center } from "@src/store/styled/components";
 import { Container } from "@src/store/styled/components";
 
 const Footer = () => {
   return (
     <>
-      <footer>
+      <Footer.Footer>
         <Container>
-          <h2>Footer</h2>
+          <SecondaryText>Натали - партнер Oriflame</SecondaryText>
         </Container>
-      </footer>
+      </Footer.Footer>
     </>
   );
 };
+
+Footer.Footer = styled.footer`
+  background-color: ${props => props.theme.colors.surface}
+`;
 
 export { Footer };
