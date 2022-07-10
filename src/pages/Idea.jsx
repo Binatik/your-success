@@ -15,7 +15,7 @@ const Idea = () => {
   return (
     <>
       <Section articles={[]} bg="#00CCFF" title="">
-        <Frame>
+        <Frame isPadding={true}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
           </SecondaryText>

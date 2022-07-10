@@ -9,7 +9,6 @@ import { Video } from "@cmp/UI/Video";
 import { Frame } from "@cmp/UI/Frame";
 
 const SecondaryBeatyText = styled(SecondaryText)`
-  margin: 0 0 25px 0;
   text-align: center;
   text-shadow: 1px 1px 40px #000;
   background-color: transparent;
@@ -29,7 +28,7 @@ const Сontacts = () => {
         </Support>
       </Section>
       <Section articles={[]} anchor="video" bg="#000" title="Сомневаешься &mdash;">
-        <Frame>
+        <Frame isPadding={false}>
           <SecondaryBeatyText>
             Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!
           </SecondaryBeatyText>

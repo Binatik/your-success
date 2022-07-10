@@ -30,7 +30,7 @@ const scale = keyframes`
 
 const Content = styled.div`
   background-color: #00000099;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
 `;
 
@@ -58,12 +58,12 @@ const LineTop = styled(Line)`
   transform: rotate(180deg);
 `;
 
-const Frame = ({ children }) => {
+const Frame = ({ isPadding, children }) => {
   return (
     <>
-      <Frame.Frame>
-          <Line></Line>
-          <LineTop></LineTop>
+      <Frame.Frame isPadding={isPadding}>
+        <Line></Line>
+        <LineTop></LineTop>
         <Content>{children}</Content>
       </Frame.Frame>
     </>
@@ -77,7 +77,7 @@ Frame.Frame = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin: 5% auto;
-  padding: 20px;
+  padding: ${props => (props.isPadding ? "20px" : 0)};
   border: 3px solid #00ccff;
   box-shadow: #00000030 0px 7px 29px 0px;
 `;
