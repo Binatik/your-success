@@ -16,11 +16,12 @@ const Logo = ({ title, toTitle }) => {
 };
 
 Logo.Logo = styled.a`
+  margin: 10px 30px 10px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  flex: 1 1 100%;
+  flex: 1 1 auto;
   padding: 10px 20px;
   background-color: ${props => props.theme.colors.secondary};
   border-radius: 5px;

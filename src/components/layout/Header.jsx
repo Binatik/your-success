@@ -68,9 +68,7 @@ const Header = () => {
       <Header.Header isTopScroll={isTopScroll} isAciveBurger={isAciveBurger}>
         <Container>
           <Content>
-            <div style={{ margin: "10px 30px 10px 0", zIndex: 3 }}>
-              <Logo title="Твой" toTitle="успех" />
-            </div>
+            <Logo title="Твой" toTitle="успех" />
             <NavigationList links={links} />
             <PhoneWrapper>
               <PhoneIcon />

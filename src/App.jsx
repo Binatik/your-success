@@ -10,6 +10,7 @@ import { ErrorPage } from "@pages/ErrorPage";
 import "./style.css";
 
 const App = () => {
+
   return (
     <>
       <Routes>

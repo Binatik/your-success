@@ -56,6 +56,11 @@ const NavigationList = ({ links }) => {
 
   function closeBurger() {
     dispatch(close());
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
   }
 
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 
@@ -20,6 +20,13 @@ const Main = styled.main`
 `;
 
 const Layout = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
+
   return (
     <>
       <Wrapper>
