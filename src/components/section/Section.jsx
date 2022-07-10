@@ -10,7 +10,7 @@ const Items = styled.div`
   margin: 50px -15px 10px -15px;
 `;
 
-const Section = ({ title, bg, articles, anchor, children }) => {
+const Section = ({ title, bg, articles, anchor, isCenter, grid, colSize, children }) => {
   return (
     <>
       <Section.Section id={anchor} bg={bg}>
@@ -18,7 +18,7 @@ const Section = ({ title, bg, articles, anchor, children }) => {
           <SurfaceTitle style={{ textAlign: "center" }}>{title}</SurfaceTitle>
           <Items>
             {articles.map(element => (
-              <ItemGrid key={element.id} element={element} />
+              <ItemGrid key={element.id} element={element} isCenter={isCenter} colSize={colSize} grid={grid} />
             ))}
           </Items>
           {children}

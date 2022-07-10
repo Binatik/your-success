@@ -25,7 +25,7 @@ const Main = () => {
         </PrimaryHashLink>
       </VideoBanner>
       <Section anchor="tasks" articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
-      <Section articles={possibilitys} bg="#000" title="Работая с нами &mdash;">
+      <Section grid="col4" colSize="small" articles={possibilitys} bg="#000" title="Работая с нами &mdash;">
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>

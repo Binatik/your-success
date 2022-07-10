@@ -11,6 +11,7 @@ export const theme = {
   },
 
   grid: {
+    col4: "25%",
     col3: "33.333%",
     col2: "50%",
     col1: "100%",

@@ -1,29 +1,14 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
 
-import { PrimarySubTitle, PrimaryText } from "@src/store/styled/components";
-
-const Grid = styled.div`
-  padding: 0 15px;
-  display: flex;
-  justify-content: center;
-  flex: 0 0 ${props => props.theme.grid.col3};
-  margin: 0 0 30px 0;
-
-  @media ${props => props.theme.desktopFirst.desktop} {
-    flex: 0 0 ${props => props.theme.grid.col2};
-  }
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    flex: 1 1 ${props => props.theme.grid.col1};
-  }
-`;
+import { PrimarySubTitle, PrimaryText, Grid } from "@src/store/styled/components";
 
 const Item = styled.div`
-  width: 350px;
+  width: ${props => props.size};
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: ${props => (props.isCenter ? "center" : "start")};
   box-shadow: ${props => props.theme.colors.primary + "00030"} 0px 7px 29px 0px;
   background-color: ${props => props.theme.colors.secondary};
   height: 100%;
@@ -34,15 +19,26 @@ const Item = styled.div`
   }
 `;
 
-const ItemGrid = ({ element }) => {
+const ItemGrid = ({ element, isCenter, colSize, grid }) => {
   const { title, texts } = element;
+
+  const col = useMemo(() => {
+    return grid ? grid : "col3";
+  }, [grid]);
+
+  const size = useMemo(() => {
+    if (!colSize) return "350px";
+    else if (colSize === "big") return "350px";
+    else if (colSize === "small") return "280px";
+  }, [colSize]);
+
   return (
     <>
-      <Grid>
-        <Item>
-          <PrimarySubTitle>{title}</PrimarySubTitle>
+      <Grid col={col}>
+        <Item size={size} isCenter={isCenter}>
+          <PrimarySubTitle style={{whiteSpace: "nowrap"}}>{title}</PrimarySubTitle>
           {texts.map((text, index) => (
-            <PrimaryText style={{ margin: "5px 0", fontWeight: 400 }} key={index}>
+            <PrimaryText style={{ margin: "5px 0", fontWeight: 400, textAlign: isCenter ? "center" : "start" }} key={index}>
               {text}
             </PrimaryText>
           ))}

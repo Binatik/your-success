@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import { FiPhoneCall } from "react-icons/fi";
 
 import { Container, Support } from "@src/store/styled/components";
 import { getBurgerState } from "@src/store/redux";
@@ -21,6 +22,17 @@ const Content = styled.div`
   }
 `;
 
+const PhoneWrapper = styled.div`
+  display: inline-block;
+`;
+
+const PhoneIcon = styled(FiPhoneCall)`
+  transform: rotate(10deg);
+  margin: 0 8px 0 0;
+  font-size: 20px;
+  color: #fff;
+`;
+
 const Header = () => {
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
 
@@ -35,7 +47,7 @@ const Header = () => {
     const doc = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
     if (doc > lastScroll && !isAciveBurger) {
-      if (doc > 1000) setIsTopScroll(true);
+      if (doc > 100) setIsTopScroll(true);
     } else {
       setIsTopScroll(false);
     }
@@ -56,13 +68,16 @@ const Header = () => {
       <Header.Header isTopScroll={isTopScroll} isAciveBurger={isAciveBurger}>
         <Container>
           <Content>
-            <div style={{margin: "0 30px 0 0", zIndex: 3 }}>
+            <div style={{ margin: "10px 30px 10px 0", zIndex: 3 }}>
               <Logo title="Твой" toTitle="успех" />
             </div>
             <NavigationList links={links} />
-            <Support style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
-              +7 (909) 922-38-01
-            </Support>
+            <PhoneWrapper>
+              <PhoneIcon />
+              <Support style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
+                +7 (909) 922-38-01
+              </Support>
+            </PhoneWrapper>
             <Burger />
           </Content>
         </Container>

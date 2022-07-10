@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  margin: 78px 0 0 0;
+  margin: 82px 0 0 0;
   flex: 1 1;
 `;
 

@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 export const Container = styled.div`
   max-width: 1310px;
   margin: 0 auto;
-  padding: 20px 15px;
+  padding: 10px 15px;
 `;
 
 export const Center = styled.div`
@@ -116,6 +116,22 @@ export const NavigationLink = styled(NavLink)`
   }
 
   ${props => props.theme.fontStyle.link};
+`;
+
+export const Grid = styled.div`
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 ${props => props.theme.grid[props.col]};
+  margin: 0 0 30px 0;
+
+  @media ${props => props.theme.desktopFirst.desktop} {
+    flex: 0 0 ${props => props.theme.grid.col2};
+  }
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    flex: 1 1 ${props => props.theme.grid.col1};
+  }
 `;
 
 export const BurgerLine = styled.path`
