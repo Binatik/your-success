@@ -11,16 +11,20 @@ const Items = styled.div`
 `;
 
 const Section = ({ title, bg, articles, anchor, isCenter, grid, colSize, children }) => {
+  const items = (
+    <Items>
+      {articles.map(element => (
+        <ItemGrid key={element.id} element={element} isCenter={isCenter} colSize={colSize} grid={grid} />
+      ))}
+    </Items>
+  );
+
   return (
     <>
       <Section.Section id={anchor} bg={bg}>
         <Container>
           <SurfaceTitle style={{ textAlign: "center" }}>{title}</SurfaceTitle>
-          <Items>
-            {articles.map(element => (
-              <ItemGrid key={element.id} element={element} isCenter={isCenter} colSize={colSize} grid={grid} />
-            ))}
-          </Items>
+          {articles.length !== 0 ? items : null}
           {children}
         </Container>
       </Section.Section>

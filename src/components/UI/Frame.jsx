@@ -76,7 +76,7 @@ Frame.Frame = styled.div`
   max-width: 800px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 5% auto;
+  margin: 30px auto;
   padding: ${props => (props.isPadding ? "20px" : 0)};
   border: 3px solid #00ccff;
   box-shadow: #00000030 0px 7px 29px 0px;
