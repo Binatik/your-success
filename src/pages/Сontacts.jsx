@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Center, PrimaryLink, SecondaryText } from "@src/store/styled/components";
+import { Center, PrimaryLink, SecondaryText, Support } from "@src/store/styled/components";
 import { initСontacts } from "@src/store/state";
 
 import { Section } from "@cmp/section/Section";
@@ -23,10 +23,16 @@ const Сontacts = () => {
 
   return (
     <>
-      <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#fff" title="Контакты &mdash;"></Section>
+      <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#fff" title="Контакты &mdash;">
+        <Support style={{ color: "#000" }} href="https://ru.wikipedia.org/wiki/Oriflame">
+          Проверить компанию
+        </Support>
+      </Section>
       <Section articles={[]} anchor="video" bg="#000" title="Сомневаешься &mdash;">
         <Frame>
-          <SecondaryBeatyText>Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!</SecondaryBeatyText>
+          <SecondaryBeatyText>
+            Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!
+          </SecondaryBeatyText>
         </Frame>
         <Video path={videoPath} />
         <Center>

@@ -12,7 +12,7 @@ const Footer = () => {
       <Footer.Footer>
         <Container>
           <Logo title="Твой" toTitle="успех" />
-          <SecondaryText style={{ margin: "5px 0 10px 0" }}>Натали - партнер Oriflame</SecondaryText>
+          <SecondaryText style={{ margin: "5px 0 10px 0" }}>© Copyright 2022 Натали - партнер Oriflame</SecondaryText>
           <Support style={{ margin: "0 10px 0 0" }} href="mailto:nmang2103@mail.ru">
             nmang2103@mail.ru
           </Support>
