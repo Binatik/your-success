@@ -24,8 +24,12 @@ const Content = styled.div`
 
 const PhoneWrapper = styled.div`
   z-index: 3;
-  margin: 0 50px 0 0;
+  margin: 0;
   display: inline-block;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    margin: 0 50px 0 0;
+  }
 `;
 
 const PhoneIcon = styled(FiPhoneCall)`
