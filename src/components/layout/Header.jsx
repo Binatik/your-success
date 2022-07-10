@@ -23,6 +23,8 @@ const Content = styled.div`
 `;
 
 const PhoneWrapper = styled.div`
+  z-index: 3;
+  margin: 0 50px 0 0;
   display: inline-block;
 `;
 
@@ -72,7 +74,7 @@ const Header = () => {
             <NavigationList links={links} />
             <PhoneWrapper>
               <PhoneIcon />
-              <Support style={{ margin: "0 50px 0 0" }} href="tel:+79099223801">
+              <Support href="tel:+79099223801">
                 +7 (909) 922-38-01
               </Support>
             </PhoneWrapper>

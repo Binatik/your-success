@@ -88,7 +88,6 @@ export const PrimarySubTitle = styled.h3`
 export const Support = styled.a`
   display: inline;
   color: ${props => props.theme.colors.secondary};
-  z-index: 3;
   transition: color 0.1s;
 
   ${props => props.theme.fontStyle.paragraph};
