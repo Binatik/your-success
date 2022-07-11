@@ -53,7 +53,7 @@ const ItemGrid = ({ element, isCenter, colSize, grid }) => {
     <>
       <Grid col={col}>
         <Item size={size} isCenter={isCenter}>
-          <PrimarySubTitle style={{ whiteSpace: "nowrap" }}>{title}</PrimarySubTitle>
+          <PrimarySubTitle style={{ whiteSpace: "nowrap", borderBottom: "2px solid #00CCFF"}}>{title}</PrimarySubTitle>
           {texts.map((text, index) => (
             <React.Fragment key={index}>
               <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
