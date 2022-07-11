@@ -24,7 +24,7 @@ const FlexСontainer = styled(Container)`
 const Center = styled.div`
   margin: 15px 0;
   border-radius: 4px;
-  background-color: ${props => props.theme.colors.primary + "00099"};
+  background-color: ${props => props.theme.colors.primary + "99"};
   padding: 20px;
 `;
 

@@ -18,11 +18,11 @@ export const PrimaryLink = styled.a`
   display: inline-block;
   border-radius: 3px;
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 25px;
   color: ${props => props.theme.colors.secondary};
   background-color: ${props => props.theme.colors.surface};
   box-shadow: 0px 5px 80px 2px ${props => props.theme.colors.surface};
-  transition: background 0.1s;
+  transition: background 0.2s;
 
   &:hover {
     background-color: ${props => props.theme.colors.primary};
@@ -35,11 +35,11 @@ export const PrimaryHashLink = styled(HashLink)`
   display: inline-block;
   border-radius: 3px;
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 25px;
   color: ${props => props.theme.colors.secondary};
   background-color: ${props => props.theme.colors.surface};
   box-shadow: 0px 5px 80px 2px ${props => props.theme.colors.surface};
-  transition: background 0.1s;
+  transition: background 0.2s;
 
   &:hover {
     background-color: ${props => props.theme.colors.primary};
@@ -61,18 +61,21 @@ export const SecondaryText = styled.p`
 `;
 
 export const PrimaryTitle = styled.h2`
+  font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.colors.primary};
 
   ${props => props.theme.fontStyle.title}
 `;
 
 export const SurfaceTitle = styled.h2`
+  font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.colors.surface};
 
   ${props => props.theme.fontStyle.title}
 `;
 
 export const SecondaryTitle = styled.h2`
+  font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.colors.secondary};
   text-align: center;
 
@@ -80,6 +83,7 @@ export const SecondaryTitle = styled.h2`
 `;
 
 export const PrimarySubTitle = styled.h3`
+  font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.colors.primary};
 
   ${props => props.theme.fontStyle.title};
@@ -137,6 +141,6 @@ export const BurgerLine = styled.path`
   fill: ${props => props.theme.colors.primary};
   transform-origin: 50%;
   transition: transform 400ms;
-  stroke: #fff;
+  stroke: ${props => props.theme.colors.primary};
   stroke-width: 7;
 `;

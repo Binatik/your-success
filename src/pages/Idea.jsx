@@ -30,7 +30,7 @@ const Idea = () => {
       <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(255,255,255,1) 10%)" title="Доходы &mdash;">
         <Slider />
       </Section>
-      <Section articles={essence} bg="#000" title="Суть &mdash;">
+      <Section articles={essence} bg="#151719" title="Суть &mdash;">
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
           <PrimaryLink style={{ margin: "40px 0" }} href={videoPart} target="_blank">

@@ -27,7 +27,7 @@ const Сontacts = () => {
           Проверить компанию
         </Support>
       </Section>
-      <Section articles={[]} anchor="video" bg="#000" title="Сомневаешься &mdash;">
+      <Section articles={[]} anchor="video" bg="#151719" title="Сомневаешься &mdash;">
         <Frame isPadding={false}>
           <SecondaryBeatyText>
             Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!
