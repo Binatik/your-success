@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { PrimaryLink, SecondaryText, Center } from "@src/store/styled/components";
+import { PrimaryButton, SecondaryText, Center } from "@src/store/styled/components";
 import { initEssence } from "@src/store/state";
 
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
+import { Modal } from "@cmp/UI/Modal";
+import { Video } from "@cmp/UI/Video";
 
 const Idea = () => {
   const [essence, setEssence] = useState(initEssence);
+  const [isVideoModalActive, setIsVideoModalActive] = useState(false);
 
-  const videoPart = "https://www.youtube.com/watch?v=rGV7shl5N-4";
+  const videoPath = "https://www.youtube.com/embed/rGV7shl5N-4";
+
+  function openModal() {
+    setIsVideoModalActive(!isVideoModalActive);
+  }
   return (
     <>
+      <Modal isActive={isVideoModalActive} setIsActive={setIsVideoModalActive} isTransparent={true}>
+        <Video path={videoPath} />
+      </Modal>
       <Section articles={[]} bg="#00CCFF" title="">
         <Frame isPadding={true}>
           <SecondaryText style={{ margin: "20px 0" }}>
@@ -33,9 +43,9 @@ const Idea = () => {
       <Section articles={essence} bg="#151719" title="Суть &mdash;">
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
-          <PrimaryLink style={{ margin: "40px 0" }} href={videoPart} target="_blank">
+          <PrimaryButton type="button" onClick={openModal} style={{ margin: "40px 0" }}>
             Видео презентация
-          </PrimaryLink>
+          </PrimaryButton>
         </Center>
       </Section>
     </>

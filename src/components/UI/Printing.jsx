@@ -17,7 +17,7 @@ const FlexContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 400px;
+  min-height: 450px;
 `;
 
 const Printing = ({ bg, color, texts, children }) => {
@@ -49,12 +49,12 @@ const Printing = ({ bg, color, texts, children }) => {
         }
       }
       renderLine();
-    }, getRandomInt(30, 150));
+    }, getRandomInt(30, 130));
   }
 
   useEffect(() => {
     renderLine();
-  });
+  }, []);
   return (
     <>
       <Printing.Printing bg={bg}>

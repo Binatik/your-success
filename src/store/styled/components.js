@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 export const Container = styled.div`
   max-width: 1310px;
@@ -12,6 +12,24 @@ export const Center = styled.div`
   width: 100%;
   margin: 0 auto;
   text-align: center;
+`;
+
+export const PrimaryButton = styled.button`
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 10px 25px;
+  color: ${props => props.theme.colors.secondary};
+  background-color: ${props => props.theme.colors.surface};
+  box-shadow: 0px 5px 80px 2px ${props => props.theme.colors.surface};
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+  }
+
+  ${props => props.theme.fontStyle.link};
 `;
 
 export const PrimaryLink = styled.a`
@@ -61,21 +79,21 @@ export const SecondaryText = styled.p`
 `;
 
 export const PrimaryTitle = styled.h2`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: ${props => props.theme.colors.primary};
 
   ${props => props.theme.fontStyle.title}
 `;
 
 export const SurfaceTitle = styled.h2`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: ${props => props.theme.colors.surface};
 
   ${props => props.theme.fontStyle.title}
 `;
 
 export const SecondaryTitle = styled.h2`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: ${props => props.theme.colors.secondary};
   text-align: center;
 
@@ -83,7 +101,7 @@ export const SecondaryTitle = styled.h2`
 `;
 
 export const PrimarySubTitle = styled.h3`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: ${props => props.theme.colors.primary};
 
   ${props => props.theme.fontStyle.title};
