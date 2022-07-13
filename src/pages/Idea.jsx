@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { PrimaryButton, SecondaryText, Center } from "@src/store/styled/components";
+import { PrimaryButton, SecondaryText, Center, NavigationLink } from "@src/store/styled/components";
+import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initEssence } from "@src/store/state";
+
 
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
@@ -46,6 +48,9 @@ const Idea = () => {
           <PrimaryButton type="button" onClick={openModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
+          <NavigationLink to={"/contacts"} onClick={scrollStartPage}>
+            Cледующая страница
+          </NavigationLink>
         </Center>
       </Section>
     </>

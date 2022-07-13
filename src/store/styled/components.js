@@ -110,7 +110,7 @@ export const PrimarySubTitle = styled.h3`
 export const Support = styled.a`
   display: inline;
   color: ${props => props.theme.colors.secondary};
-  transition: color 0.1s;
+  transition: color 0.2s;
 
   ${props => props.theme.fontStyle.paragraph};
 
@@ -120,9 +120,10 @@ export const Support = styled.a`
 `;
 
 export const NavigationLink = styled(NavLink)`
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
+  transition: color 0.2s;
 
   &:hover {
     color: ${props => props.theme.colors.secondary};

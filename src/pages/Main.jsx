@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { PrimaryLink, SecondaryText, Center } from "@src/store/styled/components";
+import { PrimaryLink, SecondaryText, Center, NavigationLink } from "@src/store/styled/components";
 import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state";
+import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
 import { Section } from "@cmp/section/Section";
 import { Printing } from "@cmp/UI/Printing";
@@ -23,6 +24,9 @@ const Main = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
+          <NavigationLink to={"/idea"} onClick={scrollStartPage}>
+            Cледующая страница
+          </NavigationLink>
         </Center>
       </Section>
     </>

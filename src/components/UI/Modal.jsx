@@ -9,11 +9,11 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: ${props => (props.isFullScreen ? "5px" : "20px")};
   background-color: ${props => (props.isTransparent ? "transparent" : "#fff")};
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    width: 85%;
+    width: 95%;
   }
 `;
 

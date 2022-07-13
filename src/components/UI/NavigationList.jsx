@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBurgerState } from "@src/store/redux";
 import { close } from "@src/store/redux/slice/burger";
 import { NavigationLink } from "@src/store/styled/components";
+import {scrollStartPage} from "@src/store/helpers/scrollStartPage"
 
 const Navigation = styled.nav`
   z-index: 3;
@@ -57,12 +58,7 @@ const NavigationList = ({ links }) => {
 
   function closeBurger() {
     dispatch(close());
-
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'auto'
-    });
+    scrollStartPage();
   }
 
   return (
