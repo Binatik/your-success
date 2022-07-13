@@ -55,6 +55,7 @@ const Printing = ({ bg, color, texts, children }) => {
   useEffect(() => {
     renderLine();
   }, []);
+
   return (
     <>
       <Printing.Printing bg={bg}>

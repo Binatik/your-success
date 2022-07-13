@@ -17,7 +17,8 @@ const Navigation = styled.nav`
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: transparent;
+    background-color: #00CCFF;
+    margin: 10px 0 0 0;
     padding: 50px 0;
     transform: ${props => (props.isAciveBurger ? "translateY(60px)" : "translateY(-100%)")};
     transition: transform 0.5s;

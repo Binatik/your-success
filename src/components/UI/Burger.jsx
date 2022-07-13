@@ -79,8 +79,8 @@ Burger.Burger = styled.div`
 
   @media ${props => props.theme.desktopFirst.tablet} {
     cursor: pointer;
-    box-shadow: ${props => (props.isAciveBurger ? props.shadow : "none")};
-    border-radius: ${props => (props.isAciveBurger ? "50% 50% 50% 50%" : "0")};
+    /* box-shadow: ${props => (props.isAciveBurger ? props.shadow : "none")}; */
+    border-radius: 50% 50% 50% 50%;
     position: fixed;
     top: 0;
     right: 0;
