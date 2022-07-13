@@ -37,7 +37,7 @@ const Idea = () => {
           </SecondaryText>
         </Frame>
       </Section>
-      <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(255,255,255,1) 10%)" title="Доходы &mdash;">
+      <Section articles={[]} bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgb(246, 246, 246) 10%)" title="Доходы &mdash;">
         <Slider />
       </Section>
       <Section articles={essence} bg="#151719" title="Суть &mdash;">

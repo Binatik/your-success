@@ -33,7 +33,7 @@ const Сontacts = () => {
       <Modal isFullScreen={true} isTransparent={true} isActive={isVideoModalActive} setIsActive={setIsVideoModalActive}>
         <Video path={videoPath} />
       </Modal>
-      <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#fff" title="Контакты &mdash;">
+      <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#F6F6F6" title="Контакты &mdash;">
         <Support style={{ color: "#000" }} href="https://ru.wikipedia.org/wiki/Oriflame">
           Проверить компанию
         </Support>

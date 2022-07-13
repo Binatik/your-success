@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition, TransitionGroup, SwitchTransition } from "react-transition-group";
 
 import { Layout } from "@cmp/layout/Layout";
 import { Main } from "@pages/Main";
@@ -15,8 +15,8 @@ const App = () => {
   return (
     <>
       <TransitionGroup component={null}>
-        <CSSTransition key={location.pathname} classNames="page" timeout={300}>
-          <>
+        <SwitchTransition mode={"out-in"}>
+          <CSSTransition key={location.pathname} classNames="page" timeout={800} unmountOnExit>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Main />} />
@@ -26,8 +26,8 @@ const App = () => {
                 <Route path="*" element={<Navigate to="404" />} />
               </Route>
             </Routes>
-          </>
-        </CSSTransition>
+          </CSSTransition>
+        </SwitchTransition>
       </TransitionGroup>
     </>
   );

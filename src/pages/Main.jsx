@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <>
       <Printing texts={printingText} bg="#151719" color="#fff"></Printing>
-      <Section anchor="tasks" articles={tasks} bg="#fff" title="Что делать &mdash;"></Section>
+      <Section anchor="tasks" articles={tasks} bg="#F6F6F6" title="Что делать &mdash;"></Section>
       <Section articles={possibilitys} bg="#151719" title="Работая с нами &mdash;">
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>

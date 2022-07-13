@@ -4,7 +4,7 @@ import { fontStyle } from "./style";
 export const theme = {
   colors: {
     primary: "#151719",
-    secondary: "#fff",
+    secondary: "#F6F6F6",
     surface: "#00CCFF",
 
     backgrounds: [], //Если фон разный.
