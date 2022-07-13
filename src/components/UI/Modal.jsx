@@ -3,24 +3,32 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 const Content = styled.div`
-  width: 60%;
+  cursor: ${props => (props.isFullScreen ? "pointer" : "auto")};
+  width: ${props => (props.isFullScreen ? "100%" : "60%")};
+  height: ${props => (props.isFullScreen ? "100%" : "auto")};
+  display: flex;
+  align-items: center;
   margin: 0 auto;
   padding: 20px;
   background-color: ${props => (props.isTransparent ? "transparent" : "#fff")};
 
   @media ${props => props.theme.desktopFirst.tablet} {
-    width: 100%;
+    width: 85%;
   }
 `;
 
-const Modal = ({ isActive, setIsActive, isTransparent, children }) => {
+const Modal = ({ isFullScreen, isActive, setIsActive, isTransparent, children }) => {
+  function closesChild(event) {
+    isFullScreen ? "" : event.stopPropagation();
+  }
+
   function setModal() {
     return (
-      <Modal.Container isActive={isActive} onClick={() => setIsActive(false)}>
-        <Content isTransparent={isTransparent} onClick={event => event.stopPropagation()}>
+      <Modal.Modal isActive={isActive} onClick={() => setIsActive(false)}>
+        <Content isFullScreen={isFullScreen} isTransparent={isTransparent} onClick={closesChild}>
           {children}
         </Content>
-      </Modal.Container>
+      </Modal.Modal>
     );
   }
 
@@ -30,7 +38,7 @@ const Modal = ({ isActive, setIsActive, isTransparent, children }) => {
   return ReactDOM.createPortal(modal, root);
 };
 
-Modal.Container = styled.div`
+Modal.Modal = styled.div`
   cursor: pointer;
   position: fixed;
   display: flex;
@@ -41,7 +49,7 @@ Modal.Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: ${props => props.theme.colors.primary + "99"}; /* Black w/ opacity */
   opacity: ${props => (props.isActive ? "1" : "0")};
   pointer-events: ${props => (props.isActive ? "all" : "none")};
   transition: opacity 0.2s;

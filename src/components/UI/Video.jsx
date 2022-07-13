@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const VideoWrapper = styled.div`
-  width: 80%;
+  width: 50%;
 
   @media ${props => props.theme.desktopFirst.tablet} {
     width: 100%;
@@ -36,7 +36,7 @@ const Video = ({ path }) => {
 
 Video.Video = styled.iframe`
   position: absolute;
-  left: 10%;
+  left: 50%;
   top: 0;
   width: 100%;
   height: 100%;

@@ -21,7 +21,7 @@ const Idea = () => {
   }
   return (
     <>
-      <Modal isActive={isVideoModalActive} setIsActive={setIsVideoModalActive} isTransparent={true}>
+      <Modal isFullScreen={true} isTransparent={true} isActive={isVideoModalActive} setIsActive={setIsVideoModalActive}>
         <Video path={videoPath} />
       </Modal>
       <Section articles={[]} bg="#00CCFF" title="">

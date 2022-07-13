@@ -35,6 +35,7 @@ const Section = ({ title, bg, articles, anchor, isCenter, grid, colSize, childre
 Section.Section = styled.section`
   padding: 80px 0;
   background: ${props => props.bg};
+  background-attachment: fixed;
 `;
 
 export { Section };

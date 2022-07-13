@@ -65,7 +65,7 @@ const Header = () => {
     document.addEventListener("scroll", onScrollThrottle, { passive: true });
 
     return () => {
-      document.removeEventListener("scroll", onScroll);
+      document.removeEventListener("scroll", onScrollThrottle);
     };
   }, [lastScroll]);
 

@@ -30,7 +30,7 @@ const Сontacts = () => {
 
   return (
     <>
-      <Modal isActive={isVideoModalActive} setIsActive={setIsVideoModalActive} isTransparent={true}>
+      <Modal isFullScreen={true} isTransparent={true} isActive={isVideoModalActive} setIsActive={setIsVideoModalActive}>
         <Video path={videoPath} />
       </Modal>
       <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#fff" title="Контакты &mdash;">

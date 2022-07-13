@@ -42,6 +42,9 @@ const Printing = ({ bg, color, texts, children }) => {
   function renderLine() {
     const timeout = setTimeout(() => {
       text += texts[countIndexRef.current][countSymbolRef.current] + "";
+
+      if (textRef.current === null) return;
+
       textRef.current.innerHTML = text;
       countSymbolRef.current++;
 
@@ -66,8 +69,8 @@ const Printing = ({ bg, color, texts, children }) => {
     <>
       <Printing.Printing bg={bg}>
         <FlexContainer>
-          {texts.map(text => (
-            <TitleHidden>{text}</TitleHidden>
+          {texts.map((text, index) => (
+            <TitleHidden key={index}>{text}</TitleHidden>
           ))}
           <Title color={color} ref={textRef}></Title>
           {children}
