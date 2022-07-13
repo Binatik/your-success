@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 import { Container } from "@src/store/styled/components";
 
-const Title = styled.pre`
+const TitleHidden = styled.pre`
+  opacity: 0;
   font-family: "Montserrat", sans-serif;
   color: ${props => props.color};
   white-space: pre-wrap;
@@ -13,11 +14,16 @@ const Title = styled.pre`
   font-size: 2.5rem;
 `;
 
+const Title = styled(TitleHidden)`
+  position: absolute;
+  opacity: 1;
+`;
+
 const FlexContainer = styled(Container)`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 450px;
 `;
 
 const Printing = ({ bg, color, texts, children }) => {
@@ -60,6 +66,9 @@ const Printing = ({ bg, color, texts, children }) => {
     <>
       <Printing.Printing bg={bg}>
         <FlexContainer>
+          {texts.map(text => (
+            <TitleHidden>{text}</TitleHidden>
+          ))}
           <Title color={color} ref={textRef}></Title>
           {children}
         </FlexContainer>
@@ -69,6 +78,7 @@ const Printing = ({ bg, color, texts, children }) => {
 };
 
 Printing.Printing = styled.div`
+  padding: 60px 0;
   background-color: ${props => props.bg};
 `;
 

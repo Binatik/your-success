@@ -89,6 +89,7 @@ Burger.Burger = styled.div`
     display: block;
     width: 45px;
     height: 45px;
+    z-index: 5;
   }
 `;
 
