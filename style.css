@@ -36,6 +36,10 @@ body {
   height: 100%;
 }
 
+.scrollHidden {
+  overflow-x: hidden
+}
+
 
 .swiper {
   padding: 50px 0;
@@ -89,23 +93,41 @@ body {
   height: 15px;
 }
 
-.page-enter {
-  transform: translateX(-100%);
-}
-
-.page-enter-active {
-  transform: translateX(0%);
-}
-
+/* Когда стали переходить - эффект исчезновения */
 .page-exit {
-  transform: translateX(0%);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .page-exit-active {
+  opacity: 0;
   transform: translateX(100%);
 }
 
+/* Когда перешли на страницу - эффект появления */
+.page-enter {
+  animation: fideEnd 400ms;
+}
+
+/* .page-enter-active {
+  transform: scale(1);
+} */
+
 .page-enter-active,
 .page-exit-active {
-  transition: transform 800ms;
+  transition: transform 400ms, opacity 400ms;
+}
+
+@keyframes fideEnd {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
