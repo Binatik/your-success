@@ -99,7 +99,7 @@ body {
 
 .page-enter-active,
 .page-exit-active {
-  transition: transform 400ms, opacity 400ms;
+  transition: transform 400ms, opacity 500ms;
 }
 
 @keyframes fideEnd {
