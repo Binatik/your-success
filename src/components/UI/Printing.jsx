@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import { Container } from "@src/store/styled/components";
+import { getRandomInt } from "@src/store/helpers/getRandomInt";
 
 const TitleHidden = styled.pre`
   opacity: 0;
@@ -27,25 +28,20 @@ const FlexContainer = styled(Container)`
 `;
 
 const Printing = ({ bg, color, texts, children }) => {
-  const textRef = useRef();
+  const [isPrinting, setIsPrinting] = useState(false);
+
+  const textRef = useRef(null);
   const countIndexRef = useRef(0);
   const countSymbolRef = useRef(0);
-
-  let text = "";
-
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-  }
+  const printingRef = useRef("");
 
   function renderLine() {
     const timeout = setTimeout(() => {
-      text += texts[countIndexRef.current][countSymbolRef.current] + "";
+      printingRef.current += texts[countIndexRef.current][countSymbolRef.current] + "";
 
       if (textRef.current === null) return;
 
-      textRef.current.innerHTML = text;
+      textRef.current.innerHTML = printingRef.current;
       countSymbolRef.current++;
 
       if (countSymbolRef.current >= texts[countIndexRef.current].length) {
@@ -58,7 +54,7 @@ const Printing = ({ bg, color, texts, children }) => {
         }
       }
       renderLine();
-    }, getRandomInt(30, 130));
+    }, getRandomInt(20, 80));
   }
 
   useEffect(() => {

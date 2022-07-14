@@ -5,7 +5,6 @@ import { PrimaryButton, SecondaryText, Center, NavigationLink } from "@src/store
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initEssence } from "@src/store/state";
 
-
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
@@ -48,8 +47,8 @@ const Idea = () => {
           <PrimaryButton type="button" onClick={openModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
-          <NavigationLink to={"/contacts"} onClick={scrollStartPage}>
-            Cледующая страница
+          <NavigationLink color={"#00CCFF"} to={"/contacts"} onClick={scrollStartPage}>
+            Читать далее
           </NavigationLink>
         </Center>
       </Section>

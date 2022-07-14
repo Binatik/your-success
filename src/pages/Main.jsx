@@ -24,8 +24,8 @@ const Main = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
-          <NavigationLink to={"/idea"} onClick={scrollStartPage}>
-            Cледующая страница
+          <NavigationLink color="#00CCFF" to={"/idea"} onClick={scrollStartPage}>
+            Читать далее
           </NavigationLink>
         </Center>
       </Section>

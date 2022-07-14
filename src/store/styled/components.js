@@ -122,7 +122,7 @@ export const Support = styled.a`
 export const NavigationLink = styled(NavLink)`
   display: block;
   text-decoration: none;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => (props.color ? props.color : props.theme.colors.primary)};
   transition: color 0.2s;
 
   &:hover {

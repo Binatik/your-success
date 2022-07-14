@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { IoMdPlay } from "react-icons/io";
 
-import { Center, PrimaryLink, SecondaryText, Support } from "@src/store/styled/components";
+import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
+import { Center, PrimaryLink, NavigationLink, SecondaryText, Support } from "@src/store/styled/components";
 import { initСontacts } from "@src/store/state";
 
 import { Section } from "@cmp/section/Section";
@@ -49,6 +50,9 @@ const Сontacts = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
+          <NavigationLink color={"#00CCFF"} to={"/"} onClick={scrollStartPage}>
+            На главную
+          </NavigationLink>
         </Center>
       </Section>
     </>

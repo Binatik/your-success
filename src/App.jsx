@@ -16,7 +16,7 @@ const App = () => {
     <>
       <TransitionGroup component={null}>
         <SwitchTransition mode={"out-in"}>
-          <CSSTransition key={location.pathname} classNames="page" timeout={800} unmountOnExit>
+          <CSSTransition key={location.pathname} classNames="page" timeout={400} unmountOnExit>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Main />} />
