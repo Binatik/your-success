@@ -37,11 +37,6 @@ body {
   background-color: #15171911;
 }
 
-.scrollHidden {
-  overflow-x: hidden
-}
-
-
 .swiper {
   padding: 50px 0;
   width: 100%;
