@@ -1,9 +1,11 @@
 export function scrollStartPage() {
-  const ms = 1000;
+  const ms = 500;
 
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "auto",
-  });
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, ms);
 }
