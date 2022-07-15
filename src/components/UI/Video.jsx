@@ -16,7 +16,7 @@ const ThumbWrap = styled.div`
   height: 0;
 `;
 
-const Video = ({ path }) => {
+const Video = React.memo(({ path }) => {
   return (
     <>
       <VideoWrapper>
@@ -24,15 +24,17 @@ const Video = ({ path }) => {
           <Video.Video
             src={path}
             title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture fullscreen"
+            allowFullScreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
           ></Video.Video>
         </ThumbWrap>
       </VideoWrapper>
     </>
   );
-};
+});
 
 Video.Video = styled.iframe`
   position: absolute;
