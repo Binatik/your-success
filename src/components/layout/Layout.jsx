@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: #15171911;
   overflow: hidden;
 `;
 
