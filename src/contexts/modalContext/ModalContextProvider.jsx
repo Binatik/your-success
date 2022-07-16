@@ -10,8 +10,10 @@ const ModalContextProvider = ({ children }) => {
 
   function openModal(propsModal) {
     setModalContent(propsModal);
-    
-    setIsModalActive(!isModalActive);
+
+    setTimeout(() => {
+      setIsModalActive(!isModalActive);
+    }, 300);
   }
 
   return (
