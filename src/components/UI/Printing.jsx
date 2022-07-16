@@ -5,6 +5,7 @@ import { Container } from "@src/store/styled/components";
 import { getRandomInt } from "@src/store/helpers/getRandomInt";
 
 const TitleHidden = styled.pre`
+  margin: 20px;
   opacity: 0;
   font-family: "Montserrat", sans-serif;
   color: ${props => props.color};

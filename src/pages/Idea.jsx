@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 
+import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { PrimaryButton, SecondaryText, Center, NavigationLink } from "@src/store/styled/components";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initEssence } from "@src/store/state";
@@ -8,23 +9,25 @@ import { initEssence } from "@src/store/state";
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
-import { Modal } from "@cmp/UI/Modal";
 import { Video } from "@cmp/UI/Video";
 
 const Idea = () => {
+  const { openModal } = useContext(ModalContext);
+
   const [essence, setEssence] = useState(initEssence);
-  const [isVideoModalActive, setIsVideoModalActive] = useState(false);
 
   const videoPath = "https://www.youtube.com/embed/rGV7shl5N-4";
 
-  function openModal() {
-    setIsVideoModalActive(!isVideoModalActive);
+  function activeModal() {
+    openModal({
+      isFullScreen: true,
+      isTransparent: true,
+      children: <Video path={videoPath} />,
+    });
   }
+
   return (
     <>
-      <Modal isFullScreen={true} isTransparent={true} isActive={isVideoModalActive} setIsActive={setIsVideoModalActive}>
-        <Video path={videoPath} />
-      </Modal>
       <Section articles={[]} bg="#00CCFF" title="">
         <Frame isPadding={true}>
           <SecondaryText style={{ margin: "20px 0" }}>
@@ -44,7 +47,7 @@ const Idea = () => {
       <Section articles={essence} bg="#151719" title="Суть &mdash;">
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
-          <PrimaryButton type="button" onClick={openModal} style={{ margin: "40px 0" }}>
+          <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
           <NavigationLink color={"#00CCFF"} to={"/contacts"} onClick={scrollStartPage}>

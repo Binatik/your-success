@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-const Wrapper = styled.div`
+const Router = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -22,13 +22,13 @@ const Layout = () => {
 
   return (
     <>
-      <Wrapper>
+      <Router>
         <Header />
         <Main>
           <Outlet />
         </Main>
         <Footer />
-      </Wrapper>
+      </Router>
     </>
   );
 };

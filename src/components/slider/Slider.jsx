@@ -32,7 +32,7 @@ const Slider = () => {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 5,
+          modifier: 10,
           slideShadows: false,
         }}
         spaceBetween={10}
@@ -74,6 +74,15 @@ const Slider = () => {
           <img
             data-src="
             https://sun9-32.userapi.com/impf/Bxn90gRbW-k6ctFJr6PmEvtVj0Zwyj-ifxAGrA/VZbCHDtg494.jpg?size=1280x1280&quality=96&sign=5ef4f09cd700975fab645526dfce536a&type=album"
+            alt=""
+            className="swiper-lazy"
+          />
+          <div className="swiper-lazy-preloader"></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            data-src="
+            https://i.mycdn.me/image?id=931576027715&t=3&plc=API&viewToken=ELIYHaQSxWs9ToCqcHj9GA&tkn=*tdTJMfSOO3sscXSHTJ3xp8H3h6E"
             alt=""
             className="swiper-lazy"
           />
