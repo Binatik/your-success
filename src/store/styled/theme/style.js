@@ -18,7 +18,7 @@ export const fontStyle = {
   `,
 
   paragraph: `
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 
   @media (max-width: ${breakpoints.medium}px) {
     font-size: 1rem;
