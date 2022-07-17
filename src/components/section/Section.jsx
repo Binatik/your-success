@@ -10,6 +10,12 @@ const Items = styled.div`
   margin: 50px -15px 10px -15px;
 `;
 
+const SectionTitle = styled(SurfaceTitle)`
+  text-align: center;
+
+  ${props => props.theme.fontStyle.sectionTitle};
+`
+
 const Section = ({ articles, title, bg, anchor, children, ...props }) => {
   const items = (
     <Items>
@@ -23,7 +29,7 @@ const Section = ({ articles, title, bg, anchor, children, ...props }) => {
     <>
       <Section.Section id={anchor} bg={bg}>
         <Container>
-          <SurfaceTitle style={{ textAlign: "center" }}>{title}</SurfaceTitle>
+          <SectionTitle>{title}</SectionTitle>
           {articles.length !== 0 ? items : null}
           {children}
         </Container>

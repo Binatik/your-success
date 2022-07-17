@@ -5,7 +5,8 @@ import { Container } from "@src/store/styled/components";
 import { getRandomInt } from "@src/store/helpers/getRandomInt";
 
 const TitleHidden = styled.pre`
-  margin: 20px;
+  cursor: default;
+  margin: 15px 0;
   opacity: 0;
   font-family: "Montserrat", sans-serif;
   color: ${props => props.color};
@@ -17,7 +18,10 @@ const TitleHidden = styled.pre`
 `;
 
 const Title = styled(TitleHidden)`
+  cursor: auto;
   position: absolute;
+  left: 0;
+  top: 0;
   opacity: 1;
 `;
 
@@ -26,6 +30,11 @@ const FlexContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+const Content = styled.div`
+  position: relative;
+  margin: 20px;
 `;
 
 const Printing = ({ bg, color, texts, children }) => {
@@ -66,11 +75,13 @@ const Printing = ({ bg, color, texts, children }) => {
     <>
       <Printing.Printing bg={bg}>
         <FlexContainer>
-          {texts.map((text, index) => (
-            <TitleHidden key={index}>{text}</TitleHidden>
-          ))}
-          <Title color={color} ref={textRef}></Title>
-          {children}
+          <Content>
+            {texts.map((text, index) => (
+              <TitleHidden key={index}>{text}</TitleHidden>
+            ))}
+            <Title color={color} ref={textRef}></Title>
+            {children}
+          </Content>
         </FlexContainer>
       </Printing.Printing>
     </>

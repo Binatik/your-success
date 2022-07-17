@@ -70,8 +70,8 @@ const Сontacts = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
-          <NavigationLink color={"#00CCFF"} to={"/"} onClick={scrollStartPage}>
-            На главную
+          <NavigationLink color={"#00CCFF"} to={"/supports"} onClick={scrollStartPage}>
+            Поддержка
           </NavigationLink>
         </Center>
       </Section>

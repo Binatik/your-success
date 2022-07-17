@@ -17,6 +17,14 @@ export const fontStyle = {
   },
   `,
 
+  sectionTitle: `
+  font-size: 2.1rem;
+
+  @media (max-width: ${breakpoints.medium}px) {
+    font-size: 1.6rem;
+  },
+  `,
+
   paragraph: `
   font-size: 1.2rem;
 

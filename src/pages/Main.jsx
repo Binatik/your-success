@@ -17,7 +17,9 @@ const Main = () => {
   const linkQuestionnaire = "https://docs.google.com/forms/d/e/1FAIpQLSd2WqntX_EK0EiDuxI8Tf_W-t_HiWmsy_sUPpjTUULIQTON-Q/viewform";
   return (
     <>
-      <Printing texts={printingText} bg="#002137" color="#fff"></Printing>
+      <Printing texts={printingText} bg="#002137" color="#fff">
+      <SecondaryText style={{color: "#00CCFF"}}>Откройте собственный онлайн бизнес в интернете.</SecondaryText>
+      </Printing>
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
