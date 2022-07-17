@@ -16,6 +16,11 @@ export const initNavigation = [
     path: "/contacts",
     title: "Контакты",
   },
+  {
+    id: 3,
+    path: "/supports",
+    title: "Поддержка",
+  },
 ];
 
 export const initTasks = [

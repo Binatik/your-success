@@ -11,6 +11,7 @@ import { ErrorPage } from "@pages/ErrorPage";
 import "./style.css";
 
 import { ModalContextProvider } from "./contexts/modalContext/ModalContextProvider";
+import { Supports } from "@pages/Supports";
 
 const App = () => {
   // const videoPageContacts = "https://www.youtube-nocookie.com/embed/HEMEDrilV7Q?controls=0";
@@ -27,6 +28,7 @@ const App = () => {
                   <Route index element={<Main />} />
                   <Route path="idea" element={<Idea />} />
                   <Route path="contacts" element={<Сontacts />} />
+                  <Route path="supports" element={<Supports />} />
                   <Route path="404" element={<ErrorPage code={404} />} />
                   <Route path="*" element={<Navigate to="404" />} />
                 </Route>
