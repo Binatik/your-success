@@ -11,6 +11,7 @@ import { Section } from "@cmp/section/Section";
 import { Video } from "@cmp/UI/Video";
 import { Frame } from "@cmp/UI/Frame";
 import { Pulse } from "@cmp/UI/Pulse";
+import { MainCard } from "@cmp/UI/MainCard";
 
 const SecondaryBeatyText = styled(SecondaryText)`
   text-align: center;
@@ -36,12 +37,29 @@ const Сontacts = () => {
 
   return (
     <>
-      <Section grid="col4" isCenter={true} colSize="small" articles={contacts} anchor="contacts" bg="#F6F6F6" title="Контакты &mdash;">
+      <Section
+        Component={MainCard}
+        ComponentProps={{ isCenter: true, isGrow: true }}
+        isCenter={true}
+        grid="col4"
+        colSize="small"
+        articles={contacts}
+        anchor="contacts"
+        bg="#F6F6F6"
+        title="Контакты &mdash;"
+      >
         <Support style={{ color: "#000" }} href="https://ru.wikipedia.org/wiki/Oriflame">
           Проверить компанию
         </Support>
       </Section>
-      <Section articles={[]} anchor="video" bg="#151719" title="Сомневаешься &mdash;">
+      <Section
+        Component={MainCard}
+        ComponentProps={{ isCenter: false, isGrow: false }}
+        articles={[]}
+        anchor="video"
+        bg="#151719"
+        title="Сомневаешься &mdash;"
+      >
         <Frame isPadding={false}>
           <SecondaryBeatyText>
             Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!

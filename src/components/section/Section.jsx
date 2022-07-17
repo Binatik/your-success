@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Container, SurfaceTitle } from "@src/store/styled/components";
-import { ItemGrid } from "./ItemGrid";
+import { GridItems } from "./GridItems";
 
 const Items = styled.div`
   display: flex;
@@ -10,11 +10,11 @@ const Items = styled.div`
   margin: 50px -15px 10px -15px;
 `;
 
-const Section = ({ title, bg, articles, anchor, isCenter, grid, colSize, children }) => {
+const Section = ({ articles, title, bg, anchor, children, ...props }) => {
   const items = (
     <Items>
       {articles.map(element => (
-        <ItemGrid key={element.id} element={element} isCenter={isCenter} colSize={colSize} grid={grid} />
+        <GridItems key={element.id} element={element} {...props} />
       ))}
     </Items>
   );
@@ -35,7 +35,6 @@ const Section = ({ title, bg, articles, anchor, isCenter, grid, colSize, childre
 Section.Section = styled.section`
   padding: 80px 0;
   background: ${props => props.bg};
-  
 `;
 
 export { Section };

@@ -21,7 +21,6 @@ export const initNavigation = [
 export const initTasks = [
   {
     id: 0,
-    isGrow: false,
     title: "1",
     texts: [
       "Пользоваться продукцией компании.",
@@ -31,7 +30,6 @@ export const initTasks = [
   },
   {
     id: 1,
-    isGrow: false,
     title: "2",
     texts: [
       "Приглашать людей и строить команду.",
@@ -41,7 +39,6 @@ export const initTasks = [
   },
   {
     id: 2,
-    isGrow: false,
     title: "3",
     texts: [
       "Обучаться и обучать своих партнёров.",
@@ -55,42 +52,36 @@ export const initTasks = [
 export const initPossibilitys = [
   {
     id: 0,
-    isGrow: false,
     title: "Законный бизнес",
     texts: ["Вы сами создаете свой бизнес с 0 на законных основаниях - выстраивая свой собственный магазин."],
     paths: [],
   },
   {
     id: 1,
-    isGrow: false,
     title: "Трудовой стаж",
     texts: ["После выхода на пенсию вы получаете пенсионные отчисления."],
     paths: [],
   },
   {
     id: 2,
-    isGrow: false,
     title: "Премии",
     texts: ["Выходя на новый уровень компания выплачивает одноразовую премию."],
     paths: [],
   },
   {
     id: 3,
-    isGrow: false,
     title: "Путешествие",
     texts: ["Начиная со звания  директор вас ждет ежегодные заграничные поездки за счет компании."],
     paths: [],
   },
   {
     id: 4,
-    isGrow: false,
     title: "Пассивный доход",
     texts: ["Вырастив лидеров, вам уже не придется думать о рекрутинге так часто, доход будет идти за счет той структуры, которую вы сами сделали."],
     paths: [],
   },
   {
     id: 5,
-    isGrow: false,
     title: "Карьера",
     texts: [
       "Развитие сотрудника в иерархии должностей организаций, сопровождаемое повышением должностного уровня, ответственности и масштаба решаемых задач.",
@@ -99,14 +90,12 @@ export const initPossibilitys = [
   },
   {
     id: 6,
-    isGrow: false,
     title: "Удаленная работа",
     texts: ["Работайте в любое время с любого устройства, имея только выход в интернет"],
     paths: [],
   },
   {
     id: 7,
-    isGrow: false,
     title: "Команда",
     texts: [
       "На протяжении всей работы вы не останитесь без внимания.",
@@ -120,7 +109,6 @@ export const initPossibilitys = [
 export const initEssence = [
   {
     id: 0,
-    isGrow: false,
     title: "Доставка",
     texts: [
       "Товар доставляется покупателю напрямую без всяких посредников.",
@@ -132,7 +120,6 @@ export const initEssence = [
   },
   {
     id: 1,
-    isGrow: false,
     title: "Товарооборот",
     texts: [
       "Один человек не продаст столько, сколько 1000 купят для себя.",
@@ -143,7 +130,6 @@ export const initEssence = [
   },
   {
     id: 2,
-    isGrow: false,
     title: "1000 человек",
     texts: [
       "Вы пригласили 2 знакомых, которые поняли идею.",
@@ -156,7 +142,6 @@ export const initEssence = [
   },
   {
     id: 3,
-    isGrow: false,
     title: "Откуда деньги",
     texts: [
       "Каждая покупка вашего партнера засчитывается к вам в товарооборот",
@@ -166,7 +151,6 @@ export const initEssence = [
   },
   {
     id: 4,
-    isGrow: false,
     title: "Структура",
     texts: [
       "Вам не просто нужно выстраивать структуру потребителей. ",
@@ -180,28 +164,24 @@ export const initEssence = [
 export const initСontacts = [
   {
     id: 0,
-    isGrow: true,
     title: "Телефон",
     texts: ["Самый простой способ - позвонить!"],
     paths: ["tel:+79099223801", "+79099223801"],
   },
   {
     id: 1,
-    isGrow: true,
     title: "Электронная почта",
     texts: ["Старый проверенный способ - письмо"],
     paths: ["mailto:nmang2103@mail.ru", "nmang2103@mail.ru"],
   },
   {
     id: 2,
-    isGrow: true,
     title: "VK",
     texts: ["Надежно но медленно"],
     paths: ["https://vk.com/id411622841", "Перейти ВК"],
   },
   {
     id: 3,
-    isGrow: true,
     title: "Телеграмм",
     texts: ["Быстро и эффективно"],
     paths: ["https://t.me/Natalya21031", "Перейти в Телеграмм"],
