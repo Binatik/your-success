@@ -57,7 +57,7 @@ const Сontacts = () => {
         ComponentProps={{ isCenter: false, isGrow: false }}
         articles={[]}
         anchor="video"
-        bg="#151719"
+        bg="#002137"
         title="Сомневаешься &mdash;"
       >
         <Frame isPadding={false}>

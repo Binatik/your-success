@@ -9,7 +9,7 @@ import { MainCard } from "@cmp/UI/MainCard";
 const Supports = () => {
   return (
     <>
-      <Printing texts={["Добро пожаловать в службу поддержки."]} bg="#151719" color="#fff"></Printing>
+      <Printing texts={["Добро пожаловать в службу поддержки."]} bg="#002137" color="#fff"></Printing>
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}

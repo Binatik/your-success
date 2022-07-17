@@ -3,7 +3,7 @@ import { fontStyle } from "./style";
 
 export const theme = {
   colors: {
-    primary: "#151719",
+    primary: "#002137",
     secondary: "#F6F6F6",
     surface: "#00CCFF",
 

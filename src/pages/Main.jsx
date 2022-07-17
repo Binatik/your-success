@@ -17,7 +17,7 @@ const Main = () => {
   const linkQuestionnaire = "https://docs.google.com/forms/d/e/1FAIpQLSd2WqntX_EK0EiDuxI8Tf_W-t_HiWmsy_sUPpjTUULIQTON-Q/viewform";
   return (
     <>
-      <Printing texts={printingText} bg="#151719" color="#fff"></Printing>
+      <Printing texts={printingText} bg="#002137" color="#fff"></Printing>
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
@@ -30,7 +30,7 @@ const Main = () => {
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
         articles={possibilitys}
-        bg="#151719"
+        bg="#002137"
         title="Работая с нами &mdash;"
       >
         <Center>
