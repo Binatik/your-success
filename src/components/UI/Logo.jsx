@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PrimaryText, SurfaceTitle } from "@src/store/styled/components";
+import { PrimaryText } from "@src/store/styled/components/texts";
+import { SurfaceTitle } from "@src/store/styled/components/titles";
 
 const Logo = ({ title, toTitle }) => {
-
   return (
     <>
       <Logo.Logo href="#">

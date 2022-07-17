@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
 
-import { Grid } from "@src/store/styled/components";
+import { Grid } from "@src/store/styled/components/others";
 
 const ItemGrid = styled.div`
   width: ${props => props.size};

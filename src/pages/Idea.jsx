@@ -1,10 +1,13 @@
-import React, { useState, useContext, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState, useContext } from "react";
 
 import { ModalContext } from "@src/contexts/modalContext/ModalContext";
-import { PrimaryButton, SecondaryText, Center, NavigationLink } from "@src/store/styled/components";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initEssence } from "@src/store/state";
+
+import { SecondaryText } from "@src/store/styled/components/texts";
+import { Center } from "@src/store/styled/components/others";
+import { PrimaryNavLink } from "@src/store/styled/components/router";
+import { PrimaryButton } from "@src/store/styled/components/buttons";
 
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
@@ -57,9 +60,9 @@ const Idea = () => {
           <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
-          <NavigationLink color={"#00CCFF"} to={"/contacts"} onClick={scrollStartPage}>
+          <PrimaryNavLink color={"#00CCFF"} to={"/contacts"} onClick={scrollStartPage}>
             Читать далее
-          </NavigationLink>
+          </PrimaryNavLink>
         </Center>
       </Section>
     </>

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
-import { Container } from "@src/store/styled/components";
 import { getRandomInt } from "@src/store/helpers/getRandomInt";
+import { Container } from "@src/store/styled/components/others";
 
 const TitleHidden = styled.pre`
   cursor: default;

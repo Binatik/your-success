@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { FiPhoneCall } from "react-icons/fi";
 
-import { Container, Support } from "@src/store/styled/components";
 import { getBurgerState } from "@src/store/redux";
 import { useThrottle } from "@src/hooks/useThrottle";
 import { initNavigation } from "@src/store/state";
+import { Container, Support } from "@src/store/styled/components/others";
 
 import { Burger } from "@cmp/UI/Burger";
 import { Logo } from "@cmp/UI/Logo";

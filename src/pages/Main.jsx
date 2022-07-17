@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 
-import { PrimaryLink, SecondaryText, Center, NavigationLink } from "@src/store/styled/components";
 import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
+
+import { PrimaryLink } from "@src/store/styled/components/links";
+import { SecondaryText } from "@src/store/styled/components/texts";
+import { Center } from "@src/store/styled/components/others";
+import { PrimaryNavLink } from "@src/store/styled/components/router";
 
 import { Section } from "@cmp/section/Section";
 import { Printing } from "@cmp/UI/Printing";
@@ -18,7 +21,7 @@ const Main = () => {
   return (
     <>
       <Printing texts={printingText} bg="#002137" color="#fff">
-      <SecondaryText style={{color: "#00CCFF"}}>Откройте собственный онлайн бизнес в интернете.</SecondaryText>
+        <SecondaryText style={{ color: "#00CCFF" }}>Откройте собственный онлайн бизнес в интернете.</SecondaryText>
       </Printing>
       <Section
         Component={MainCard}
@@ -40,9 +43,9 @@ const Main = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
-          <NavigationLink color="#00CCFF" to={"/idea"} onClick={scrollStartPage}>
+          <PrimaryNavLink color="#00CCFF" to={"/idea"} onClick={scrollStartPage}>
             Читать далее
-          </NavigationLink>
+          </PrimaryNavLink>
         </Center>
       </Section>
     </>

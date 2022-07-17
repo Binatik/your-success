@@ -3,8 +3,8 @@ import styled, { ThemeContext } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 
 import { toggle } from "@src/store/redux/slice/burger";
-import { BurgerLine } from "@src/store/styled/components";
 import { getBurgerState } from "@src/store/redux";
+import { BurgerLine } from "@src/store/styled/components/others";
 
 const LineClose = styled(BurgerLine)`
   stroke-width: 0.393rem;

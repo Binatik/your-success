@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PrimarySubTitle, PrimaryText, Support } from "@src/store/styled/components";
+import { Support } from "@src/store/styled/components/others";
+import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
+import { PrimaryText } from "@src/store/styled/components/texts";
 
 const PrimaryBeatyText = styled(PrimaryText)`
   margin: 10px 0;

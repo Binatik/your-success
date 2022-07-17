@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getBurgerState } from "@src/store/redux";
 import { close } from "@src/store/redux/slice/burger";
-import { NavigationLink } from "@src/store/styled/components";
-import {scrollStartPage} from "@src/store/helpers/scrollStartPage"
+import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
+import { PrimaryNavLink } from "@src/store/styled/components/router";
 
 const Navigation = styled.nav`
   z-index: 3;
@@ -18,7 +18,7 @@ const Navigation = styled.nav`
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #00CCFF;
+    background-color: #00ccff;
     margin: 10px 0 0 0;
     padding: 50px 0;
     transform: ${props => (props.isAciveBurger ? "translateY(60px)" : "translateY(-100%)")};
@@ -67,9 +67,9 @@ const NavigationList = ({ links }) => {
         <List>
           {links.map(({ id, path, title }) => (
             <Item isAciveBurger={isAciveBurger} key={id}>
-              <NavigationLink onClick={closeBurger} to={path}>
+              <PrimaryNavLink onClick={closeBurger} to={path}>
                 {title}
-              </NavigationLink>
+              </PrimaryNavLink>
             </Item>
           ))}
         </List>

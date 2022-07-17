@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Container, SurfaceTitle } from "@src/store/styled/components";
+import { Container } from "@src/store/styled/components/others";
+import { SurfaceTitle } from "@src/store/styled/components/titles";
+
 import { GridItems } from "./GridItems";
 
 const Items = styled.div`

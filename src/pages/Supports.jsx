@@ -1,6 +1,7 @@
 import React from "react";
 
-import { SecondaryText, Center, PrimaryText } from "@src/store/styled/components";
+import { PrimaryText } from "@src/store/styled/components/texts";
+import { Center } from "@src/store/styled/components/others";
 
 import { Printing } from "@cmp/UI/Printing";
 import { Section } from "@cmp/section/Section";
@@ -16,7 +17,7 @@ const Supports = () => {
         anchor="tasks"
         articles={[]}
         bg="#F6F6F6"
-        title="Темы &mdash;"
+        title="Темыs &mdash;"
       >
         <Center>
           <PrimaryText>Мы уже занимаемся разработкой тем</PrimaryText>

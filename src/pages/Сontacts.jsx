@@ -1,11 +1,15 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { IoMdPlay } from "react-icons/io";
 
 import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
-import { Center, PrimaryLink, NavigationLink, SecondaryText, Support } from "@src/store/styled/components";
 import { initСontacts } from "@src/store/state";
+
+import { PrimaryLink } from "@src/store/styled/components/links";
+import { SecondaryText } from "@src/store/styled/components/texts";
+import { Center, Support } from "@src/store/styled/components/others";
+import { PrimaryNavLink } from "@src/store/styled/components/router";
 
 import { Section } from "@cmp/section/Section";
 import { Video } from "@cmp/UI/Video";
@@ -70,9 +74,9 @@ const Сontacts = () => {
           <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryLink>
-          <NavigationLink color={"#00CCFF"} to={"/supports"} onClick={scrollStartPage}>
+          <PrimaryNavLink color={"#00CCFF"} to={"/supports"} onClick={scrollStartPage}>
             Поддержка
-          </NavigationLink>
+          </PrimaryNavLink>
         </Center>
       </Section>
     </>
