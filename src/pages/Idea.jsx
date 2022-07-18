@@ -16,6 +16,7 @@ import { Video } from "@cmp/UI/Video";
 import { MainCard } from "@cmp/UI/MainCard";
 
 const Idea = () => {
+  // rgba(0, 33, 55, 1);
   const { openModal } = useContext(ModalContext);
 
   const [essence, setEssence] = useState(initEssence);
@@ -32,7 +33,7 @@ const Idea = () => {
 
   return (
     <>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} articles={[]} bg="#00CCFF" title="">
+      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} articles={[]} bg="#002137" title="">
         <Frame isPadding={true}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
@@ -49,12 +50,12 @@ const Idea = () => {
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
         articles={[]}
-        bg="linear-gradient(180deg, rgba(0,204,255,1) 0%, rgb(246, 246, 246) 10%)"
+        bg="linear-gradient(180deg, rgba(0,204,255,1) 7%, rgb(246, 246, 246) 10%)"
         title="Доходы &mdash;"
       >
         <Slider />
       </Section>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} articles={essence} bg="#002137" title="Суть &mdash;">
+      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isIndex={true} articles={essence} bg="#002137" title="Суть &mdash;">
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
           <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>

@@ -9,6 +9,13 @@ const PrimaryBeatyText = styled(PrimaryText)`
   margin: 10px 0;
   text-align: ${props => (props.isCenter ? "center" : "start")};
   flex-grow: ${props => (props.isGrow ? "1" : "0")};
+  z-index: 3;
+`;
+
+const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
+  white-space: nowrap;
+  border-bottom: 2px solid #00ccff;
+  z-index: 3;
 `;
 
 const BeatySupport = styled(Support)`
@@ -18,6 +25,7 @@ const BeatySupport = styled(Support)`
   text-align: center;
   color: ${props => props.theme.colors.surface};
   border-top: 1px solid ${props => props.theme.colors.primary + "15"};
+  z-index: 3;
 `;
 
 const MainCard = ({ isCenter, isGrow, element }) => {
@@ -27,7 +35,7 @@ const MainCard = ({ isCenter, isGrow, element }) => {
 
   return (
     <>
-      <PrimarySubTitle style={{ whiteSpace: "nowrap", borderBottom: "2px solid #00CCFF" }}>{title}</PrimarySubTitle>
+      <PrimaryBeatySubTitle>{title}</PrimaryBeatySubTitle>
       {texts.map((text, index) => (
         <React.Fragment key={index}>
           <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>

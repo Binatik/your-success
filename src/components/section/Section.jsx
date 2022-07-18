@@ -16,7 +16,7 @@ const SectionTitle = styled(SurfaceTitle)`
   text-align: center;
 
   ${props => props.theme.fontStyle.sectionTitle};
-`
+`;
 
 const Section = ({ articles, title, bg, anchor, children, ...props }) => {
   const items = (

@@ -34,6 +34,7 @@ const Main = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
+        isIndex={true}
         articles={possibilitys}
         bg="#002137"
         title="Работая с нами &mdash;"

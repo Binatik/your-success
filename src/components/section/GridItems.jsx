@@ -2,8 +2,11 @@ import React, { useMemo } from "react";
 import styled from "styled-components";
 
 import { Grid } from "@src/store/styled/components/others";
+import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 
 const ItemGrid = styled.div`
+  position: relative;
+  overflow: hidden;
   width: ${props => props.size};
   padding: 20px;
   display: flex;
@@ -19,7 +22,18 @@ const ItemGrid = styled.div`
   }
 `;
 
-const GridItems = ({ Component, ComponentProps, element, isCenter, colSize, grid }) => {
+const Index = styled(PrimarySubTitle)`
+  user-select: none;
+  color: #00000008;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80rem;
+  z-index: 1;
+`;
+
+const GridItems = ({ Component, ComponentProps, element, isCenter, isIndex, colSize, grid }) => {
   const col = useMemo(() => {
     return grid ? grid : "col3";
   }, [grid]);
@@ -34,6 +48,7 @@ const GridItems = ({ Component, ComponentProps, element, isCenter, colSize, grid
     <>
       <Grid col={col}>
         <ItemGrid size={size} isCenter={isCenter}>
+          {isIndex && <Index isIndex={isIndex}>{element.id}</Index>}
           <Component {...ComponentProps} element={element} />
         </ItemGrid>
       </Grid>
