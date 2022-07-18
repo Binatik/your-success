@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { FiPhoneCall } from "react-icons/fi";
 
 import { getBurgerState } from "@src/store/redux";
 import { useThrottle } from "@src/hooks/useThrottle";
-import { initNavigation } from "@src/store/state";
-import { Container, Support } from "@src/store/styled/components/others";
+import { initNavigation, initIconСontacts } from "@src/store/state";
+import { Container } from "@src/store/styled/components/others";
 
 import { Burger } from "@cmp/UI/Burger";
 import { Logo } from "@cmp/UI/Logo";
 import { NavigationList } from "@cmp/UI/NavigationList";
+import { IconContacts } from "@cmp/UI/IconContacts";
 
 const Content = styled.div`
   display: flex;
@@ -22,27 +22,11 @@ const Content = styled.div`
   }
 `;
 
-const PhoneWrapper = styled.div`
-  z-index: 3;
-  margin: 0;
-  display: inline-block;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 0 50px 0 0;
-  }
-`;
-
-const PhoneIcon = styled(FiPhoneCall)`
-  transform: rotate(10deg);
-  margin: 0 8px 0 0;
-  font-size: 20px;
-  color: #fff;
-`;
-
 const Header = () => {
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
 
   const [links, setLinks] = useState(initNavigation);
+  const [iconСontacts, setIconСontacts] = useState(initIconСontacts);
 
   const [isTopScroll, setIsTopScroll] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
@@ -76,12 +60,7 @@ const Header = () => {
           <Content>
             <Logo title="Твой" toTitle="успех" />
             <NavigationList links={links} />
-            <PhoneWrapper>
-              <PhoneIcon />
-              <Support href="tel:+79099223801">
-                +7 (909) 922-38-01
-              </Support>
-            </PhoneWrapper>
+            <IconContacts contacts={iconСontacts} />
             <Burger />
           </Content>
         </Container>

@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Container, Support } from "@src/store/styled/components/others";
 import { SecondaryText } from "@src/store/styled/components/texts";
+import { initIconСontacts } from "@src/store/state";
 
 import { Logo } from "@cmp/UI/Logo";
+import { IconContacts } from "@cmp/UI/IconContacts";
 
 const Footer = () => {
+  const [iconСontacts, setIconСontacts] = useState(initIconСontacts);
+
   return (
     <>
       <Footer.Footer>
         <Container>
           <Logo title="Твой" toTitle="успех" />
           <SecondaryText style={{ margin: "5px 0 10px 0" }}>© Copyright 2022 Натали - партнер Oriflame</SecondaryText>
-          <Support style={{ margin: "0 10px 0 0" }} href="mailto:nmang2103@mail.ru">
-            nmang2103@mail.ru
-          </Support>
-          <Support href="tel:+79099223801">+7 (909) 922-38-01</Support>
+            <IconContacts contacts={iconСontacts} />
         </Container>
       </Footer.Footer>
     </>

@@ -193,6 +193,30 @@ export const initСontacts = [
   },
 ];
 
+import { FaTelegram, FaWhatsappSquare } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
+
+export const initIconСontacts = [
+  {
+    id: 0,
+    ComponentIcon: MdAlternateEmail,
+    path: "mailto:nmang2103@mail.ru",
+    title: "Маил"
+  },
+  {
+    id: 1,
+    ComponentIcon: FaTelegram,
+    path: "https://t.me/Natalya21031",
+    title: "Телеграмм"
+  },
+  {
+    id: 2,
+    ComponentIcon: FaWhatsappSquare,
+    path: "https://api.whatsapp.com/send?phone=79099223801",
+    title: "Ватсап"
+  },
+];
+
 export const initPrintingText = [
   "Я - Наталья - интернет - предприниматель.\n",
   "Работаю только через интернет, удалённо.\n",

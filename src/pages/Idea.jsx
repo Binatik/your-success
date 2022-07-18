@@ -55,7 +55,14 @@ const Idea = () => {
       >
         <Slider />
       </Section>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isIndex={true} articles={essence} bg="#002137" title="Суть &mdash;">
+      <Section
+        Component={MainCard}
+        ComponentProps={{ isCenter: false, isGrow: false }}
+        isIndex={true}
+        articles={essence}
+        bg="#002137"
+        title="Суть &mdash;"
+      >
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
           <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
