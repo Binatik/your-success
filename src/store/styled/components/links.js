@@ -34,7 +34,7 @@ export const SurfaceLink = styled(Link)`
 const ButtonLink = styled(Link)`
   border-radius: 3px;
   padding: 10px 35px;
-  box-shadow: 0px 5px 150px 2px ${props => props.theme.colors.surface};
+  box-shadow: 0px 5px 1000px 2px #6633FF;
 `;
 
 export const PrimaryButtonLink = styled(ButtonLink)`

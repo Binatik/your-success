@@ -21,10 +21,22 @@ export const PrimaryRouterLink = styled(RouterNavLink)`
   }
 `;
 
+export const SecondaryRouterLink = styled(RouterNavLink)`
+  color: ${props => (props.color ? props.color : props.theme.colors.secondary)};
+
+  &:hover {
+    color: ${props => props.theme.colors.secondary};
+  }
+
+  &.active {
+    color: ${props => props.theme.colors.secondary};
+  }
+`;
+
 const RouterButtonLink = styled(RouterNavLink)`
   border-radius: 3px;
   padding: 10px 25px;
-  box-shadow: 0px 5px 150px 2px ${props => props.theme.colors.surface};
+  box-shadow: 0px 5px 1000px 2px #6633FF;
 `;
 
 export const PrimaryRouterButtonLink = styled(RouterButtonLink)`

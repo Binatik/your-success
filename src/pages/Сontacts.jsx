@@ -7,7 +7,7 @@ import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initСontacts } from "@src/store/state";
 
 import { PrimaryButtonLink, PrimaryLink } from "@src/store/styled/components/links";
-import { PrimaryText, SecondaryText } from "@src/store/styled/components/texts";
+import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { PrimaryRouterButtonLink } from "@src/store/styled/components/router";
 
@@ -74,7 +74,7 @@ const Сontacts = () => {
           <PrimaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryButtonLink> 
-          <PrimaryText>или</PrimaryText>
+          <SecondaryText>или</SecondaryText>
           <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>
             Поддержка
           </PrimaryRouterButtonLink>

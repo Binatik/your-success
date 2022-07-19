@@ -19,6 +19,10 @@ const SecondaryBeatyLink = styled(SecondaryLink)`
   &:hover {
     color: ${props => props.theme.colors.surface};
   }
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    width: auto;
+  }
 `;
 
 const IconContacts = ({ contacts }) => {

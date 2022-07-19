@@ -6,7 +6,7 @@ export const Button = styled.button`
   border-radius: 3px;
   font-weight: 400;
   padding: 10px 35px;
-  box-shadow: 0px 5px 150px 2px ${props => props.theme.colors.surface};
+  box-shadow: 0px 5px 1000px 2px #6633FF;
   transition: background 0.2s, color 0.2s;
   ${props => props.theme.fontStyle.link};
 `;

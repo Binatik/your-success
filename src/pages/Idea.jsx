@@ -6,7 +6,7 @@ import { initEssence } from "@src/store/state";
 
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
-import { PrimaryRouterLink } from "@src/store/styled/components/router";
+import { SecondaryRouterLink } from "@src/store/styled/components/router";
 import { PrimaryButton } from "@src/store/styled/components/buttons";
 
 import { Section } from "@cmp/section/Section";
@@ -70,9 +70,9 @@ const Idea = () => {
           <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
-          <PrimaryRouterLink to={"/contacts"} onClick={scrollStartPage}>
+          <SecondaryRouterLink to={"/contacts"} onClick={scrollStartPage}>
             Читать далее
-          </PrimaryRouterLink>
+          </SecondaryRouterLink>
         </Center>
       </Section>
     </>

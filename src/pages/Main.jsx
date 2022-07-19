@@ -6,7 +6,7 @@ import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { PrimaryButtonLink } from "@src/store/styled/components/links";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
-import { PrimaryRouterLink } from "@src/store/styled/components/router";
+import { SecondaryRouterLink } from "@src/store/styled/components/router";
 
 import { Section } from "@cmp/section/Section";
 import { Printing } from "@cmp/UI/Printing";
@@ -44,9 +44,9 @@ const Main = () => {
           <PrimaryButtonLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
           </PrimaryButtonLink>
-          <PrimaryRouterLink to={"/idea"} onClick={scrollStartPage}>
+          <SecondaryRouterLink to={"/idea"} onClick={scrollStartPage}>
             Читать далее
-          </PrimaryRouterLink>
+          </SecondaryRouterLink>
         </Center>
       </Section>
     </>
