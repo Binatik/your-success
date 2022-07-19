@@ -55,7 +55,7 @@ const Idea = () => {
         title="Доходы &mdash;"
       >
         <Slider />
-        <PrimaryLink href="https://vk.com/club122297325">Еще больше доходов</PrimaryLink>
+        <PrimaryLink target="_blank" href="https://vk.com/club122297325">Еще больше доходов</PrimaryLink>
       </Section>
       <Section
         Component={MainCard}

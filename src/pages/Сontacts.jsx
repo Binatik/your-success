@@ -52,7 +52,7 @@ const Сontacts = () => {
         bg="#F6F6F6"
         title="Контакты &mdash;"
       >
-        <PrimaryLink href="https://ru.wikipedia.org/wiki/Oriflame">
+        <PrimaryLink target="_blank" href="https://ru.wikipedia.org/wiki/Oriflame">
           Проверить компанию
         </PrimaryLink>
       </Section>
