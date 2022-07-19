@@ -36,9 +36,9 @@ export const SecondaryRouterLink = styled(RouterNavLink)`
 const RouterButtonLink = styled(RouterNavLink)`
   border-radius: 3px;
   padding: 10px 25px;
-  box-shadow: 0px 5px 250px 2px #6633FF;
+  /* box-shadow: 0px 5px 250px 2px #6633FF;
   -webkit-box-shadow: 0px 5px 250px 2px #6633FF;
-  -moz-box-shadow: 0px 5px 250px 2px #6633FF;
+  -moz-box-shadow: 0px 5px 250px 2px #6633FF; */
 `;
 
 export const PrimaryRouterButtonLink = styled(RouterButtonLink)`
