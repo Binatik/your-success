@@ -34,7 +34,7 @@ export const SurfaceLink = styled(Link)`
 const ButtonLink = styled(Link)`
   border-radius: 3px;
   padding: 10px 35px;
-  box-shadow: 0px 5vw 100vw 2vw #6633FF;
+  box-shadow: 0 0 200px #6633FF;
 `;
 
 export const PrimaryButtonLink = styled(ButtonLink)`
