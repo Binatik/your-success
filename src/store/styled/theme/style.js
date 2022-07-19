@@ -14,6 +14,14 @@ export const fontStyle = {
     },
   `,
 
+  button: `
+  font-size: 1.2rem;
+
+  @media (max-width: ${breakpoints.medium}px) {
+    font-size: 1.1rem;
+  },
+  `,
+
   title: `
   font-size: 1.5rem;
 
