@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const Support = styled.a`
-  display: inline;
-  color: ${props => props.theme.colors.secondary};
-  transition: color 0.2s;
-
-  ${props => props.theme.fontStyle.paragraph};
-
-  &:hover {
-    color: ${props => props.theme.colors.primary};
-  }
-`;
-
 export const Grid = styled.div`
   padding: 0 15px;
   display: flex;
@@ -37,8 +25,9 @@ export const BurgerLine = styled.path`
 `;
 
 export const Center = styled.div`
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 `;
 

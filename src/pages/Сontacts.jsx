@@ -6,10 +6,10 @@ import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initСontacts } from "@src/store/state";
 
-import { PrimaryLink } from "@src/store/styled/components/links";
-import { SecondaryText } from "@src/store/styled/components/texts";
-import { Center, Support } from "@src/store/styled/components/others";
-import { PrimaryNavLink } from "@src/store/styled/components/router";
+import { PrimaryButtonLink, PrimaryLink } from "@src/store/styled/components/links";
+import { PrimaryText, SecondaryText } from "@src/store/styled/components/texts";
+import { Center } from "@src/store/styled/components/others";
+import { PrimaryRouterButtonLink } from "@src/store/styled/components/router";
 
 import { Section } from "@cmp/section/Section";
 import { Video } from "@cmp/UI/Video";
@@ -52,9 +52,9 @@ const Сontacts = () => {
         bg="#F6F6F6"
         title="Контакты &mdash;"
       >
-        <Support style={{ color: "#000" }} href="https://ru.wikipedia.org/wiki/Oriflame">
+        <PrimaryLink href="https://ru.wikipedia.org/wiki/Oriflame">
           Проверить компанию
-        </Support>
+        </PrimaryLink>
       </Section>
       <Section
         Component={MainCard}
@@ -71,12 +71,13 @@ const Сontacts = () => {
         </Frame>
         <Center>
           <Pulse handleClick={activeModal} componentIcon={<IoMdPlay />} />
-          <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
+          <PrimaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
-          </PrimaryLink>
-          <PrimaryNavLink color={"#00CCFF"} to={"/supports"} onClick={scrollStartPage}>
+          </PrimaryButtonLink> 
+          <PrimaryText>или</PrimaryText>
+          <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>
             Поддержка
-          </PrimaryNavLink>
+          </PrimaryRouterButtonLink>
         </Center>
       </Section>
     </>

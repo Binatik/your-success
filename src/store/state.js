@@ -193,7 +193,7 @@ export const initСontacts = [
   },
 ];
 
-import { FaTelegram, FaWhatsappSquare } from "react-icons/fa";
+import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
 export const initIconСontacts = [
@@ -205,13 +205,13 @@ export const initIconСontacts = [
   },
   {
     id: 1,
-    ComponentIcon: FaTelegram,
+    ComponentIcon: FaTelegramPlane,
     path: "https://t.me/Natalya21031",
     title: "Телеграмм"
   },
   {
     id: 2,
-    ComponentIcon: FaWhatsappSquare,
+    ComponentIcon: FaWhatsapp,
     path: "https://api.whatsapp.com/send?phone=79099223801",
     title: "Ватсап"
   },

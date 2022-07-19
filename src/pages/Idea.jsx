@@ -6,7 +6,7 @@ import { initEssence } from "@src/store/state";
 
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
-import { PrimaryNavLink } from "@src/store/styled/components/router";
+import { PrimaryRouterLink } from "@src/store/styled/components/router";
 import { PrimaryButton } from "@src/store/styled/components/buttons";
 
 import { Section } from "@cmp/section/Section";
@@ -14,6 +14,7 @@ import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
 import { Video } from "@cmp/UI/Video";
 import { MainCard } from "@cmp/UI/MainCard";
+import { PrimaryLink } from "@src/store/styled/components/links";
 
 const Idea = () => {
   // rgba(0, 33, 55, 1);
@@ -54,6 +55,7 @@ const Idea = () => {
         title="Доходы &mdash;"
       >
         <Slider />
+        <PrimaryLink href="https://vk.com/club122297325">Еще больше доходов</PrimaryLink>
       </Section>
       <Section
         Component={MainCard}
@@ -68,9 +70,9 @@ const Idea = () => {
           <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
             Видео презентация
           </PrimaryButton>
-          <PrimaryNavLink color={"#00CCFF"} to={"/contacts"} onClick={scrollStartPage}>
+          <PrimaryRouterLink to={"/contacts"} onClick={scrollStartPage}>
             Читать далее
-          </PrimaryNavLink>
+          </PrimaryRouterLink>
         </Center>
       </Section>
     </>

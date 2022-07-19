@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
-import { PrimaryLink } from "@src/store/styled/components/links";
+import { PrimaryButtonLink } from "@src/store/styled/components/links";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
-import { PrimaryNavLink } from "@src/store/styled/components/router";
+import { PrimaryRouterLink } from "@src/store/styled/components/router";
 
 import { Section } from "@cmp/section/Section";
 import { Printing } from "@cmp/UI/Printing";
@@ -41,12 +41,12 @@ const Main = () => {
       >
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>
-          <PrimaryLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
+          <PrimaryButtonLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
-          </PrimaryLink>
-          <PrimaryNavLink color="#00CCFF" to={"/idea"} onClick={scrollStartPage}>
+          </PrimaryButtonLink>
+          <PrimaryRouterLink to={"/idea"} onClick={scrollStartPage}>
             Читать далее
-          </PrimaryNavLink>
+          </PrimaryRouterLink>
         </Center>
       </Section>
     </>

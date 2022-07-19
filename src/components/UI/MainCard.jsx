@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Support } from "@src/store/styled/components/others";
 import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 import { PrimaryText } from "@src/store/styled/components/texts";
+import { SurfaceLink } from "@src/store/styled/components/links";
 
 const PrimaryBeatyText = styled(PrimaryText)`
   margin: 10px 0;
@@ -18,20 +19,17 @@ const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
   z-index: 3;
 `;
 
-const BeatySupport = styled(Support)`
+const SurfaceBeatyLink = styled(SurfaceLink)`
   margin: 10px 0;
   padding: 10px 0;
   width: 100%;
   text-align: center;
-  color: ${props => props.theme.colors.surface};
   border-top: 1px solid ${props => props.theme.colors.primary + "15"};
   z-index: 3;
 `;
 
 const MainCard = ({ isCenter, isGrow, element }) => {
   const { title, texts, paths } = element;
-
-  const support = <BeatySupport href={paths[0]}>{paths[1]}</BeatySupport>;
 
   return (
     <>
@@ -41,7 +39,7 @@ const MainCard = ({ isCenter, isGrow, element }) => {
           <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
             {text}
           </PrimaryBeatyText>
-          {paths.length !== 0 ? support : null}
+          {paths.length !== 0 ? <SurfaceBeatyLink href={paths[0]}>{paths[1]}</SurfaceBeatyLink> : null}
         </React.Fragment>
       ))}
     </>

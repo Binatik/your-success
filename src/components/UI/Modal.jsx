@@ -43,7 +43,7 @@ Modal.Modal = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 15;
   left: 0;
   top: 0;
   width: 100%;
