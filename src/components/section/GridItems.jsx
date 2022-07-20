@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import styled from "styled-components";
 
 import { Grid } from "@src/store/styled/components/others";
-import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 
 const ItemGrid = styled.div`
   position: relative;
@@ -28,7 +27,7 @@ const Index = styled.span`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 800px;
+  font-size: 70rem;
   z-index: 1;
 `;
 

@@ -23,6 +23,7 @@ const Idea = () => {
   const [essence, setEssence] = useState(initEssence);
 
   const videoPath = "https://www.youtube.com/embed/rGV7shl5N-4";
+  const sectionSliderBg = "linear-gradient(180deg,#6633ff 60%,rgb(246,246,246) 61%)";
 
   function activeModal() {
     openModal({
@@ -34,7 +35,7 @@ const Idea = () => {
 
   return (
     <>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#002137" title="">
+      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#6633ff" title="">
         <Frame isPadding={false}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
@@ -51,10 +52,11 @@ const Idea = () => {
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
         isDecor={false}
+        titleColor="#fff"
         grid="col3"
         colSize="big"
         articles={[]}
-        bg="linear-gradient(180deg, rgba(0,204,255,1) 7%, rgb(246, 246, 246) 10%)"
+        bg={sectionSliderBg}
         title="Доходы &mdash;"
       >
         <Slider />

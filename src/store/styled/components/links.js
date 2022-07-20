@@ -36,7 +36,7 @@ const ButtonLink = styled(Link)`
   text-transform: uppercase;
   border-radius: 3px;
   padding: 10px 35px;
-  box-shadow: 0 0 200px #6633FF;
+  box-shadow: 0 0 100px #6633FF;
   ${props => props.theme.fontStyle.button};
 `;
 

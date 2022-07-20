@@ -38,7 +38,7 @@ const RouterButtonLink = styled(RouterNavLink)`
   text-transform: uppercase;
   border-radius: 3px;
   padding: 10px 25px;
-  box-shadow: 0 0 200px #6633ff;
+  box-shadow: 0 0 100px #6633ff;
   ${props => props.theme.fontStyle.button};
 `;
 
