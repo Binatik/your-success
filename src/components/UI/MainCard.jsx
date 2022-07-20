@@ -7,6 +7,7 @@ import { SurfaceLink } from "@src/store/styled/components/links";
 
 const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
   text-align: ${props => (props.isCenter ? "center" : "start")};
+  width: ${props => (props.isCenter ? "100%" : "auto")};
   padding: 10px 0;
   border-bottom: 2px solid #00ccff;
   z-index: 3;

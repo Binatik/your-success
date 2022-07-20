@@ -10,6 +10,7 @@ const ItemGrid = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   box-shadow: ${props => props.theme.colors.primary + "30"} 0px 7px 29px 0px;
   background-color: ${props => props.theme.colors.secondary};
   height: 100%;
