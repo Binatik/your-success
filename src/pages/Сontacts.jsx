@@ -6,7 +6,7 @@ import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initСontacts } from "@src/store/state";
 
-import { PrimaryButtonLink, PrimaryLink } from "@src/store/styled/components/links";
+import { SecondaryButtonLink, PrimaryLink } from "@src/store/styled/components/links";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { PrimaryRouterButtonLink } from "@src/store/styled/components/router";
@@ -73,9 +73,9 @@ const Сontacts = () => {
         </Frame>
         <Center>
           <Pulse handleClick={activeModal} componentIcon={<IoMdPlay />} />
-          <PrimaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
+          <SecondaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
-          </PrimaryButtonLink> 
+          </SecondaryButtonLink> 
           <SecondaryText>или</SecondaryText>
           <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>
             Поддержка

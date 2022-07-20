@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
-import { PrimaryButtonLink } from "@src/store/styled/components/links";
+import { SecondaryButtonLink } from "@src/store/styled/components/links";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { SecondaryRouterLink } from "@src/store/styled/components/router";
@@ -46,9 +46,9 @@ const Main = () => {
       >
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>
-          <PrimaryButtonLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
+          <SecondaryButtonLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам
-          </PrimaryButtonLink>
+          </SecondaryButtonLink>
           <SecondaryRouterLink to={"/idea"} onClick={scrollStartPage}>
             Читать далее
           </SecondaryRouterLink>

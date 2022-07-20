@@ -14,12 +14,11 @@ const Items = styled.div`
 
 const SectionTitle = styled(SurfaceTitle)`
   text-align: center;
-  color: ${props => props.color};
 
   ${props => props.theme.fontStyle.sectionTitle};
 `;
 
-const Section = ({ articles, titleColor, title, bg, anchor, children, ...props }) => {
+const Section = ({ articles, title, bg, anchor, children, ...props }) => {
   const items = (
     <Items>
       {articles.map(element => (
@@ -32,7 +31,7 @@ const Section = ({ articles, titleColor, title, bg, anchor, children, ...props }
     <>
       <Section.Section id={anchor} bg={bg}>
         <Container>
-          <SectionTitle color={titleColor}>{title}</SectionTitle>
+          <SectionTitle>{title}</SectionTitle>
           {articles.length !== 0 ? items : null}
           {children}
         </Container>

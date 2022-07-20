@@ -7,7 +7,7 @@ import { initEssence } from "@src/store/state";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { SecondaryRouterLink } from "@src/store/styled/components/router";
-import { PrimaryButton } from "@src/store/styled/components/buttons";
+import { SecondaryButton } from "@src/store/styled/components/buttons";
 
 import { Section } from "@cmp/section/Section";
 import { Slider } from "@cmp/slider/Slider";
@@ -23,7 +23,7 @@ const Idea = () => {
   const [essence, setEssence] = useState(initEssence);
 
   const videoPath = "https://www.youtube.com/embed/rGV7shl5N-4";
-  const sectionSliderBg = "linear-gradient(180deg,#6633ff 60%,rgb(246,246,246) 61%)";
+  const sectionSliderBg = "linear-gradient(180deg,#002137 60%,rgb(246,246,246) 61%)";
 
   function activeModal() {
     openModal({
@@ -35,7 +35,7 @@ const Idea = () => {
 
   return (
     <>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#6633ff" title="">
+      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#002137" title="">
         <Frame isPadding={false}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
@@ -52,7 +52,6 @@ const Idea = () => {
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
         isDecor={false}
-        titleColor="#fff"
         grid="col3"
         colSize="big"
         articles={[]}
@@ -76,9 +75,9 @@ const Idea = () => {
       >
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
-          <PrimaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
+          <SecondaryButton type="button" onClick={activeModal} style={{ margin: "40px 0" }}>
             Видео презентация
-          </PrimaryButton>
+          </SecondaryButton>
           <SecondaryRouterLink to={"/contacts"} onClick={scrollStartPage}>
             Читать далее
           </SecondaryRouterLink>

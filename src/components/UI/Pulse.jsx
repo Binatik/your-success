@@ -31,7 +31,8 @@ const Line = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #fff;
+  border: 1px solid #f6f6f6;
+  transition: border 1.2s, color 1.2s;
 `;
 
 const OneLine = styled(Line)`
@@ -55,7 +56,7 @@ const Content = styled.div`
   }
 `;
 
-const Pulse = ({ handleClick, componentIcon, isCenter }) => {
+const Pulse = ({ handleClick, componentIcon }) => {
   return (
     <>
       <Container>
@@ -85,6 +86,10 @@ Pulse.Pulse = styled.button`
   z-index: 1;
   border-radius: 50%;
   background-color: #fff;
+
+  &:hover ${Line} {
+    border: 1px solid #00ccff;
+  }
 
   @media ${props => props.theme.desktopFirst.tablet} {
     width: 50px;
