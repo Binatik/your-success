@@ -35,7 +35,7 @@ const Idea = () => {
   return (
     <>
       <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#002137" title="">
-        <Frame isPadding={true}>
+        <Frame isPadding={false}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
           </SecondaryText>

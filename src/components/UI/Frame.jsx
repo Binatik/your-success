@@ -79,7 +79,7 @@ Frame.Frame = styled.div`
   margin: 30px auto;
   padding: ${props => (props.isPadding ? "20px" : 0)};
   border: 3px solid #00ccff;
-  box-shadow: #00000030 0px 7px 29px 0px;
+  box-shadow: 0 0 200px #6633FF;
 `;
 
 export { Frame };
