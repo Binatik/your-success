@@ -72,7 +72,7 @@ body {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #002137;
+  color: #F6F6F6;
   transition: transform 0.2s;
 }
 
