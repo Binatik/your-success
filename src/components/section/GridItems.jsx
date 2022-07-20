@@ -11,7 +11,6 @@ const ItemGrid = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: ${props => (props.isCenter ? "center" : "start")};
   box-shadow: ${props => props.theme.colors.primary + "30"} 0px 7px 29px 0px;
   background-color: ${props => props.theme.colors.secondary};
   height: 100%;
@@ -22,18 +21,18 @@ const ItemGrid = styled.div`
   }
 `;
 
-const Index = styled(PrimarySubTitle)`
+const Index = styled.span`
   user-select: none;
   color: #00000008;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 80rem;
+  font-size: 800px;
   z-index: 1;
 `;
 
-const GridItems = ({ Component, ComponentProps, element, isCenter, isIndex, colSize, grid }) => {
+const GridItems = ({ Component, ComponentProps, element, isDecor, colSize, grid }) => {
   const col = useMemo(() => {
     return grid ? grid : "col3";
   }, [grid]);
@@ -41,14 +40,14 @@ const GridItems = ({ Component, ComponentProps, element, isCenter, isIndex, colS
   const size = useMemo(() => {
     if (!colSize) return "350px";
     else if (colSize === "big") return "350px";
-    else if (colSize === "small") return "280px";
+    else if (colSize === "auto") return "100%";
   }, [colSize]);
 
   return (
     <>
       <Grid col={col}>
-        <ItemGrid size={size} isCenter={isCenter}>
-          {isIndex && <Index isIndex={isIndex}>{element.id}</Index>}
+        <ItemGrid size={size}>
+          {isDecor && <Index isIndex={isDecor}>{element.id}</Index>}
           <Component {...ComponentProps} element={element} />
         </ItemGrid>
       </Grid>

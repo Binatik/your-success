@@ -26,6 +26,9 @@ const Main = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
+        isDecor={false}
+        grid="col3"
+        colSize="big"
         anchor="tasks"
         articles={tasks}
         bg="#F6F6F6"
@@ -34,7 +37,9 @@ const Main = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
-        isIndex={true}
+        isDecor={true}
+        grid="col3"
+        colSize="big"
         articles={possibilitys}
         bg="#002137"
         title="Работая с нами &mdash;"

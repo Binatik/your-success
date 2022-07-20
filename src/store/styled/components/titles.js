@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Title = styled.h2`
   font-family: "Montserrat", sans-serif;
+  z-index: 3;
   ${props => props.theme.fontStyle.title}
 `;
 

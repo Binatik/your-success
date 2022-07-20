@@ -10,7 +10,8 @@ const PrimaryBeatyText = styled(PrimaryText)`
 
 const SecondaryBeatyLink = styled(SecondaryLink)`
   padding: 8px;
-  background-color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.secondary};
   border-radius: 50%;
   display: flex;
   align-items: center;

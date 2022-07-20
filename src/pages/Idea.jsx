@@ -34,7 +34,7 @@ const Idea = () => {
 
   return (
     <>
-      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} articles={[]} bg="#002137" title="">
+      <Section Component={MainCard} ComponentProps={{ isCenter: false, isGrow: false }} isDecor={false} articles={[]} bg="#002137" title="">
         <Frame isPadding={true}>
           <SecondaryText style={{ margin: "20px 0" }}>
             Компания платит определенный процент от товарооборота, который создает Ваша команда
@@ -50,17 +50,24 @@ const Idea = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
+        isDecor={false}
+        grid="col3"
+        colSize="big"
         articles={[]}
         bg="linear-gradient(180deg, rgba(0,204,255,1) 7%, rgb(246, 246, 246) 10%)"
         title="Доходы &mdash;"
       >
         <Slider />
-        <PrimaryLink target="_blank" href="https://vk.com/club122297325">Еще больше доходов</PrimaryLink>
+        <PrimaryLink target="_blank" href="https://vk.com/club122297325">
+          Еще больше доходов
+        </PrimaryLink>
       </Section>
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
-        isIndex={false}
+        isDecor={true}
+        grid="col3"
+        colSize="big"
         articles={essence}
         bg="#002137"
         title="Суть &mdash;"

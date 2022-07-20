@@ -44,11 +44,10 @@ const Сontacts = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: true, isGrow: true }}
-        isCenter={true}
+        isDecor={false}
         grid="col4"
-        colSize="small"
+        colSize="auto"
         articles={contacts}
-        anchor="contacts"
         bg="#F6F6F6"
         title="Контакты &mdash;"
       >
@@ -59,6 +58,9 @@ const Сontacts = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
+        isDecor={false}
+        grid="col3"
+        colSize="big"
         articles={[]}
         anchor="video"
         bg="#002137"

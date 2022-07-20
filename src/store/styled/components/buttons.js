@@ -8,6 +8,7 @@ export const Button = styled.button`
   font-weight: 400;
   padding: 10px 35px;
   box-shadow: 0 0 200px #6633FF;
+  z-index: 3;
   transition: background 0.2s, color 0.2s;
   ${props => props.theme.fontStyle.button};
 `;
