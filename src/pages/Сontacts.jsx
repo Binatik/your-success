@@ -52,7 +52,7 @@ const Сontacts = () => {
         title="Контакты &mdash;"
       >
         <PrimaryLink target="_blank" href="https://ru.wikipedia.org/wiki/Oriflame">
-          Проверить компанию
+          Проверить компанию ➜
         </PrimaryLink>
       </Section>
       <Section
@@ -74,7 +74,7 @@ const Сontacts = () => {
         <Center>
           <Pulse handleClick={activeModal} componentIcon={<IoMdPlay />} />
           <SecondaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
-            Присоединиться к нам
+            Присоединиться к нам ➜
           </SecondaryButtonLink> 
           <SecondaryText>или</SecondaryText>
           <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>

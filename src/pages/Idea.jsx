@@ -5,7 +5,7 @@ import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { initEssence } from "@src/store/state";
 
 import { SecondaryText } from "@src/store/styled/components/texts";
-import { Center } from "@src/store/styled/components/others";
+import { Center, FlexItems } from "@src/store/styled/components/others";
 import { SecondaryRouterLink } from "@src/store/styled/components/router";
 import { SecondaryButton } from "@src/store/styled/components/buttons";
 
@@ -17,7 +17,6 @@ import { MainCard } from "@cmp/UI/MainCard";
 import { PrimaryLink } from "@src/store/styled/components/links";
 
 const Idea = () => {
-  // rgba(0, 33, 55, 1);
   const { openModal } = useContext(ModalContext);
 
   const [essence, setEssence] = useState(initEssence);
@@ -58,10 +57,12 @@ const Idea = () => {
         bg={sectionSliderBg}
         title="Доходы &mdash;"
       >
-        <Slider />
-        <PrimaryLink target="_blank" href="https://vk.com/club122297325">
-          Еще больше доходов
-        </PrimaryLink>
+        <FlexItems style={{display: "flex"}}>
+          <Slider />
+          <PrimaryLink target="_blank" href="https://vk.com/club122297325">
+            Еще больше доходов ➜
+          </PrimaryLink>
+        </FlexItems>
       </Section>
       <Section
         Component={MainCard}

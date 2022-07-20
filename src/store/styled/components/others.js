@@ -36,3 +36,11 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 10px 15px;
 `;
+
+export const FlexItems = styled.div`
+  display: flex;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    flex-wrap: wrap;
+  }
+`;

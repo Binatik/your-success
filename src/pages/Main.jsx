@@ -47,7 +47,7 @@ const Main = () => {
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>
           <SecondaryButtonLink style={{ margin: "40px 0" }} href={linkQuestionnaire}>
-            Присоединиться к нам
+            Присоединиться к нам ➜
           </SecondaryButtonLink>
           <SecondaryRouterLink to={"/idea"} onClick={scrollStartPage}>
             Читать далее
