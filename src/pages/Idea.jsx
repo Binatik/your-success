@@ -60,7 +60,7 @@ const Idea = () => {
       <Section
         Component={MainCard}
         ComponentProps={{ isCenter: false, isGrow: false }}
-        isIndex={true}
+        isIndex={false}
         articles={essence}
         bg="#002137"
         title="Суть &mdash;"
