@@ -5,7 +5,7 @@ import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 import { PrimaryText } from "@src/store/styled/components/texts";
 import { SurfaceLink } from "@src/store/styled/components/links";
 
-const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
+export const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
   text-align: ${props => (props.isCenter ? "center" : "start")};
   width: ${props => (props.isCenter ? "100%" : "auto")};
   padding: 10px 0;
@@ -15,6 +15,7 @@ const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
 
 const PrimaryBeatyText = styled(PrimaryText)`
   padding: 10px 0;
+  width: ${props => (props.isCenter ? "100%" : "auto")};
   text-align: ${props => (props.isCenter ? "center" : "start")};
   flex-grow: ${props => (props.isGrow ? "1" : "0")};
   z-index: 3;
