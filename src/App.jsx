@@ -13,6 +13,7 @@ import "./style.css";
 import { ModalContextProvider } from "./contexts/modalContext/ModalContextProvider";
 import { Supports } from "@pages/Supports";
 import { Header } from "@cmp/layout/Header";
+import { CatalogCard } from "@pages/supportCatalog/CatalogCard";
 
 const App = () => {
 
@@ -30,6 +31,7 @@ const App = () => {
                   <Route path="idea" element={<Idea />} />
                   <Route path="contacts" element={<Сontacts />} />
                   <Route path="supports" element={<Supports />} />
+                  <Route path="supports/:id/:title" element={<CatalogCard />} />
                   <Route path="404" element={<ErrorPage code={404} />} />
                   <Route path="*" element={<Navigate to="404" />} />
                 </Route>

@@ -34,6 +34,18 @@ export const SecondaryRouterLink = styled(RouterNavLink)`
   }
 `;
 
+export const SurfaceRouterLink = styled(RouterNavLink)`
+  color: ${props => props.theme.colors.primary};
+
+  &:hover {
+    color: ${props => props.theme.colors.surface};
+  }
+
+  &.active {
+    color: ${props => props.theme.colors.surface};
+  }
+`;
+
 const RouterButtonLink = styled(RouterNavLink)`
   text-transform: uppercase;
   border-radius: 3px;

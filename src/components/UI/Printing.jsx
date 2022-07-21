@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import { getRandomInt } from "@src/store/helpers/getRandomInt";
@@ -38,8 +38,6 @@ const Content = styled.div`
 `;
 
 const Printing = ({ bg, color, texts, children }) => {
-  const [isPrinting, setIsPrinting] = useState(false);
-
   const textRef = useRef(null);
   const countIndexRef = useRef(0);
   const countSymbolRef = useRef(0);

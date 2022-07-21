@@ -13,7 +13,7 @@ const Router = styled.div`
 `;
 
 const Main = styled.main`
-  margin: 80px 0 0 0;
+  padding: 95px 0 0 0;
   flex: 1 1 100%;
 `;
 
