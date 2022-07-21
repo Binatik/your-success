@@ -89,7 +89,7 @@ body {
 
 /* Когда стали переходить - эффект исчезновения */
 .page-exit {
-  animation: fadeOut 0.8s;
+  animation: fadeOut 0.4s;
 }
 
 /* .page-exit-active {
@@ -98,7 +98,7 @@ body {
 
 /* Когда перешли на страницу - эффект появления */
 .page-enter {
-  animation: fadeEnd 0.8s;
+  animation: fadeEnd 0.4s;
 }
 
 /* .page-enter-active {
