@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 
-import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 const Router = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
 `;
 
@@ -21,12 +20,12 @@ const Main = styled.main`
 const Layout = () => {
   return (
     <>
-      <Router>
-        <Main>
-          <Outlet />
-        </Main>
-        <Footer />
-      </Router>
+        <Router>
+          <Main>
+            <Outlet />
+          </Main>
+          <Footer />
+        </Router>
     </>
   );
 };

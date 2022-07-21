@@ -1,5 +1,5 @@
 export function scrollStartPage() {
-  const ms = 500;
+  const ms = 100;
 
   setTimeout(() => {
     window.scrollTo({
