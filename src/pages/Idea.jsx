@@ -14,7 +14,7 @@ import { Slider } from "@cmp/slider/Slider";
 import { Frame } from "@cmp/UI/Frame";
 import { Video } from "@cmp/UI/Video";
 import { MainCard } from "@cmp/UI/MainCard";
-import { PrimaryLink } from "@src/store/styled/components/links";
+import { SecondaryLink } from "@src/store/styled/components/links";
 
 const Idea = () => {
   const { openModal } = useContext(ModalContext);
@@ -57,11 +57,11 @@ const Idea = () => {
         bg={sectionSliderBg}
         title="Доходы &mdash;"
       >
-        <FlexItems style={{display: "flex"}}>
+        <FlexItems style={{ display: "flex" }}>
           <Slider />
-          <PrimaryLink target="_blank" href="https://vk.com/club122297325">
+          <SecondaryLink mobileColor="#002137" target="_blank" href="https://vk.com/club122297325">
             Еще больше доходов ➜
-          </PrimaryLink>
+          </SecondaryLink>
         </FlexItems>
       </Section>
       <Section

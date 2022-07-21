@@ -5,11 +5,11 @@ import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 import { PrimaryText } from "@src/store/styled/components/texts";
 import { SurfaceLink } from "@src/store/styled/components/links";
 
-export const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
+const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
   text-align: ${props => (props.isCenter ? "center" : "start")};
   width: ${props => (props.isCenter ? "100%" : "auto")};
   padding: 10px 0;
-  border-bottom: 2px solid #00ccff;
+  border-bottom: 2px solid ${props => props.theme.colors.surface};
   z-index: 3;
 `;
 

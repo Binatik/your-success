@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Container, Support } from "@src/store/styled/components/others";
+import { Container } from "@src/store/styled/components/others";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { initIconСontacts } from "@src/store/state";
 

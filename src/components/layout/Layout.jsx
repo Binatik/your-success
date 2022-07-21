@@ -19,11 +19,9 @@ const Main = styled.main`
 `;
 
 const Layout = () => {
-
   return (
     <>
       <Router>
-        <Header />
         <Main>
           <Outlet />
         </Main>

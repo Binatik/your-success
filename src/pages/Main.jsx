@@ -4,7 +4,7 @@ import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state"
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
 import { SecondaryButtonLink } from "@src/store/styled/components/links";
-import { SecondaryText } from "@src/store/styled/components/texts";
+import { SecondaryText, SurfaceText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { SecondaryRouterLink } from "@src/store/styled/components/router";
 
@@ -21,7 +21,7 @@ const Main = () => {
   return (
     <>
       <Printing texts={printingText} bg="#002137" color="#fff">
-        <SecondaryText style={{ color: "#00CCFF" }}>Откройте собственный онлайн бизнес в интернете.</SecondaryText>
+        <SurfaceText>Откройте собственный онлайн бизнес в интернете.</SurfaceText>
       </Printing>
       <Section
         Component={MainCard}

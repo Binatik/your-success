@@ -2,7 +2,6 @@ import React, { useMemo } from "react";
 import styled from "styled-components";
 
 import { Grid } from "@src/store/styled/components/others";
-import { PrimaryBeatySubTitle } from "@cmp/UI/MainCard";
 
 const ItemGrid = styled.div`
   position: relative;
@@ -16,10 +15,6 @@ const ItemGrid = styled.div`
   background-color: ${props => props.theme.colors.secondary};
   height: 100%;
   border-radius: 5px;
-
-  &:hover ${PrimaryBeatySubTitle} {
-    color: ${props => props.theme.colors.surface};
-  }
 
   @media ${props => props.theme.desktopFirst.tablet} {
     width: 100%;

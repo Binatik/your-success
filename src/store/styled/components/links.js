@@ -20,7 +20,11 @@ export const SecondaryLink = styled(Link)`
   color: ${props => props.theme.colors.secondary};
 
   &:hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.surface};
+  }
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    color: ${props => (props.mobileColor ? props.mobileColor : props.theme.colors.secondary)};
   }
 `;
 

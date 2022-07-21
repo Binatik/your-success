@@ -12,17 +12,18 @@ import "./style.css";
 
 import { ModalContextProvider } from "./contexts/modalContext/ModalContextProvider";
 import { Supports } from "@pages/Supports";
+import { Header } from "@cmp/layout/Header";
 
 const App = () => {
-  // const videoPageContacts = "https://www.youtube-nocookie.com/embed/HEMEDrilV7Q?controls=0";
 
   const location = useLocation();
   return (
     <ModalContextProvider>
       <>
+        <Header />
         <TransitionGroup component={null}>
           <SwitchTransition mode={"out-in"}>
-            <CSSTransition key={location.pathname} classNames="page" timeout={600} unmountOnExit>
+            <CSSTransition key={location.pathname} classNames="page" timeout={300} unmountOnExit>
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Layout />}>
                   <Route index element={<Main />} />
