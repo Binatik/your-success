@@ -70,13 +70,20 @@ const initialState = {
       paths: [],
     },
   ],
+  filteredSupports: [],
 };
 
 const posts = createSlice({
   name: "posts",
   initialState,
-  reducers: {},
+  reducers: {
+    removeActivePost(state, actions) {
+      const { id } = actions.payload;
+
+      state.filteredSupports = state.supports.filter((element) => element.id !== +id);
+    }
+  },
 });
 
-export const {} = posts.actions;
+export const { removeActivePost } = posts.actions;
 export default posts.reducer;

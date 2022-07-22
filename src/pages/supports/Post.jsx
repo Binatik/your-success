@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import { getPostsState } from "@src/store/redux";
 import { Center, Container } from "@src/store/styled/components/others";
 import { SecondaryRouterButtonLink } from "@src/store/styled/components/router";
+import { removeActivePost } from "@src/store/redux/slice/posts";
 
 import { GridItems } from "@cmp/section/GridItems";
 import { MainCard } from "@cmp/UI/MainCard";
@@ -19,13 +20,17 @@ const DuestionWrapper = styled.div`
 `;
 
 const Post = () => {
-  const { supports } = useSelector(getPostsState);
+  const dispatch = useDispatch();
+  const { supports, filteredSupports } = useSelector(getPostsState);
   const { id, title } = useParams();
 
   const { texts, paths } = supports[id];
 
   const location = useLocation();
-  console.log(location);
+
+  useEffect(() => {
+    dispatch(removeActivePost({ id }));
+  }, [id]);
 
   return (
     <>
@@ -45,7 +50,7 @@ const Post = () => {
             grid="col1"
             colSize="auto"
             anchor="tasks"
-            articles={supports}
+            articles={filteredSupports}
             bg="#002137"
             title="Другие темы &mdash;"
           ></Section>
