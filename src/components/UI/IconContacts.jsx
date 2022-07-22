@@ -43,12 +43,9 @@ const IconContacts = ({ contacts }) => {
 
 IconContacts.IconContacts = styled.div`
   position: relative;
+  padding: 5px 0;
   display: flex;
   align-items: center;
   z-index: 5;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 0 50px 0 0;
-  }
 `;
 export { IconContacts };

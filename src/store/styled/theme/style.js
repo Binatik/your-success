@@ -4,11 +4,6 @@ export const fontStyle = {
   link: `
     font-size: 1.4rem;
 
-    @media (max-width: ${breakpoints.small}px) {
-      width: 100%;
-      text-align: center;
-    },
-
     @media (max-width: ${breakpoints.medium}px) {
       font-size: 1.3rem;
     },

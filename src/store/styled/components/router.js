@@ -61,3 +61,13 @@ export const PrimaryRouterButtonLink = styled(RouterButtonLink)`
     background-color: ${props => props.theme.colors.surface};
   }
 `;
+
+export const SecondaryRouterButtonLink = styled(RouterButtonLink)`
+  color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.secondary};
+
+  &:hover {
+    background-color: ${props => props.theme.colors.surface};
+    color: ${props => props.theme.colors.secondary};
+  }
+`;

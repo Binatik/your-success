@@ -16,6 +16,7 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 50px 0 0;
 
   @media ${props => props.theme.desktopFirst.tablet} {
     justify-content: space-between;

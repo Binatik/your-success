@@ -84,7 +84,7 @@ Burger.Burger = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    transform: translate(-15%, 20px);
+    transform: translate(-15%, 23px);
     transition: box-shadow 0.6s;
     display: block;
     width: 45px;

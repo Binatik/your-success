@@ -5,8 +5,19 @@ import { Container } from "@src/store/styled/components/others";
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { initIconСontacts } from "@src/store/state";
 
-import { Logo } from "@cmp/UI/Logo";
 import { IconContacts } from "@cmp/UI/IconContacts";
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media ${props => props.theme.desktopFirst.phone} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 const Footer = () => {
   const [iconСontacts, setIconСontacts] = useState(initIconСontacts);
@@ -15,9 +26,10 @@ const Footer = () => {
     <>
       <Footer.Footer>
         <Container>
-          <Logo title="Твой" toTitle="успех" />
-          <SecondaryText style={{ margin: "15px 0 10px 0" }}>© Copyright 2022 Натали - партнер Oriflame</SecondaryText>
+          <FlexContainer>
             <IconContacts contacts={iconСontacts} />
+            <SecondaryText>© Copyright 2022 Натали - партнер Oriflame</SecondaryText>
+          </FlexContainer>
         </Container>
       </Footer.Footer>
     </>
