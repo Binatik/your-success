@@ -80,8 +80,8 @@ const posts = createSlice({
     removeActivePost(state, actions) {
       const { id } = actions.payload;
 
-      state.filteredSupports = state.supports.filter((element) => element.id !== +id);
-    }
+      state.filteredSupports = state.supports.filter(element => element.id !== +id);
+    },
   },
 });
 
