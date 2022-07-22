@@ -175,7 +175,7 @@ export const initСontacts = [
   },
   {
     id: 1,
-    title: "Электронная почта",
+    title: "Почта",
     texts: ["Старый проверенный способ - письмо"],
     paths: ["mailto:nmang2103@mail.ru", "nmang2103@mail.ru"],
   },

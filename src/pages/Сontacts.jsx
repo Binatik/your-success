@@ -46,7 +46,7 @@ const Сontacts = () => {
         ComponentProps={{ isCenter: true, isGrow: true }}
         isDecor={false}
         grid="col4"
-        colSize="auto"
+        colSize="small"
         articles={contacts}
         bg="#F6F6F6"
         title="Контакты &mdash;"

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Grid = styled.div`
   padding: 0 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 0 0 ${props => props.theme.grid[props.col]};
   margin: 0 0 30px 0;
 
@@ -32,7 +32,7 @@ export const Center = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1310px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 10px 15px;
 `;

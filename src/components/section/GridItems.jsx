@@ -38,8 +38,9 @@ const GridItems = ({ Component, ComponentProps, element, isDecor, colSize, grid 
   }, [grid]);
 
   const size = useMemo(() => {
-    if (!colSize) return "350px";
-    else if (colSize === "big") return "350px";
+    if (!colSize) return "380px";
+    else if (colSize === "big") return "380px";
+    else if (colSize === "small") return "300px";
     else if (colSize === "auto") return "100%";
   }, [colSize]);
 
