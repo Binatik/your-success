@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 
@@ -14,20 +14,12 @@ import { MainCard } from "@cmp/UI/MainCard";
 import { Section } from "@cmp/section/Section";
 import { RouterCard } from "@cmp/UI/RouterCard";
 
-const DuestionWrapper = styled.div`
-  padding: 50px 0;
-  background-color: ${props => props.theme.colors.primary};
-  min-height: 810px;
-`;
-
 const Post = () => {
   const dispatch = useDispatch();
   const { supports, filteredSupports } = useSelector(getPostsState);
   const { id, title } = useParams();
 
   const { texts, paths } = supports[id];
-
-  const location = useLocation();
 
   useEffect(() => {
     dispatch(removeActivePost({ id }));
@@ -63,5 +55,13 @@ const Post = () => {
     </>
   );
 };
+
+// __StyledComponents
+
+const DuestionWrapper = styled.div`
+  padding: 50px 0;
+  background-color: ${props => props.theme.colors.primary};
+  min-height: 810px;
+`;
 
 export { Post };

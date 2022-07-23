@@ -5,6 +5,26 @@ import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
 import { PrimaryText } from "@src/store/styled/components/texts";
 import { SurfaceLink } from "@src/store/styled/components/links";
 
+const MainCard = ({ isCenter, isGrow, element }) => {
+  const { title, texts, paths } = element;
+
+  return (
+    <>
+      <PrimaryBeatySubTitle isCenter={isCenter}>{title}</PrimaryBeatySubTitle>
+      {texts.map((text, index) => (
+        <React.Fragment key={index}>
+          <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
+            {text}
+          </PrimaryBeatyText>
+          {paths.length !== 0 ? <SurfaceBeatyLink href={paths[0]}>{paths[1]}</SurfaceBeatyLink> : null}
+        </React.Fragment>
+      ))}
+    </>
+  );
+};
+
+// __StyledComponents
+
 const PrimaryBeatySubTitle = styled(PrimarySubTitle)`
   text-align: ${props => (props.isCenter ? "center" : "start")};
   width: ${props => (props.isCenter ? "100%" : "auto")};
@@ -29,23 +49,5 @@ const SurfaceBeatyLink = styled(SurfaceLink)`
   border-top: 1px solid ${props => props.theme.colors.primary + "15"};
   z-index: 3;
 `;
-
-const MainCard = ({ isCenter, isGrow, element }) => {
-  const { title, texts, paths } = element;
-
-  return (
-    <>
-      <PrimaryBeatySubTitle isCenter={isCenter}>{title}</PrimaryBeatySubTitle>
-      {texts.map((text, index) => (
-        <React.Fragment key={index}>
-          <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
-            {text}
-          </PrimaryBeatyText>
-          {paths.length !== 0 ? <SurfaceBeatyLink href={paths[0]}>{paths[1]}</SurfaceBeatyLink> : null}
-        </React.Fragment>
-      ))}
-    </>
-  );
-};
 
 export { MainCard };

@@ -7,6 +7,35 @@ import { close } from "@src/store/redux/slice/burger";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 import { PrimaryRouterLink } from "@src/store/styled/components/router";
 
+const NavigationList = ({ links }) => {
+  const dispatch = useDispatch();
+
+  const { toggle: isAciveBurger } = useSelector(getBurgerState);
+
+  function closeBurger() {
+    dispatch(close());
+    scrollStartPage();
+  }
+
+  return (
+    <>
+      <Navigation isAciveBurger={isAciveBurger}>
+        <List>
+          {links.map(({ id, path, title }) => (
+            <Item isAciveBurger={isAciveBurger} key={id}>
+              <PrimaryRouterLink onClick={closeBurger} to={path}>
+                {title}
+              </PrimaryRouterLink>
+            </Item>
+          ))}
+        </List>
+      </Navigation>
+    </>
+  );
+};
+
+// __StyledComponents
+
 const Navigation = styled.nav`
   z-index: 3;
   flex: 1 1 auto;
@@ -50,32 +79,5 @@ const Item = styled.li`
     transition: transform 0.2s;
   }
 `;
-
-const NavigationList = ({ links }) => {
-  const dispatch = useDispatch();
-
-  const { toggle: isAciveBurger } = useSelector(getBurgerState);
-
-  function closeBurger() {
-    dispatch(close());
-    scrollStartPage();
-  }
-
-  return (
-    <>
-      <Navigation isAciveBurger={isAciveBurger}>
-        <List>
-          {links.map(({ id, path, title }) => (
-            <Item isAciveBurger={isAciveBurger} key={id}>
-              <PrimaryRouterLink onClick={closeBurger} to={path}>
-                {title}
-              </PrimaryRouterLink>
-            </Item>
-          ))}
-        </List>
-      </Navigation>
-    </>
-  );
-};
 
 export { NavigationList };

@@ -17,12 +17,6 @@ import { Frame } from "@cmp/UI/Frame";
 import { Pulse } from "@cmp/UI/Pulse";
 import { MainCard } from "@cmp/UI/MainCard";
 
-const SecondaryBeatyText = styled(SecondaryText)`
-  text-align: center;
-  text-shadow: 1px 1px 40px #000;
-  background-color: transparent;
-`;
-
 const Сontacts = () => {
   const { openModal } = useContext(ModalContext);
 
@@ -85,5 +79,13 @@ const Сontacts = () => {
     </>
   );
 };
+
+// __StyledComponents
+
+const SecondaryBeatyText = styled(SecondaryText)`
+  text-align: center;
+  text-shadow: 1px 1px 40px #000;
+  background-color: transparent;
+`;
 
 export { Сontacts };

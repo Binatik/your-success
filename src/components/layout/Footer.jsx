@@ -7,18 +7,6 @@ import { initIconСontacts } from "@src/store/state";
 
 import { IconContacts } from "@cmp/UI/IconContacts";
 
-const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media ${props => props.theme.desktopFirst.phone} {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
 const Footer = () => {
   const [iconСontacts, setIconСontacts] = useState(initIconСontacts);
 
@@ -36,8 +24,22 @@ const Footer = () => {
   );
 };
 
+// __StyledComponents
+
 Footer.Footer = styled.footer`
   background-color: ${props => props.theme.colors.surface};
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media ${props => props.theme.desktopFirst.phone} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export { Footer };

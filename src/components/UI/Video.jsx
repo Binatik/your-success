@@ -1,34 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const ThumbWrap = styled.div`
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  width: 100%;
-  height: 0;
-`;
-
-const VideoIframe = styled.iframe`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    width: 95%;
-    height: 95%;
-  }
-`;
-
-const Loader = styled.span`
-  position: absolute;
-  font-size: 2rem;
-  color: #fff;
-`;
-
 const Video = React.memo(({ path }) => {
   return (
     <>
@@ -48,6 +20,8 @@ const Video = React.memo(({ path }) => {
   );
 });
 
+// __StyledComponents
+
 Video.Сontent = styled.div`
   position: relative;
   display: flex;
@@ -56,6 +30,34 @@ Video.Сontent = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+`;
+
+const ThumbWrap = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  width: 100%;
+  height: 0;
+`;
+
+const VideoIframe = styled.iframe`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 45%;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    width: 95%;
+    height: 95%;
+  }
+`;
+
+const Loader = styled.span`
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
 `;
 
 export { Video };

@@ -8,12 +8,14 @@ const Logo = ({ title, toTitle }) => {
   return (
     <>
       <Logo.Logo href="#">
-        <PrimaryText style={{margin: "0 10px 0 0"}}>{title}</PrimaryText>
+        <PrimaryText style={{ margin: "0 10px 0 0" }}>{title}</PrimaryText>
         <SurfaceTitle>{toTitle}</SurfaceTitle>
       </Logo.Logo>
     </>
   );
 };
+
+// __StyledComponents
 
 Logo.Logo = styled.a`
   z-index: 5;

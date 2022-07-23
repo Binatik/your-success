@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Modal } from "@cmp/UI/Modal";
 
@@ -13,8 +13,26 @@ const ModalContextProvider = ({ children }) => {
 
     setTimeout(() => {
       setIsModalActive(!isModalActive);
-    }, 300);
+    }, 100);
   }
+
+  useEffect(() => {
+    const scrollbarWidth = window.innerWidth - document.body.offsetWidth;
+    const body = document.body;
+    const header = body.querySelector("header");
+
+    if (isModalActive) {
+      body.style.overflow = "hidden";
+      body.style.paddingRight = `${scrollbarWidth}px`;
+      header.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    if (!isModalActive) {
+      body.style.overflow = null;
+      body.style.paddingRight = null;
+      header.style.paddingRight = null;
+    }
+  }, [isModalActive]);
 
   return (
     <>

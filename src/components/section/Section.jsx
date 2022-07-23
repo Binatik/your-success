@@ -6,19 +6,6 @@ import { SurfaceTitle } from "@src/store/styled/components/titles";
 
 import { GridWrapper } from "./GridWrapper";
 
-const GridRoot = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  max-width: ${props => props.size};
-  margin: 30px auto;
-`;
-
-const SectionTitle = styled(SurfaceTitle)`
-  text-align: center;
-
-  ${props => props.theme.fontStyle.sectionTitle};
-`;
-
 const Section = ({ articles, title, bg, anchor, colSize, children, ...props }) => {
   const size = useMemo(() => {
     if (!colSize) return "1200px";
@@ -48,9 +35,24 @@ const Section = ({ articles, title, bg, anchor, colSize, children, ...props }) =
   );
 };
 
+// __StyledComponents
+
 Section.Section = styled.section`
   padding: 80px 0;
   background: ${props => props.bg};
+`;
+
+const GridRoot = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: ${props => props.size};
+  margin: 30px auto;
+`;
+
+const SectionTitle = styled(SurfaceTitle)`
+  text-align: center;
+
+  ${props => props.theme.fontStyle.sectionTitle};
 `;
 
 export { Section };

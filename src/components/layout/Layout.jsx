@@ -4,6 +4,21 @@ import { Outlet } from "react-router-dom";
 
 import { Footer } from "./Footer";
 
+const Layout = () => {
+  return (
+    <>
+      <Router>
+        <Main>
+          <Outlet />
+        </Main>
+        <Footer />
+      </Router>
+    </>
+  );
+};
+
+// __StyledComponents
+
 const Router = styled.div`
   position: relative;
   display: flex;
@@ -16,18 +31,5 @@ const Main = styled.main`
   padding: 90px 0 0 0;
   flex: 1 1 100%;
 `;
-
-const Layout = () => {
-  return (
-    <>
-        <Router>
-          <Main>
-            <Outlet />
-          </Main>
-          <Footer />
-        </Router>
-    </>
-  );
-};
 
 export { Layout };

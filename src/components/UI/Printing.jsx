@@ -4,39 +4,6 @@ import styled from "styled-components";
 import { getRandomInt } from "@src/store/helpers/getRandomInt";
 import { Container } from "@src/store/styled/components/others";
 
-const TitleHidden = styled.pre`
-  cursor: default;
-  margin: 15px 0;
-  opacity: 0;
-  font-family: "Montserrat", sans-serif;
-  color: ${props => props.color};
-  white-space: pre-wrap;
-
-  ${props => props.theme.fontStyle.title};
-
-  font-size: 2.5rem;
-`;
-
-const Title = styled(TitleHidden)`
-  cursor: auto;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 1;
-`;
-
-const FlexContainer = styled(Container)`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const Content = styled.div`
-  position: relative;
-  margin: 20px;
-`;
-
 const Printing = ({ bg, color, texts, children }) => {
   const textRef = useRef(null);
   const countIndexRef = useRef(0);
@@ -86,9 +53,44 @@ const Printing = ({ bg, color, texts, children }) => {
   );
 };
 
+// __StyledComponents
+
 Printing.Printing = styled.div`
   padding: 60px 0;
   background-color: ${props => props.bg};
+`;
+
+const TitleHidden = styled.pre`
+  cursor: default;
+  margin: 15px 0;
+  opacity: 0;
+  font-family: "Montserrat", sans-serif;
+  color: ${props => props.color};
+  white-space: pre-wrap;
+
+  ${props => props.theme.fontStyle.title};
+
+  font-size: 2.5rem;
+`;
+
+const Title = styled(TitleHidden)`
+  cursor: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+`;
+
+const FlexContainer = styled(Container)`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Content = styled.div`
+  position: relative;
+  margin: 20px;
 `;
 
 export { Printing };

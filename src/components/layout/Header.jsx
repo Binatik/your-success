@@ -12,17 +12,6 @@ import { Logo } from "@cmp/UI/Logo";
 import { NavigationList } from "@cmp/UI/NavigationList";
 import { IconContacts } from "@cmp/UI/IconContacts";
 
-const Content = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    margin: 0 50px 0 0;
-    justify-content: space-between;
-  }
-`;
-
 const Header = () => {
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
 
@@ -70,6 +59,8 @@ const Header = () => {
   );
 };
 
+// __StyledComponents
+
 Header.Header = styled.header`
   position: fixed;
   width: 100%;
@@ -79,6 +70,17 @@ Header.Header = styled.header`
   background-color: ${props => props.theme.colors.surface};
   transform: translateY(${props => (props.isTopScroll ? "-100" : "0")}%);
   transition: transform 0.2s;
+`;
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    margin: 0 50px 0 0;
+    justify-content: space-between;
+  }
 `;
 
 export { Header };

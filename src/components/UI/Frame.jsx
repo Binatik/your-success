@@ -2,6 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
+const Frame = ({ isPadding, children }) => {
+  return (
+    <>
+      <Frame.Frame isPadding={isPadding}>
+        <Line></Line>
+        <LineTop></LineTop>
+        <Content>{children}</Content>
+      </Frame.Frame>
+    </>
+  );
+};
+
+// __StyledComponents
+
+Frame.Frame = styled.div`
+  position: relative;
+  height: 100%;
+  max-width: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+  padding: ${props => (props.isPadding ? "20px" : 0)};
+  border: 3px solid #00ccff;
+`;
+
 const scale = keyframes`
 0% {
   transform:scaleX(0);
@@ -56,29 +81,6 @@ const Line = styled.span`
 
 const LineTop = styled(Line)`
   transform: rotate(180deg);
-`;
-
-const Frame = ({ isPadding, children }) => {
-  return (
-    <>
-      <Frame.Frame isPadding={isPadding}>
-        <Line></Line>
-        <LineTop></LineTop>
-        <Content>{children}</Content>
-      </Frame.Frame>
-    </>
-  );
-};
-
-Frame.Frame = styled.div`
-  position: relative;
-  height: 100%;
-  max-width: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 30px auto;
-  padding: ${props => (props.isPadding ? "20px" : 0)};
-  border: 3px solid #00ccff;
 `;
 
 export { Frame };

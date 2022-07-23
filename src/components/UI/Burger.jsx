@@ -6,6 +6,55 @@ import { toggle } from "@src/store/redux/slice/burger";
 import { getBurgerState } from "@src/store/redux";
 import { BurgerLine } from "@src/store/styled/components/others";
 
+const Burger = () => {
+  const dispatch = useDispatch();
+
+  const { toggle: isAciveBurger } = useSelector(getBurgerState);
+
+  const themeColor = useContext(ThemeContext).colors.surface;
+  const burgerShadow = `0 0 0 100vw ${themeColor}, 0 0 0 100vh ${themeColor}`;
+
+  return (
+    <>
+      <Burger.Burger shadow={burgerShadow} isAciveBurger={isAciveBurger} onClick={() => dispatch(toggle())}>
+        <IconLine version="1.1" viewBox="0 0 100 100">
+          <Line1 isAciveBurger={isAciveBurger} d="M 50,35 H 30" />
+          <Line2 isAciveBurger={isAciveBurger} d="M 50,35 H 70" />
+          <Line3 isAciveBurger={isAciveBurger} d="M 50,50 H 30" />
+          <Line4 isAciveBurger={isAciveBurger} d="M 50,50 H 70" />
+          <Line5 isAciveBurger={isAciveBurger} d="M 50,65 H 30" />
+          <Line6 isAciveBurger={isAciveBurger} d="M 50,65 H 70" />
+        </IconLine>
+        <IconClose isAciveBurger={isAciveBurger} version="1.1" viewBox="0 0 100 100">
+          <LineClose d="M 34,32 L 66,68" />
+          <LineClose d="M 66,32 L 34,68" />
+        </IconClose>
+      </Burger.Burger>
+    </>
+  );
+};
+
+// __StyledComponents
+
+Burger.Burger = styled.div`
+  display: none;
+
+  @media ${props => props.theme.desktopFirst.tablet} {
+    cursor: pointer;
+    /* box-shadow: ${props => (props.isAciveBurger ? props.shadow : "none")}; */
+    border-radius: 50% 50% 50% 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-15%, 23px);
+    transition: box-shadow 0.6s;
+    display: block;
+    width: 45px;
+    height: 45px;
+    z-index: 5;
+  }
+`;
+
 const LineClose = styled(BurgerLine)`
   stroke-width: 0.393rem;
 `;
@@ -44,53 +93,6 @@ const IconLine = styled.svg`
   width: 45px;
   height: 45px;
   background-color: ${props => props.theme.colors.secondary};
-`;
-
-const Burger = () => {
-  const dispatch = useDispatch();
-
-  const { toggle: isAciveBurger } = useSelector(getBurgerState);
-
-  const themeColor = useContext(ThemeContext).colors.surface;
-  const burgerShadow = `0 0 0 100vw ${themeColor}, 0 0 0 100vh ${themeColor}`;
-
-  return (
-    <>
-      <Burger.Burger shadow={burgerShadow} isAciveBurger={isAciveBurger} onClick={() => dispatch(toggle())}>
-        <IconLine version="1.1" viewBox="0 0 100 100">
-          <Line1 isAciveBurger={isAciveBurger} d="M 50,35 H 30" />
-          <Line2 isAciveBurger={isAciveBurger} d="M 50,35 H 70" />
-          <Line3 isAciveBurger={isAciveBurger} d="M 50,50 H 30" />
-          <Line4 isAciveBurger={isAciveBurger} d="M 50,50 H 70" />
-          <Line5 isAciveBurger={isAciveBurger} d="M 50,65 H 30" />
-          <Line6 isAciveBurger={isAciveBurger} d="M 50,65 H 70" />
-        </IconLine>
-        <IconClose isAciveBurger={isAciveBurger} version="1.1" viewBox="0 0 100 100">
-          <LineClose d="M 34,32 L 66,68" />
-          <LineClose d="M 66,32 L 34,68" />
-        </IconClose>
-      </Burger.Burger>
-    </>
-  );
-};
-
-Burger.Burger = styled.div`
-  display: none;
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    cursor: pointer;
-    /* box-shadow: ${props => (props.isAciveBurger ? props.shadow : "none")}; */
-    border-radius: 50% 50% 50% 50%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translate(-15%, 23px);
-    transition: box-shadow 0.6s;
-    display: block;
-    width: 45px;
-    height: 45px;
-    z-index: 5;
-  }
 `;
 
 export { Burger };
