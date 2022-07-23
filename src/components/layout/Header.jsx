@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 
 import { getBurgerState } from "@src/store/redux";
 import { useThrottle } from "@src/hooks/useThrottle";
-import { initNavigation, initIconСontacts } from "@src/store/state";
+import { initIconСontacts } from "@src/store/state/reactIcons";
+import { initNavigation } from "@src/store/state/navigate";
 import { Container } from "@src/store/styled/components/others";
 
 import { Burger } from "@cmp/UI/Burger";

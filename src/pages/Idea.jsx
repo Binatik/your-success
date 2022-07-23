@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 
 import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
-import { initEssence } from "@src/store/state";
+import { initIdea } from "@src/store/state/mainCard";
 
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center, FlexItems } from "@src/store/styled/components/others";
@@ -19,7 +19,7 @@ import { SecondaryLink } from "@src/store/styled/components/links";
 const Idea = () => {
   const { openModal } = useContext(ModalContext);
 
-  const [essence, setEssence] = useState(initEssence);
+  const [idea, setIdea] = useState(initIdea);
 
   const videoPath = "https://www.youtube.com/embed/rGV7shl5N-4";
   const sectionSliderBg = "linear-gradient(180deg,#002137 60%,rgb(246,246,246) 61%)";
@@ -70,7 +70,7 @@ const Idea = () => {
         isDecor={true}
         grid="col3"
         colSize="big"
-        articles={essence}
+        articles={idea}
         bg="#002137"
         title="Суть &mdash;"
       >
@@ -83,6 +83,10 @@ const Idea = () => {
             Читать далее
           </SecondaryRouterLink>
         </Center>
+        <Frame isPadding={false}>
+          <SecondaryText>Обратите внимания, что это бизнес не рекрутеров, а учителей. </SecondaryText>
+          <SecondaryText>Вам платят деньги за работу с людьми, а не просто приглашая их.</SecondaryText>
+        </Frame>
       </Section>
     </>
   );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Container } from "@src/store/styled/components/others";
 import { SecondaryText } from "@src/store/styled/components/texts";
-import { initIconСontacts } from "@src/store/state";
+import { initIconСontacts } from "@src/store/state/reactIcons";
 
 import { IconContacts } from "@cmp/UI/IconContacts";
 

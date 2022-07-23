@@ -2,23 +2,36 @@ import React from "react";
 import styled from "styled-components";
 
 import { PrimarySubTitle } from "@src/store/styled/components/subTitles";
-import { PrimaryText } from "@src/store/styled/components/texts";
+import { PrimaryText, SurfaceTextLink } from "@src/store/styled/components/texts";
 import { SurfaceLink } from "@src/store/styled/components/links";
 
 const MainCard = ({ isCenter, isGrow, element }) => {
-  const { title, texts, paths } = element;
+  const { title, paragraphs, paths } = element;
 
   return (
     <>
       <PrimaryBeatySubTitle isCenter={isCenter}>{title}</PrimaryBeatySubTitle>
-      {texts.map((text, index) => (
-        <React.Fragment key={index}>
-          <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
-            {text}
-          </PrimaryBeatyText>
-          {paths.length !== 0 ? <SurfaceBeatyLink href={paths[0]}>{paths[1]}</SurfaceBeatyLink> : null}
-        </React.Fragment>
-      ))}
+      {paragraphs.map((paragraph, index) => {
+        return (
+          <React.Fragment key={index}>
+            <PrimaryBeatyText isCenter={isCenter} isGrow={isGrow}>
+              {paragraph.contents.map(content => {
+                return content.link ? (
+                  <React.Fragment key={index}>
+                    {content.text}
+                    <SurfaceTextLink href={content.link[0]} target="_blank">
+                      {content.link[1]}
+                    </SurfaceTextLink>
+                  </React.Fragment>
+                ) : (
+                  content.text
+                );
+              })}
+            </PrimaryBeatyText>
+            {paths.length !== 0 ? <SurfaceBeatyLink href={paths[0]}>{paths[1]}</SurfaceBeatyLink> : null}
+          </React.Fragment>
+        );
+      })}
     </>
   );
 };

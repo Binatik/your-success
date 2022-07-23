@@ -19,7 +19,7 @@ const Post = () => {
   const { supports, filteredSupports } = useSelector(getPostsState);
   const { id, title } = useParams();
 
-  const { texts, paths } = supports[id];
+  const { paragraphs, paths } = supports[id];
 
   useEffect(() => {
     dispatch(removeActivePost({ id }));
@@ -28,29 +28,31 @@ const Post = () => {
   return (
     <>
       <DuestionWrapper>
-        <Container>
+        <BeatyContainer>
           <GridWrapper
             Component={MainCard}
             ComponentProps={{ isCenter: false, isGrow: false }}
-            element={{ title, texts, paths }}
+            element={{ title, paragraphs, paths }}
             isDecor={false}
-            colSize="auto"
             grid="col1"
           />
-          <Section
-            Component={RouterCard}
-            ComponentProps={{ isCenter: false, isGrow: false }}
-            grid="col1"
-            colSize="auto"
-            anchor="tasks"
-            articles={filteredSupports}
-            bg="#002137"
-            title="Другие темы &mdash;"
-          ></Section>
+        </BeatyContainer>
+        <Section
+          Component={RouterCard}
+          ComponentProps={{ isCenter: false, isGrow: false }}
+          grid="col1"
+          colSize="small"
+          anchor="tasks"
+          articles={filteredSupports}
+          bg="#002137"
+          title="Другие темы &mdash;"
+        >
           <Center>
-            <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">Вернуться в поддержку ➜</SecondaryRouterButtonLink>
+            <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">
+              Вернуться в поддержку ➜
+            </SecondaryRouterButtonLink>
           </Center>
-        </Container>
+        </Section>
       </DuestionWrapper>
     </>
   );
@@ -62,6 +64,10 @@ const DuestionWrapper = styled.div`
   padding: 50px 0;
   background-color: ${props => props.theme.colors.primary};
   min-height: 810px;
+`;
+
+const BeatyContainer = styled(Container)`
+  max-width: 800px;
 `;
 
 export { Post };

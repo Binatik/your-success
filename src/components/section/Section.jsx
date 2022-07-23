@@ -14,21 +14,17 @@ const Section = ({ articles, title, bg, anchor, colSize, children, ...props }) =
     else if (colSize === "auto") return "100%";
   }, [colSize]);
 
-  const gridRoot = (
-    <GridRoot size={size}>
-      {articles.map(element => (
-        <GridWrapper key={element.id} element={element} {...props} />
-      ))}
-      {children}
-    </GridRoot>
-  );
-
   return (
     <>
       <Section.Section id={anchor} bg={bg}>
         <Container>
           <SectionTitle>{title}</SectionTitle>
-          {gridRoot}
+          <GridRoot size={size}>
+            {articles.map(element => (
+              <GridWrapper key={element.id} element={element} {...props} />
+            ))}
+            {children}
+          </GridRoot>
         </Container>
       </Section.Section>
     </>

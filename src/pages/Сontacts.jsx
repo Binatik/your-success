@@ -4,7 +4,7 @@ import { IoMdPlay } from "react-icons/io";
 
 import { ModalContext } from "@src/contexts/modalContext/ModalContext";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
-import { initСontacts } from "@src/store/state";
+import { initСontacts } from "@src/store/state/mainCard";
 
 import { SecondaryButtonLink, PrimaryLink } from "@src/store/styled/components/links";
 import { SecondaryText } from "@src/store/styled/components/texts";

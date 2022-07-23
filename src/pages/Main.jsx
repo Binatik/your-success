@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { initTasks, initPossibilitys, initPrintingText } from "@src/store/state";
+import { initTasks, initPossibilitys } from "@src/store/state/mainCard";
+import { initPrintingText } from "@src/store/state/printing";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
 import { SecondaryButtonLink } from "@src/store/styled/components/links";
