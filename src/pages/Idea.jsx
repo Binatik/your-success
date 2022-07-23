@@ -57,7 +57,7 @@ const Idea = () => {
         bg={sectionSliderBg}
         title="Доходы &mdash;"
       >
-        <FlexItems style={{ display: "flex" }}>
+        <FlexItems>
           <Slider />
           <SecondaryLink mobileColor="#002137" target="_blank" href="https://vk.com/club122297325">
             Еще больше доходов ➜

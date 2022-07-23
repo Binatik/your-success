@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
 
 import { Container } from "@src/store/styled/components/others";
 import { SurfaceTitle } from "@src/store/styled/components/titles";
 
-import { GridItems } from "./GridItems";
+import { GridWrapper } from "./GridWrapper";
 
-const Items = styled.div`
+const GridRoot = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 50px -15px 10px -15px;
+  max-width: ${props => props.size};
+  margin: 30px auto;
 `;
 
 const SectionTitle = styled(SurfaceTitle)`
@@ -18,13 +19,21 @@ const SectionTitle = styled(SurfaceTitle)`
   ${props => props.theme.fontStyle.sectionTitle};
 `;
 
-const Section = ({ articles, title, bg, anchor, children, ...props }) => {
-  const items = (
-    <Items>
+const Section = ({ articles, title, bg, anchor, colSize, children, ...props }) => {
+  const size = useMemo(() => {
+    if (!colSize) return "1200px";
+    else if (colSize === "big") return "1200px";
+    else if (colSize === "small") return "1000px";
+    else if (colSize === "auto") return "100%";
+  }, [colSize]);
+
+  const gridRoot = (
+    <GridRoot size={size}>
       {articles.map(element => (
-        <GridItems key={element.id} element={element} {...props} />
+        <GridWrapper key={element.id} element={element} {...props} />
       ))}
-    </Items>
+      {children}
+    </GridRoot>
   );
 
   return (
@@ -32,8 +41,7 @@ const Section = ({ articles, title, bg, anchor, children, ...props }) => {
       <Section.Section id={anchor} bg={bg}>
         <Container>
           <SectionTitle>{title}</SectionTitle>
-          {articles.length !== 0 ? items : null}
-          {children}
+          {gridRoot}
         </Container>
       </Section.Section>
     </>

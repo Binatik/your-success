@@ -3,14 +3,12 @@ import styled from "styled-components";
 
 import { Grid } from "@src/store/styled/components/others";
 
-const ItemGrid = styled.div`
+const Item = styled.div`
   position: relative;
   overflow: hidden;
-  width: ${props => props.size};
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   box-shadow: ${props => props.theme.colors.primary + "30"} 0px 7px 29px 0px;
   background-color: ${props => props.theme.colors.secondary};
   height: 100%;
@@ -32,28 +30,21 @@ const Index = styled.span`
   z-index: 1;
 `;
 
-const GridItems = ({ Component, ComponentProps, element, isDecor, colSize, grid }) => {
+const GridWrapper = ({ Component, ComponentProps, element, isDecor, grid }) => {
   const col = useMemo(() => {
     return grid ? grid : "col3";
   }, [grid]);
 
-  const size = useMemo(() => {
-    if (!colSize) return "380px";
-    else if (colSize === "big") return "380px";
-    else if (colSize === "small") return "300px";
-    else if (colSize === "auto") return "100%";
-  }, [colSize]);
-
   return (
     <>
       <Grid col={col}>
-        <ItemGrid size={size}>
+        <Item>
           {isDecor && <Index isIndex={isDecor}>{element.id}</Index>}
           <Component {...ComponentProps} element={element} />
-        </ItemGrid>
+        </Item>
       </Grid>
     </>
   );
 };
 
-export { GridItems };
+export { GridWrapper };

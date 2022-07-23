@@ -45,7 +45,7 @@ const Сontacts = () => {
         Component={MainCard}
         ComponentProps={{ isCenter: true, isGrow: true }}
         isDecor={false}
-        grid="col4"
+        grid="col2"
         colSize="small"
         articles={contacts}
         bg="#F6F6F6"

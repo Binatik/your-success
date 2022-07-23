@@ -7,8 +7,9 @@ import { getPostsState } from "@src/store/redux";
 import { Center, Container } from "@src/store/styled/components/others";
 import { SecondaryRouterButtonLink } from "@src/store/styled/components/router";
 import { removeActivePost } from "@src/store/redux/slice/posts";
+import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
-import { GridItems } from "@cmp/section/GridItems";
+import { GridWrapper } from "@cmp/section/GridWrapper";
 import { MainCard } from "@cmp/UI/MainCard";
 import { Section } from "@cmp/section/Section";
 import { RouterCard } from "@cmp/UI/RouterCard";
@@ -36,7 +37,7 @@ const Post = () => {
     <>
       <DuestionWrapper>
         <Container>
-          <GridItems
+          <GridWrapper
             Component={MainCard}
             ComponentProps={{ isCenter: false, isGrow: false }}
             element={{ title, texts, paths }}
@@ -55,7 +56,7 @@ const Post = () => {
             title="Другие темы &mdash;"
           ></Section>
           <Center>
-            <SecondaryRouterButtonLink to="/supports">Вернуться в поддержку ➜</SecondaryRouterButtonLink>
+            <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">Вернуться в поддержку ➜</SecondaryRouterButtonLink>
           </Center>
         </Container>
       </DuestionWrapper>

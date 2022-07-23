@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const Grid = styled.div`
-  padding: 0 15px;
-  display: flex;
-  justify-content: flex-start;
+  padding: 0 40px 0 0;
+  margin: 20px 0;
   flex: 0 0 ${props => props.theme.grid[props.col]};
-  margin: 0 0 30px 0;
 
   @media ${props => props.theme.desktopFirst.desktop} {
     flex: 0 0 ${props => props.theme.grid.col2};
@@ -13,6 +11,7 @@ export const Grid = styled.div`
 
   @media ${props => props.theme.desktopFirst.tablet} {
     flex: 1 1 ${props => props.theme.grid.col1};
+    padding: 0;
   }
 `;
 
@@ -29,6 +28,8 @@ export const Center = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 30px 0 0 0;
+  flex: 1 1 100%;
 `;
 
 export const Container = styled.div`
@@ -39,6 +40,8 @@ export const Container = styled.div`
 
 export const FlexItems = styled.div`
   display: flex;
+  min-width: 0;
+
 
   @media ${props => props.theme.desktopFirst.tablet} {
     flex-wrap: wrap;
