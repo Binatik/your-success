@@ -13,6 +13,7 @@ import { GridWrapper } from "@cmp/section/GridWrapper";
 import { MainCard } from "@cmp/UI/MainCard";
 import { Section } from "@cmp/section/Section";
 import { RouterCard } from "@cmp/UI/RouterCard";
+import { Search } from "@cmp/UI/Search";
 
 const Post = () => {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ const Post = () => {
           title="Другие темы &mdash;"
         >
           <Center>
+          {/* <Search /> */}
             <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">
               Вернуться в поддержку ➜
             </SecondaryRouterButtonLink>

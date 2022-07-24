@@ -35,6 +35,7 @@ const Section = ({ articles, title, bg, anchor, colSize, children, ...props }) =
 
 Section.Section = styled.section`
   padding: 80px 0;
+  min-height: 500px;
   background: ${props => props.bg};
 `;
 

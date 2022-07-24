@@ -178,12 +178,27 @@ const initialState = {
   ],
 
   filteredSupports: [],
+
+  filteredQuerySupports: [],
 };
 
 const posts = createSlice({
   name: "posts",
   initialState,
   reducers: {
+    filteredQuery(state, actions) {
+      const { inputValue:postQuery  } = actions.payload;
+
+      state.filteredQuerySupports = state.supports.filter(element => {
+        const lowerCasePostQuery = postQuery.toLowerCase();
+        const elementLowerCase = element.title.toLowerCase();
+
+        if (elementLowerCase.includes(lowerCasePostQuery)) {
+          return element;
+        }
+      });
+    },
+
     removeActivePost(state, actions) {
       const { id } = actions.payload;
 
@@ -192,5 +207,5 @@ const posts = createSlice({
   },
 });
 
-export const { removeActivePost } = posts.actions;
+export const { removeActivePost, filteredQuery } = posts.actions;
 export default posts.reducer;

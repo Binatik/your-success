@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Grid = styled.div`
-  padding: 0 40px 0 0;
+  padding: 0 20px 0 20px;
   margin: 20px 0;
   flex: 0 0 ${props => props.theme.grid[props.col]};
 
@@ -46,4 +46,12 @@ export const FlexItems = styled.div`
   @media ${props => props.theme.desktopFirst.tablet} {
     flex-wrap: wrap;
   }
+`;
+
+export const Label = styled.label`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
 `;
