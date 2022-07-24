@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
@@ -21,15 +21,19 @@ const Supports = () => {
 
   const { filteredQuerySupports, supports } = useSelector(getPostsState);
 
+  useEffect(() => {
+    dispatch(filteredQuery({ inputValue }));
+  }, []);
+
   function submitQuery(event) {
     event.preventDefault();
-
-    dispatch(filteredQuery({ inputValue }));
 
     const queryParams = {};
     if (inputValue.length) queryParams.title = inputValue;
 
     setSearchParams(queryParams);
+
+    dispatch(filteredQuery({ inputValue }));
   }
 
   function isFilterQuery() {
