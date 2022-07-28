@@ -90,7 +90,6 @@ const FlexContainer = styled(Container)`
 
 const Content = styled.div`
   position: relative;
-  margin: 20px;
 `;
 
 export { Printing };

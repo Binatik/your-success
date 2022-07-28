@@ -16,8 +16,8 @@ const Slider = () => {
     768: {
       slidesPerView: "auto",
     },
-    576: {
-      slidesPerView: 1,
+    476: {
+      slidesPerView: 2,
     },
   };
 

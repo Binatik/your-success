@@ -12,6 +12,7 @@ import { Burger } from "@cmp/UI/Burger";
 import { Logo } from "@cmp/UI/Logo";
 import { NavigationList } from "@cmp/UI/NavigationList";
 import { IconContacts } from "@cmp/UI/IconContacts";
+import { Space } from "@cmp/UI/Space";
 
 const Header = () => {
   const { toggle: isAciveBurger } = useSelector(getBurgerState);
@@ -49,7 +50,9 @@ const Header = () => {
       <Header.Header isTopScroll={isTopScroll} isAciveBurger={isAciveBurger}>
         <Container>
           <Content>
-            <Logo title="Твой" toTitle="успех" />
+            <Space type="m" size="min">
+              <Logo title="Твой" toTitle="успех" />
+            </Space>
             <NavigationList links={links} />
             <IconContacts contacts={iconСontacts} />
             <Burger />

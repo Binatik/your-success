@@ -9,11 +9,12 @@ import { SecondaryRouterButtonLink } from "@src/store/styled/components/router";
 import { removeActivePost } from "@src/store/redux/slice/posts";
 import { scrollStartPage } from "@src/store/helpers/scrollStartPage";
 
-import { GridWrapper } from "@cmp/section/GridWrapper";
-import { MainCard } from "@cmp/UI/MainCard";
-import { Section } from "@cmp/section/Section";
-import { RouterCard } from "@cmp/UI/RouterCard";
-import { Search } from "@cmp/UI/Search";
+import { Card } from "@cmp/cards/Card";
+import { RouterCard } from "@cmp/cards/RouterCard";
+import { SurfaceSectionTitle } from "@src/store/styled/components/titles";
+import { Section } from "@cmp/UI/Section";
+import { Space } from "@cmp/UI/Space";
+import { FlexGrid } from "@cmp/grid/FlexGrid";
 
 const Post = () => {
   const dispatch = useDispatch();
@@ -30,26 +31,14 @@ const Post = () => {
     <>
       <DuestionWrapper>
         <BeatyContainer>
-          <GridWrapper
-            Component={MainCard}
-            ComponentProps={{ isCenter: false, isGrow: false }}
-            element={{ title, paragraphs, paths }}
-            isDecor={false}
-            grid="col1"
-          />
+          <Card element={{ title, paragraphs, paths }} />
         </BeatyContainer>
-        <Section
-          Component={RouterCard}
-          ComponentProps={{ isCenter: false, isGrow: false }}
-          grid="col1"
-          colSize="small"
-          anchor="tasks"
-          articles={filteredSupports}
-          bg="#002137"
-          title="Другие темы &mdash;"
-        >
+        <Section anchor="post" color="#002137">
           <Center>
-          {/* <Search /> */}
+            <SurfaceSectionTitle>Другие темы &mdash;</SurfaceSectionTitle>
+            <Space type="m" size="small">
+              <FlexGrid grid="col1" size="small" data={filteredSupports} Card={RouterCard} propsCard={{ isCenter: true, isGrow: true }} />
+            </Space>
             <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">
               Вернуться в поддержку ➜
             </SecondaryRouterButtonLink>

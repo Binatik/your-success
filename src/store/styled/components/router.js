@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 const RouterNavLink = styled(NavLink)`
   display: block;
   text-decoration: none;
-  z-index: 3;
+  z-index: 5;
   transition: background 0.2s, color 0.2s;
   ${props => props.theme.fontStyle.link};
 `;

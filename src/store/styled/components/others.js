@@ -1,20 +1,5 @@
 import styled from "styled-components";
 
-export const Grid = styled.div`
-  padding: 0 20px 0 20px;
-  margin: 20px 0;
-  flex: 0 0 ${props => props.theme.grid[props.col]};
-
-  @media ${props => props.theme.desktopFirst.desktop} {
-    flex: 0 0 ${props => props.theme.grid.col2};
-  }
-
-  @media ${props => props.theme.desktopFirst.tablet} {
-    flex: 1 1 ${props => props.theme.grid.col1};
-    padding: 0;
-  }
-`;
-
 export const BurgerLine = styled.path`
   fill: ${props => props.theme.colors.primary};
   transform-origin: 50%;
@@ -28,7 +13,6 @@ export const Center = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 30px 0 0 0;
   flex: 1 1 100%;
 `;
 
@@ -54,4 +38,8 @@ export const Label = styled.label`
   flex-direction: column;
   justify-content: center;
   height: 50px;
+`;
+
+export const Space = styled.div`
+  
 `;

@@ -19,7 +19,7 @@ const Logo = ({ title, toTitle }) => {
 
 Logo.Logo = styled.a`
   z-index: 5;
-  margin: 10px 50px 10px 0;
+  margin: 0 50px 0 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: flex;

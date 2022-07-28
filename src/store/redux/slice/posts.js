@@ -187,7 +187,7 @@ const posts = createSlice({
   initialState,
   reducers: {
     filteredQuery(state, actions) {
-      const { inputValue:postQuery  } = actions.payload;
+      const { postQuery  } = actions.payload;
 
       state.filteredQuerySupports = state.supports.filter(element => {
         const lowerCasePostQuery = postQuery.toLowerCase();

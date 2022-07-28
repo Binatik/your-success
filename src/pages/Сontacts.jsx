@@ -10,12 +10,15 @@ import { SecondaryButtonLink, PrimaryLink } from "@src/store/styled/components/l
 import { SecondaryText } from "@src/store/styled/components/texts";
 import { Center } from "@src/store/styled/components/others";
 import { PrimaryRouterButtonLink } from "@src/store/styled/components/router";
+import { SurfaceSectionTitle } from "@src/store/styled/components/titles";
 
-import { Section } from "@cmp/section/Section";
 import { Video } from "@cmp/UI/Video";
 import { Frame } from "@cmp/UI/Frame";
 import { Pulse } from "@cmp/UI/Pulse";
-import { MainCard } from "@cmp/UI/MainCard";
+import { Card } from "@cmp/cards/Card";
+import { Section } from "@cmp/UI/Section";
+import { Space } from "@cmp/UI/Space";
+import { FlexGrid } from "@cmp/grid/FlexGrid";
 
 const Сontacts = () => {
   const { openModal } = useContext(ModalContext);
@@ -35,31 +38,24 @@ const Сontacts = () => {
 
   return (
     <>
-      <Section
-        Component={MainCard}
-        ComponentProps={{ isCenter: true, isGrow: true }}
-        isDecor={false}
-        grid="col2"
-        colSize="small"
-        articles={contacts}
-        bg="#F6F6F6"
-        title="Контакты &mdash;"
-      >
-        <PrimaryLink target="_blank" href="https://ru.wikipedia.org/wiki/Oriflame">
-          Проверить компанию ➜
-        </PrimaryLink>
+      <Section anchor="contacts" color="#F6F6F6">
+        <Center>
+          <SurfaceSectionTitle>Контакты &mdash;</SurfaceSectionTitle>
+        </Center>
+        <Space type="m" size="small">
+          <FlexGrid grid="col4" size="auto" data={contacts} Card={Card} propsCard={{ isCenter: true, isGrow: true }} />
+        </Space>
+        <Space type="p" isSpaceLeft={true}>
+          <PrimaryLink target="_blank" href="https://ru.wikipedia.org/wiki/Oriflame">
+            Проверить компанию ➜
+          </PrimaryLink>
+        </Space>
       </Section>
-      <Section
-        Component={MainCard}
-        ComponentProps={{ isCenter: false, isGrow: false }}
-        isDecor={false}
-        grid="col3"
-        colSize="big"
-        articles={[]}
-        anchor="video"
-        bg="#002137"
-        title="Сомневаешься &mdash;"
-      >
+
+      <Section anchor="video" color="#002137">
+        <Center>
+          <SurfaceSectionTitle>Сомневаешься &mdash;</SurfaceSectionTitle>
+        </Center>
         <Frame isPadding={false}>
           <SecondaryBeatyText>
             Пока ты сомневаешься и придумываешь отмазки - Десятки тысяч партнеров компании уже осуществили свою мечту!
@@ -69,7 +65,7 @@ const Сontacts = () => {
           <Pulse handleClick={activeModal} componentIcon={<IoMdPlay />} />
           <SecondaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
             Присоединиться к нам ➜
-          </SecondaryButtonLink> 
+          </SecondaryButtonLink>
           <SecondaryText>или</SecondaryText>
           <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>
             Поддержка

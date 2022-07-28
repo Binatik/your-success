@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Link = styled.a`
   display: block;
+  height: min-content;
   font-weight: 400;
   z-index: 3;
   transition: background 0.2s, color 0.2s;

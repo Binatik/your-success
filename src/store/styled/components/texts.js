@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Text = styled.p`
   position: relative;
-  z-index: 3;
+  z-index: 5;
   ${props => props.theme.fontStyle.paragraph};
 `;
 
