@@ -47,11 +47,11 @@ const Navigation = styled.nav`
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #00ccff;
+    background-color: ${props => (props.isAciveBurger ? "#00ccff" : "transparent")};
     margin: 10px 0 0 0;
     padding: 80px 0;
     transform: ${props => (props.isAciveBurger ? "translateY(60px)" : "translateY(-100%)")};
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
   }
 `;
 

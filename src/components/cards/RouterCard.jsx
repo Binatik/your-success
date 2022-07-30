@@ -27,4 +27,5 @@ const Link = styled(SurfaceRouterLink)`
   background-color: ${props => props.theme.colors.secondary};
   box-shadow: ${props => props.theme.colors.primary + "30"} 0px 7px 29px 0px;
   border-radius: 5px;
+  height: 100%;
 `;

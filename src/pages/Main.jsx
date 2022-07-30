@@ -33,7 +33,7 @@ const Main = () => {
           <SurfaceSectionTitle>Что делать &mdash;</SurfaceSectionTitle>
         </Center>
         <Space type="m" size="big">
-          <FlexGrid grid="col3" size="big" data={tasks} Card={Card} propsCard={{ isCenter: false, isGrow: false }} />
+          <FlexGrid grid="col3" size="big" data={tasks} renderCard={element => <Card element={element} />} />
         </Space>
       </Section>
 
@@ -42,7 +42,7 @@ const Main = () => {
           <SurfaceSectionTitle>Работая с нами &mdash;</SurfaceSectionTitle>
         </Center>
         <Space type="m" size="big">
-          <FlexGrid grid="col3" size="big" isDecor data={possibilitys} Card={Card} propsCard={{ isCenter: false, isGrow: false }} />
+          <FlexGrid grid="col3" size="big" isDecor data={possibilitys} renderCard={element => <Card element={element} />} />
         </Space>
         <Center>
           <SecondaryText>Регистрация в компании в нашем проекте вас ни к чему не обязывает, без вложений, а значит без риска.</SecondaryText>

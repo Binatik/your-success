@@ -37,7 +37,7 @@ const Post = () => {
           <Center>
             <SurfaceSectionTitle>Другие темы &mdash;</SurfaceSectionTitle>
             <Space type="m" size="small">
-              <FlexGrid grid="col1" size="small" data={filteredSupports} Card={RouterCard} propsCard={{ isCenter: true, isGrow: true }} />
+            <FlexGrid grid="col1" size="auto" data={filteredSupports} renderCard={element => <RouterCard element={element} />} />
             </Space>
             <SecondaryRouterButtonLink onClick={scrollStartPage} to="/supports">
               Вернуться в поддержку ➜

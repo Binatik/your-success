@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
 
-const FlexGrid = ({ grid, isDecor, size, data, Card, propsCard }) => {
+const FlexGrid = ({ grid, isDecor, size, data, renderCard }) => {
   const maxWidth = useMemo(() => {
     if (size === "big") return "1200px";
     if (size === "small") return "1000px";
@@ -14,7 +14,7 @@ const FlexGrid = ({ grid, isDecor, size, data, Card, propsCard }) => {
         {data.map(element => (
           <Grid key={element.id} col={grid}>
             {isDecor && <Index isIndex={isDecor}>{element.id}</Index>}
-            <Card element={element} {...propsCard}></Card>
+            {renderCard(element)}
           </Grid>
         ))}
       </GridRoot>
@@ -38,7 +38,7 @@ export const Grid = styled.div`
   flex: 0 0 ${props => props.theme.grid[props.col]};
 
   @media ${props => props.theme.desktopFirst.desktop} {
-    flex: 0 0 ${props => props.theme.grid.col2};
+    flex: 0 0 ${props => props.col === "col1" ? props.theme.grid.col1 : props.theme.grid.col2 };
   }
 
   @media ${props => props.theme.desktopFirst.tablet} {

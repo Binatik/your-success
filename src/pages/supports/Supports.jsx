@@ -50,7 +50,7 @@ const Supports = () => {
           <SurfaceSectionTitle>Темыs &mdash;</SurfaceSectionTitle>
         </Center>
         <Space type="m" size="small">
-          <FlexGrid grid="col1" size="auto" data={isFilterQuery()} Card={RouterCard} propsCard={{ isCenter: true, isGrow: true }} />
+        <FlexGrid grid="col1" size="auto" data={isFilterQuery()} renderCard={element => <RouterCard element={element} />} />
         </Space>
         <Space type="p" isSpaceLeft={true}>
           <Center>{filteredQuerySupports.length === 0 && <PrimaryText>На ваш поисковый запрос ничего не найдено.</PrimaryText>}</Center>

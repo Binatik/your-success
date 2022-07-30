@@ -73,7 +73,7 @@ const Idea = () => {
           <SurfaceSectionTitle>Суть &mdash;</SurfaceSectionTitle>
         </Center>
         <Space type="m" size="big">
-          <FlexGrid grid="col3" size="big" isDecor data={idea} Card={Card} propsCard={{ isCenter: false, isGrow: false }} />
+        <FlexGrid grid="col3" size="big" isDecor data={idea} renderCard={element => <Card element={element} />} />
         </Space>
         <Center>
           <SecondaryText>Мы рекомендуем посмотреть презентацию, чтобы лучше ориентироваться в этом бизнесе.</SecondaryText>
@@ -86,10 +86,6 @@ const Idea = () => {
             Читать далее
           </SecondaryRouterLink>
         </Center>
-        {/* <Frame isPadding={false}>
-          <SecondaryText>Обратите внимания, что это бизнес не рекрутеров, а учителей. </SecondaryText>
-          <SecondaryText>Вам платят деньги за работу с людьми, а не просто приглашая их.</SecondaryText>
-        </Frame> */}
       </Section>
     </>
   );

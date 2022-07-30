@@ -43,7 +43,7 @@ const Сontacts = () => {
           <SurfaceSectionTitle>Контакты &mdash;</SurfaceSectionTitle>
         </Center>
         <Space type="m" size="small">
-          <FlexGrid grid="col4" size="auto" data={contacts} Card={Card} propsCard={{ isCenter: true, isGrow: true }} />
+          <FlexGrid grid="col4" size="auto" data={contacts} renderCard={element => <Card element={element} isCenter isGrow />} />
         </Space>
         <Space type="p" isSpaceLeft={true}>
           <PrimaryLink target="_blank" href="https://ru.wikipedia.org/wiki/Oriflame">
@@ -63,13 +63,15 @@ const Сontacts = () => {
         </Frame>
         <Center>
           <Pulse handleClick={activeModal} componentIcon={<IoMdPlay />} />
-          <SecondaryButtonLink style={{ margin: "60px 0 20px 0" }} href={linkQuestionnaire}>
-            Присоединиться к нам ➜
-          </SecondaryButtonLink>
+          <Space type="m" size="big">
+            <SecondaryButtonLink href={linkQuestionnaire}>Присоединиться к нам ➜</SecondaryButtonLink>
+          </Space>
           <SecondaryText>или</SecondaryText>
-          <PrimaryRouterButtonLink style={{ margin: "20px 0" }} to={"/supports"} onClick={scrollStartPage}>
-            Поддержка
-          </PrimaryRouterButtonLink>
+          <Space type="m" size="min">
+            <PrimaryRouterButtonLink to={"/supports"} onClick={scrollStartPage}>
+              Поддержка
+            </PrimaryRouterButtonLink>
+          </Space>
         </Center>
       </Section>
     </>
